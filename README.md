@@ -3,7 +3,7 @@ Hola grupo
 - *Temática del sitio
 - Ecommerce de Bicicletas, Accesorios, Repuestos y Servicios. Blog de Novedades de Bicicletas
 - *Público objetivo
-- Personas que disfruten de paseos en bici.
+- Personas que practiquen el ciclismo tanto de forma amateur como profesional, rango de edades desde público adolescente hasta jubilados.
 - * Breve Descripción de los integrantes del Equipo:
 Juan Manuel Fernández, valoro mucho el aire libre y la actividad física. Hice algunos cursos online sobre Python y algo de HTML. Actualmente estoy terminando Data Science. 
 Kerby Tovar, Me gustan las películas y series del mundo Marvel, DC. Tengo conocimiento muy básico sobre HTML. Estudié sistemas. 
