@@ -21,4 +21,5 @@
 - https://www.nitrobikes.com.ar/ Clientes a los que apuntan, estética y funcionalidad.
 - https://www.decathlon.es/ Su funcionalidad y Productos o Servicios que ofrecen.
 - https://steel-vintage.com/ Aspecto y funcionalidad.
+- https://www.interfuerzas.com.ar/ Footer
 
