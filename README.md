@@ -13,7 +13,7 @@
    
    Jonima Núñez, Me gusta comunicarme con los demás, soy una persona creativa y amigable. Hice algunos cursos online sobre Git & Git hub, MySQL, JS.Realizando Argentina Programa .
   
-   Kristina Sarquiz, 
+   Kristina Sarquiz, hola 
    
 - *Listado de al menos 5 referentes:
 - https://www.chainreactioncycles.com/ Relacionado con el rubro.
