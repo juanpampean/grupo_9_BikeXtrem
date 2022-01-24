@@ -5,18 +5,18 @@
    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
    CSS Rule para especificar> font-family: 'Montserrat', sans-serif; */
 
-   
+   *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+   }
 
 /* CSS Jonima */
 /* CSS Kerby */
 
 /*CSS Kris  */
-*{
-   margin:0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Montserrat', sans-serif;
-}
+
 body{
    background-color: aliceblue;
 }
@@ -58,4 +58,31 @@ flex: 1;
    color: #333;
 }
 
-/* CSS Juan  /*
+/* CSS Juan  */
+header .top-header {
+   display: flex;
+   background-color:#0D353F;
+   padding:20px;
+   justify-content: space-between;
+   height:50px;
+}
+
+header .cuenta a {
+   margin:5px;
+   color:#72CDAE;
+}
+
+header .mid-header {
+   display: flex;
+   background-color:#72CDAE ;
+   justify-content: space-between;
+   height:100px;
+   
+}
+
+header .mid-header a {
+   padding:5px;
+   text-align:center;
+   height:80%;
+   
+}
