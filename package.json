@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  },
+  "name": "grupo_9_bikextrem",
+  "description": "- *Temática del MarketPlace:  \r    Ecommerce de Bicicletas, Accesorios, Repuestos y Servicios. Blog de Novedades de Bicicletas",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanpampean/grupo_9_BikeXtrem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanpampean/grupo_9_BikeXtrem/issues"
+  },
+  "homepage": "https://github.com/juanpampean/grupo_9_BikeXtrem#readme"
+}
