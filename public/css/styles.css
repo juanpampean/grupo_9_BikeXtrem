@@ -14,8 +14,8 @@
 *{
    margin:0;
    padding: 0;
-   font-family: 'Montserrat', sans-serif;
    box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
 }
 body{
    background-color: aliceblue;
@@ -35,7 +35,7 @@ body{
    background-color: white;
    box-shadow:0 1px 1px 0 rgba(0,0,0,.2);
 }
-.login, .registro{
+.registro .login{
 flex: 1;
 }
 .login{
@@ -51,6 +51,11 @@ flex: 1;
    width: 100%;
    padding: 5px;
    font-size: 16px;
+   border-top-style: none;
+   border-left-style: none;
+   border-right-style: none;
+   border-bottom: 1px solid #a8a8a8;
+   color: #333;
 }
 
 /* CSS Juan  /*
