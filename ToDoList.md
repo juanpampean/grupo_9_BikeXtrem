@@ -12,7 +12,7 @@ Sprint 2:
 ★ Archivo retro.md con el resultado de la retrospectiva. (Miércoles)
 ★ Enlace al tablero de trabajo -Trello- en el archivo README.md. (Joni)
 ★ Llenar Trello con estas tareas (Joni)
-★ Aplicación Node.js+Express (Jonima)
+★ Aplicación Node.js+Express (Kris)
 ○ Home (index.html) -Kerby + Juan
   Header + Footer - Juan+Joni
 ○ Detalle del producto (productDetail.html) - Kerby 

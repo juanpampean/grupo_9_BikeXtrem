@@ -1,4 +1,4 @@
-//intalacion de express
+//instalacion de express
 const express = require("express");
 const app = express();
 
@@ -6,12 +6,17 @@ const app = express();
 const path = require ("path");
 
 //Acceso a archivos estaticos
-app.use(express.static(__dirname + "/public"));
+app.use("/static",express.static(__dirname + "/public"));
 
 //Levantando servidor
-app.listen(3030,()=>{console.log("servidor corriendo")});
+app.listen(3000,()=>{console.log("servidor corriendo")});
 
-//Metodo de ruta
+//Ruta Home
 app.get("/",function(req,res){
-    res.sendFile(path.resolve(__dirname,"./views/home.html"));
+    res.sendFile(path.resolve(__dirname,"./views/index.html"));
+});
+
+//Ruta Login
+app.get("/Login",function(req,res){
+    res.sendFile(path.resolve(__dirname,"./views/login.html"));
 });
