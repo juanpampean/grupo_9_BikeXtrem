@@ -110,6 +110,25 @@ header .mid-header div {
 .low-header a {
       margin:5px;
       color:#72CDAE;
-      padding:10px;
-      
+      padding:10px
    }
+
+footer {
+   display:flex;
+   background-color:#0D353F;
+   color:#72CDAE;
+}
+
+.mision {
+   text-align:justify;
+   
+}
+
+main {
+   display:flex;
+   background-color: #E6DAC6 ;
+   height:300px;
+   text-align: center;
+   
+   
+}
