@@ -1,13 +1,21 @@
 const express = require("express");
 const app = express();
-const path = require("path");
 
-app.use(express.static(path.join(__dirname, './public')))
+//Requiriendo path
+const path = require ("path");
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/index.html'))
-})
+//Acceso a archivos estaticos
+app.use("/static",express.static(__dirname + "/public"));
 
-app.listen(3000, () => {
-    console.log("Servidor Corriendo")
-})
+//Levantando servidor
+app.listen(3000,()=>{console.log("servidor corriendo")});
+
+//Ruta Home
+app.get("/",function(req,res){
+    res.sendFile(path.resolve(__dirname,"./views/index.html"));
+});
+
+//Ruta Login
+app.get("/Login",function(req,res){
+    res.sendFile(path.resolve(__dirname,"./views/login.html"));
+});
