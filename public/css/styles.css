@@ -73,16 +73,43 @@ header .cuenta a {
 }
 
 header .mid-header {
-   display: flex;
+   display:flex;
    background-color:#72CDAE ;
+   height:120px;
    justify-content: space-between;
-   height:100px;
+   position:relative;
    
 }
 
-header .mid-header a {
-   padding:5px;
+header .mid-header div {
+   padding:0px 50px 0px 20px;
+   align-self: center;
+   font-size:150%;  
+}
+
+.logo {
+   display:block;
+   font-size:200%;
    text-align:center;
-   height:80%;
+
+
+}
+
+.contacto a { 
+   padding:20px;
+;
    
 }
+
+.low-header {
+   display:flex;
+   background-color:#0D353F;
+   justify-content: center;
+}
+
+.low-header a {
+      margin:5px;
+      color:#72CDAE;
+      padding:10px;
+      
+   }
