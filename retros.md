@@ -1,8 +1,13 @@
 Retro Sobre Sprint 1:
 Método Estrella de Mar (https://proyectosagiles.org/2009/06/14/retrospectiva-estrella-mar-starfish-retrospective-scrum/)
 
-1. Comenzar a hacer:
-2. Hacer más:
-3. Continuar haciendo:
-4. Hacer menos:
-5. Dejar de hacer:
+1. Comenzar a hacer: 
+    a)Espeficar las prioridades dentro de las tareas (indagar mejor sobre alcance tareas del sprint) 
+    b) Agendar reuniones (Dia 1 Sprint, Dia 7/8 Sprint, Dia -4 de final Sprint)
+2. Hacer más: 
+   a) La idea del PMV atrás de las tareas
+   b) Pasar de hacer 1 sola reunión a hacer 1 weekly o 3 en un sprint 
+3. Continuar haciendo: 
+   a) Ayudandonos en nuestras tareas.
+4. Hacer menos: no hay lugar para hacer menos...!
+5. Dejar de hacer: tampoco!
