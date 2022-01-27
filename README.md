@@ -23,3 +23,9 @@
 - https://steel-vintage.com/ Aspecto y funcionalidad.
 - https://www.interfuerzas.com.ar/ Footer
 
+Paleta de Colores 
+0D353F • 72CDAE • E6DAC6 • F5562A • AB2E44 ( + info https://www.instagram.com/p/CXmj97eM2PR/)
+Tipografia: MONTSERRAT
+   Link para los html:
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   CSS Rule para especificar> font-family: 'Montserrat', sans-serif; */

@@ -91,8 +91,6 @@ header .mid-header div {
    display:block;
    font-size:200%;
    text-align:center;
-
-
 }
 
 .contacto a { 
@@ -113,22 +111,35 @@ header .mid-header div {
       padding:10px
    }
 
+   main {
+      display:flex;
+      background-color: #E6DAC6 ;
+      text-align: center;  
+   }
+
 footer {
    display:flex;
    background-color:#0D353F;
    color:#72CDAE;
+   justify-content: space-between;
 }
 
-.mision {
-   text-align:justify;
-   
+.logo_mision {
+   text-align:left;
+   position: relative;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px; 
 }
 
-main {
+footer .logo {
    display:flex;
-   background-color: #E6DAC6 ;
-   height:300px;
-   text-align: center;
-   
-   
+   justify-content: column;
+   font-size:40px
 }
+
+footer div {
+   padding:15px;
+}
+
+
