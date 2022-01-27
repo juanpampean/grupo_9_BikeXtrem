@@ -29,3 +29,6 @@ Tipografia: MONTSERRAT
    Link para los html:
    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
    CSS Rule para especificar> font-family: 'Montserrat', sans-serif; */
+   
+*Enlace al tablero de trabajo: https://trello.com/b/79HuFMFx/grupo9bikextrem
+
