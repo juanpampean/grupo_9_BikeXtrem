@@ -23,3 +23,5 @@
 - https://steel-vintage.com/ Aspecto y funcionalidad.
 - https://www.interfuerzas.com.ar/ Footer
 
+*Enlace al tablero de trabajo: https://trello.com/b/79HuFMFx/grupo9bikextrem
+
