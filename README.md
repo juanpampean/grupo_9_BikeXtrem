@@ -32,3 +32,6 @@ Tipografia: MONTSERRAT
    
 *Enlace al tablero de trabajo: https://trello.com/b/79HuFMFx/grupo9bikextrem
 
+
+*Pagina para buscar fotografías según la temática necesaria:
+    - https://pixabay.com/

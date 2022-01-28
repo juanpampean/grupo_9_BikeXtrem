@@ -112,11 +112,24 @@ header .mid-header div {
    }
 
    main {
-      display:flex;
       background-color: #E6DAC6 ;
-      text-align: center;  
+      text-align: center;
+      
    }
 
+   main article img {
+      width:100%;
+   }
+
+   main .ofertas {
+      display:flex;
+      background-color: white;
+   }
+
+   main .carousel {
+         position:relative;
+         overflow: hidden;
+   }
 footer {
    display:flex;
    background-color:#0D353F;
