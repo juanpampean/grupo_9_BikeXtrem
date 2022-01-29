@@ -20,3 +20,12 @@ app.get("/Login",function(req,res){
     res.sendFile(path.resolve(__dirname,"./views/login.html"));
 });
 
+//Ruta ProductCart
+app.get("/ProductCart",function(req,res){
+    res.sendFile(path.resolve(__dirname,"./views/productCart.html"));
+});
+
+//Ruta ProductDetail
+app.get("/ProductDetail",function(req,res){
+    res.sendFile(path.resolve(__dirname,"./views/ProductDetail.html"));
+});
