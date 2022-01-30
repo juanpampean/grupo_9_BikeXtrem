@@ -17,7 +17,7 @@ app.get("/", function(req, res) {
 
 //Ruta Login
 app.get("/Login",function(req,res){
-    res.sendFile(path.resolve(__dirname,"./views/login.html"));
+    res.sendFile(path.resolve(__dirname,"./views/login_Registro.html"));
 });
 
 //Ruta ProductDetail
