@@ -14,7 +14,6 @@ app.listen(3000, () => { console.log("servidor corriendo") });
 app.get("/", function(req, res) {
     res.sendFile(path.resolve(__dirname, "./views/index.html"));
 });
-
 //Ruta Login
 app.get("/Login",function(req,res){
     res.sendFile(path.resolve(__dirname,"./views/login_Registro.html"));
