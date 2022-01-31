@@ -16,11 +16,15 @@ app.get("/", function(req, res) {
 });
 
 //Ruta Login
-app.get("/Login",function(req,res){
-    res.sendFile(path.resolve(__dirname,"./views/login.html"));
+app.get("/Login", function(req, res) {
+    res.sendFile(path.resolve(__dirname, "./views/login.html"));
 });
 
 //Ruta ProductDetail
-app.get("/ProductDetail",function(req,res){
-    res.sendFile(path.resolve(__dirname,"./views/ProductDetail.html"));
+app.get("/ProductDetail", function(req, res) {
+    res.sendFile(path.resolve(__dirname, "./views/ProductDetail.html"));
+});
+//Ruta ProductCart
+app.get("/ProductCart", function(req, res) {
+    res.sendFile(path.resolve(__dirname, "./views/ProductCart.html"));
 });
