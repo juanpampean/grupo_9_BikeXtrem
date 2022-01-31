@@ -1,4 +1,4 @@
-6 lines (20 sloc)  694 Bytes
+
    
 const express = require("express");
 const app = express();
@@ -26,3 +26,4 @@ app.get("/Login",function(req,res){
 app.get("/ProductDetail",function(req,res){
     res.sendFile(path.resolve(__dirname,"./views/ProductDetail.html"));
 });
+
