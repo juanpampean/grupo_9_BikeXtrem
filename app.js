@@ -23,3 +23,8 @@ app.get("/Login",function(req,res){
 app.get("/ProductDetail",function(req,res){
     res.sendFile(path.resolve(__dirname,"./views/ProductDetail.html"));
 });
+
+//Ruta ProductCart
+app.get("/ProductCart", function(req, res) {
+    res.sendFile(path.resolve(__dirname, "./views/ProductCart.html"));
+});
