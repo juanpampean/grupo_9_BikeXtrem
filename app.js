@@ -1,3 +1,5 @@
+6 lines (20 sloc)  694 Bytes
+   
 const express = require("express");
 const app = express();
 
@@ -16,21 +18,11 @@ app.get("/", function(req, res) {
 });
 
 //Ruta Login
-<<
-<< << < HEAD
-app.get("/Login", function(req, res) {
-            res.sendFile(path.resolve(__dirname, "./views/login.html")); ===
-            === =
-            app.get("/Login", function(req, res) {
-                res.sendFile(path.resolve(__dirname, "./views/login_Registro.html")); >
-                ace >>> >>> 6 ca464c8534bcb596073c4a61f55d4f31178b9cf
-            });
+app.get("/Login",function(req,res){
+    res.sendFile(path.resolve(__dirname,"./views/login_Registro.html"));
+});
 
-            //Ruta ProductDetail
-            app.get("/ProductDetail", function(req, res) {
-                res.sendFile(path.resolve(__dirname, "./views/ProductDetail.html"));
-            });
-            //Ruta ProductCart
-            app.get("/ProductCart", function(req, res) {
-                res.sendFile(path.resolve(__dirname, "./views/ProductCart.html"));
-            });
+//Ruta ProductDetail
+app.get("/ProductDetail",function(req,res){
+    res.sendFile(path.resolve(__dirname,"./views/ProductDetail.html"));
+});
