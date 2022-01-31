@@ -14,9 +14,6 @@
 
 /* CSS Jonima */
 /* CSS Kerby */
-
-/*CSS Kris  */
-
 /* CSS Juan  */
 header .top-header {
    display: flex;
@@ -70,11 +67,11 @@ header .mid-header div {
       padding:10px
    }
 
-   main {
+  /* main {
       background-color: #E6DAC6 ;
       text-align: center;
       
-   }
+   }*/
    .container-slider {
       display:flex;
       margin:auto;
