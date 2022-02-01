@@ -121,7 +121,7 @@ ul.slider li:first-child {
 }
 
 main {
-    background-color: #F5562A;
+    background-color: #E6DAC6;
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -163,6 +163,11 @@ footer div {
     color: #72CDAE;
     border-radius: 8px;
     background-color: #0D353F;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-around;
 }
 
 .Producto-carrito {
