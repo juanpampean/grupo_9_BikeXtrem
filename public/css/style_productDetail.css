@@ -40,6 +40,10 @@ header .top-header {
     font-size:200%;
     text-align:center;
  }
+
+ .bikextrem{
+    color: black;
+ }
  
  .contacto a { 
     padding:20px;
@@ -61,7 +65,7 @@ header .top-header {
 
     main {
         display:flex;
-        background-color: #72cdaf62 ;
+        background-color: #e6dac6;
         text-align: center;  
         width: 100%;
      }
@@ -101,7 +105,7 @@ body{
 }
 
 #col1{
-    height: 1000px;
+    height: 800px;
     width: 50%;
     float: left;
     padding: 1%;
@@ -111,6 +115,7 @@ body{
 .zoom{
    height: 250px;
    transition: transform 6s;
+   border:solid 1px black;
 }
 
 .zoom:hover{
@@ -118,9 +123,26 @@ body{
    cursor: zoom-in;
 }
 
+.carrusel{
+   display: flex;
+   height: 170px;
+   width: 170px;
+   margin-left: 170px;
+}
+
+.carrusel1{
+   border:solid 1px black;
+   margin: 20px;
+}
+
+.carrusel1:hover{
+   cursor:pointer;
+}
+
 .cuadro-texto{
    display: flex;
    flex-wrap: wrap;
+   margin-top: 10%;
 }
 
 .lista{
@@ -132,13 +154,18 @@ body{
    border: solid 1px rgba(128, 128, 128, 0.575);
    margin-right: 0px;
    padding: 10px;
+   background-color: #ab2e45b7;
+}
+
+.descripcion, .informacion, .comentarios:hover{
+   cursor:pointer;
 }
 
 .texto{
-   border: solid 1px rgba(128, 128, 128, 0.575);
    margin-left: 40px;
    margin-right: 80px;
    padding: 20px 5px 5px 5px;
+   margin-top: -17px;
 }
 
 .metodo{
@@ -146,7 +173,7 @@ body{
 }
 
 #col2{
-    height: 1000px;
+    height: 800px;
     width: 30%;
     float: left;
     padding: 1%;
@@ -170,6 +197,10 @@ body{
    justify-content: space-around;
 }
 
+.caja2:hover{
+   cursor:pointer;
+}
+
 .caja3{
    display: flex;
    justify-content:space-evenly;
@@ -177,6 +208,10 @@ body{
    margin-left: 1px;
    padding-left: 15%;
    padding-right: 15%;
+}
+
+.caja3:hover{
+   cursor:pointer;
 }
 
 .caja1Color{
@@ -261,8 +296,12 @@ body{
    border-color: #72CDAE;
 }
 
+.button:hover{
+   cursor:pointer;
+}
+
 #col3{
-    height: 1000px;
+    height: 800px;
     width: 40%;
     float: left;
     padding: 1%;
@@ -301,12 +340,19 @@ body{
    padding-left: 5%;
 }
 
+.retiro:hover{
+   cursor: pointer;
+}
+
 .noInteres{
    color: rgb(21, 128, 0);
 }
 .banco{
    display: flex;
-   
+}
+
+.banco:hover{
+   cursor: pointer;
 }
 
 .interes{
