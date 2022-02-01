@@ -56,7 +56,7 @@
     "vary": "^1.1.2"
   },
   "scripts": {
-    "test": "nodemon app.js"
+    "test": "nodemon index.js"
   },
   "repository": {
     "type": "git",
