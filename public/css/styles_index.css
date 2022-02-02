@@ -113,7 +113,7 @@ header .mid-header div {
       position:absolute;
       text-align:center;
       left:10px;
-      top:75%;
+      top:68%;
       cursor:pointer;
       
 
@@ -212,6 +212,20 @@ footer .logo {
 
 footer div {
    padding:15px;
+}
+.menu-footer-menu-1 {
+   
+   list-style:none;
+}
+.menu-footer-menu-1 a {
+   text-decoration:none;
+   color:#72CDAE 
+}
+.contacto {
+   list-style:none;
+}
+.contacto li {
+   margin:5px;
 }
 
 @media (min-width:361px) {
