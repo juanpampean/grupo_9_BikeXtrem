@@ -33,7 +33,9 @@ header .mid-header {
    position:relative;
    
 }
-
+.carrito {
+   color:black;
+}
 header .mid-header div {
    padding:0px 50px 0px 20px;
    align-self: center;
@@ -269,4 +271,9 @@ footer div {
    }
    footer {
       display:flex;
+   }
+   .logo {
+      display:block;
+      font-size:200%;
+      text-align:center;
    }}
