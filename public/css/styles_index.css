@@ -64,11 +64,10 @@ header .mid-header div {
       padding:10px
    }
 
-  /* main {
+  main {
       background-color: #E6DAC6 ;
-      text-align: center;
       
-   }*/
+   }
    .container-slider {
       display:block;
       margin:auto;
@@ -216,12 +215,27 @@ footer div {
 }
 
 @media (min-width:361px) {
+   header .top-header {
+   display: block;
+   background-color:#0D353F;
+   padding:20px;
+   justify-content: space-between;
+   height:auto;
+   }
+   header .mid-header {
+      display:block;
+      height:auto;
+   }
 
    }
 
 @media (min-width:769px) {
    header .top-header {
          display: flex;
+         background-color:#0D353F;
+         padding:20px;
+         justify-content: space-between;
+         height:50px;
       }
    header .mid-header {
          display:flex;
