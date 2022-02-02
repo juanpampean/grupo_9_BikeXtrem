@@ -41,7 +41,7 @@ header .mid-header div {
 }
 
 .logo {
-   display:block;
+   display:flex;
    font-size:200%;
    text-align:center;
 }
@@ -216,11 +216,10 @@ footer div {
 }
 
 @media (min-width:361px) {
-   header .top-header {
-      display: block;
+
    }
 
-   @media (min-width:769px) {
+@media (min-width:769px) {
    header .top-header {
          display: flex;
       }
@@ -242,3 +241,4 @@ footer div {
    }
    footer {
       display:flex;
+   }}
