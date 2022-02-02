@@ -8,7 +8,7 @@ const path = require("path");
 app.use("/static", express.static(__dirname + "/public"));
 
 //Levantando servidor
-app.listen(3000, () => { console.log("servidor corriendo") });
+app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") });
 
 //Ruta Home
 app.get("/", function(req, res) {
