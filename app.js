@@ -24,6 +24,16 @@ app.get("/ProductDetail",function(req,res){
     res.sendFile(path.resolve(__dirname,"./views/productDetail.html"));
 });
 
+//Ruta ProductDetail_2
+app.get("/ProductDetail_2",function(req,res){
+    res.sendFile(path.resolve(__dirname,"./views/productDetail_2.html"));
+});
+
+//Ruta ProductDetail_3
+app.get("/ProductDetail_3",function(req,res){
+    res.sendFile(path.resolve(__dirname,"./views/productDetail_3.html"));
+});
+
 //Ruta ProductCart
 app.get("/ProductCart", function(req, res) {
     res.sendFile(path.resolve(__dirname, "./views/productCart.html"));
