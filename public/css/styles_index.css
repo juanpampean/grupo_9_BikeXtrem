@@ -12,11 +12,8 @@
       font-family: 'Montserrat', sans-serif;
    }
 
-/* CSS Jonima */
-/* CSS Kerby */
-/* CSS Juan  */
 header .top-header {
-   display: flex;
+   display: block;
    background-color:#0D353F;
    padding:20px;
    justify-content: space-between;
@@ -29,14 +26,16 @@ header .cuenta a {
 }
 
 header .mid-header {
-   display:flex;
+   display:block;
    background-color:#72CDAE ;
    height:120px;
    justify-content: space-between;
    position:relative;
    
 }
-
+.carrito {
+   color:black;
+}
 header .mid-header div {
    padding:0px 50px 0px 20px;
    align-self: center;
@@ -44,7 +43,7 @@ header .mid-header div {
 }
 
 .logo {
-   display:block;
+   display:flex;
    font-size:200%;
    text-align:center;
 }
@@ -56,7 +55,7 @@ header .mid-header div {
 }
 
 .low-header {
-   display:flex;
+   display:block;
    background-color:#0D353F;
    justify-content: center;
 }
@@ -67,13 +66,12 @@ header .mid-header div {
       padding:10px
    }
 
-  /* main {
+  main {
       background-color: #E6DAC6 ;
-      text-align: center;
       
-   }*/
+   }
    .container-slider {
-      display:flex;
+      display:block;
       margin:auto;
       background-color: #E6DAC6;
       width:100%;
@@ -117,7 +115,7 @@ header .mid-header div {
       position:absolute;
       text-align:center;
       left:10px;
-      top:83%;
+      top:68%;
       cursor:pointer;
       
 
@@ -130,26 +128,71 @@ header .mid-header div {
       display:inline-block;
       color:white;
       text-decoration: none;
-      background-color: grey;
+      background-color:#72CDAE;
       width:20px;
       height:20px;
       font-size:20px; 
       border-radius: 100%;
    }
    main {
-      display:flex;
-      flex-direction: column;
+      display:block;
+      
    }
 
- 
-   main .ofertas {
-      display:flex;
+   main .ofertas-carousel {
+      display:block;
+      background-color: #E6DAC6;
+      justify-content: space-between;
+      align-items:center;
+   }
+   .titulo_ofertas {
+      display:block;
+      background-color:#E6DAC6;
+      font-size:30px;
+   }
+   .ofertas-carousel img {
+      width:100%;
+      height:40%;
+      padding:0px;
+      margin:0px;
       background-color: white;
    }
+   .ofertas-carousel .producto-oferta {
+      position:relative;
+      margin:10px 20px;
+      padding:0px;
+      border:0;
+      background-color: white;
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+   }
 
+   .ofertas-carousel .nombre {
+      position:relative;
+      bottom:40px;
+      left:10px;
+      margin:0;
+      font-size:28px;
+   }
+   .ofertas-carousel .precio_antes {
+      text-decoration:line-through red;
+      width:30%;
+      margin-bottom:0;
+      
+   }
+   .ofertas-carousel .precio_oferta {
+      color:green;
+      font-weight: 500;
+      margin-bottom:0;
+      font-size:26px;
+   }
+   .ofertas-carousel .detalle_oferta {
+      position:absolute;
+      top:10px;
+      left:10px;
+   }
 
 footer {
-   display:flex;
+   display:block;
    background-color:#0D353F;
    color:#72CDAE;
    justify-content: space-between;
@@ -172,5 +215,65 @@ footer .logo {
 footer div {
    padding:15px;
 }
+.menu-footer-menu-1 {
+   
+   list-style:none;
+}
+.menu-footer-menu-1 a {
+   text-decoration:none;
+   color:#72CDAE 
+}
+.contacto {
+   list-style:none;
+}
+.contacto li {
+   margin:5px;
+}
 
+@media (min-width:361px) {
+   header .top-header {
+   display: block;
+   background-color:#0D353F;
+   padding:20px;
+   justify-content: space-between;
+   height:auto;
+   }
+   header .mid-header {
+      display:block;
+      height:auto;
+   }
 
+   }
+
+@media (min-width:769px) {
+   header .top-header {
+         display: flex;
+         background-color:#0D353F;
+         padding:20px;
+         justify-content: space-between;
+         height:50px;
+      }
+   header .mid-header {
+         display:flex;
+      }
+   .low-header {
+         display:flex;
+      }
+   .container-slider {
+         display:flex;
+      }
+   main {
+         display:flex;
+         flex-direction: column;  
+   }
+   main .ofertas-carousel {
+      display:flex;
+   }
+   footer {
+      display:flex;
+   }
+   .logo {
+      display:block;
+      font-size:200%;
+      text-align:center;
+   }}
