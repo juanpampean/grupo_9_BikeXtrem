@@ -1,0 +1,296 @@
+    /* Paleta de Colores 
+0D353F • 72CDAE • E6DAC6 • F5562A • AB2E44 ( + info https://www.instagram.com/p/CXmj97eM2PR/)*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    header .top-header {
+        display: flex;
+        background-color: #0D353F;
+        padding: 20px;
+        justify-content: space-between;
+        height: 50px;
+    }
+    
+    header .cuenta a {
+        margin: 5px;
+        color: #72CDAE;
+    }
+    
+    header .mid-header {
+        display: flex;
+        background-color: #72CDAE;
+        height: 120px;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    header .mid-header div {
+        padding: 0px 50px 0px 20px;
+        align-self: center;
+        font-size: 150%;
+    }
+    
+    .logo {
+        display: block;
+        font-size: 200%;
+        text-align: center;
+    }
+    
+    .bikextrem {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .contacto a {
+        padding: 20px;
+    }
+    
+    .low-header {
+        display: flex;
+        background-color: #0D353F;
+        justify-content: center;
+    }
+    
+    .low-header a {
+        margin: 5px;
+        color: #72CDAE;
+        padding: 10px
+    }
+    
+    .container-slider {
+        display: flex;
+        margin: auto;
+        background-color: #E6DAC6;
+        width: 100%;
+        padding: 5px;
+    }
+    
+    ul.slider {
+        position: relative;
+        width: inherit;
+        height: 300px;
+    }
+    
+    ul.slider li {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: 0;
+        width: inherit;
+        height: inherit;
+        transition: opacity 0.5s;
+    }
+    
+    ul.slider li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 0;
+    }
+    
+    ul.slider li:target {
+        opacity: 1;
+    }
+    
+    ul.slider li:first-child {
+        opacity: 1;
+    }
+    
+    .menu {
+        position: absolute;
+        text-align: center;
+        left: 10px;
+        top: 83%;
+        cursor: pointer;
+    }
+    
+    .menu li {
+        display: inline-flex;
+        text-align: center;
+    }
+    
+    .menu li a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        background-color: grey;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        border-radius: 100%;
+    }
+    
+    main {
+        background-color: #E6DAC6;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    footer {
+        display: flex;
+        background-color: #0D353F;
+        color: #72CDAE;
+        justify-content: space-between;
+    }
+    
+    .logo_mision {
+        text-align: left;
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    footer .logo {
+        display: flex;
+        justify-content: column;
+        font-size: 40px
+    }
+    
+    footer div {
+        padding: 15px;
+    }
+    /*CSS JONIMA */
+    
+    .boton {
+        margin-top: 40px;
+        height: 40px;
+        font-size: 20px;
+        font-family: 'Monserrat', sans-serif;
+        color: #72CDAE;
+        border-radius: 8px;
+        background-color: #0D353F;
+    }
+    
+    .decidir a {
+        text-decoration-line: none;
+        margin-top: 40px;
+        height: 40px;
+        font-size: 20px;
+        font-family: 'Monserrat', sans-serif;
+        color: #72CDAE;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        background-color: #0D353F;
+    }
+    
+    #botonlink {
+        margin-top: 40px;
+        height: 40px;
+        font-size: 20px;
+        font-family: 'Monserrat', sans-serif;
+        color: #72CDAE;
+        border-radius: 8px;
+        background-color: #0D353F;
+    }
+    
+    .botones {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .Producto-carrito {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px 0px 10px;
+        border: black solid 1px;
+        margin: 10px;
+        align-items: center;
+    }
+    
+    .Producto-carrito .boton {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .imgcompra {
+        display: flex;
+    }
+    
+    .imgcompra div {
+        align-self: center;
+    }
+    
+    .Descrip {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .Descrip img {
+        margin-left: 5%;
+    }
+    
+    main .Descrip div {
+        margin-left: 5%;
+    }
+    
+    #Precio {
+        font-size: 20px;
+        align-items: center;
+        height: 5px;
+        padding-bottom: 2px;
+    }
+    
+    .Envio {
+        display: column;
+        flex-flow: wrap;
+        align-items: flex-start;
+        height: 200px;
+        width: 98%;
+        float: left;
+        border: black solid 1px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px 0px 10px;
+        border: black solid 1px;
+        margin: 10px;
+        align-items: center;
+    }
+    
+    .interesados {
+        font-size: 25px;
+        text-align: center;
+        margin-right: 10px;
+        color: #0D353F;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        height: 350px;
+        width: 100%;
+        float: left;
+    }
+    
+    .flex-container div {
+        width: 80%;
+        height: 250px;
+        margin-left: 15px;
+        background: white;
+        position: relative;
+    }
+    
+    .flex-container div img {
+        width: 60%;
+        height: auto;
+        float: left;
+        margin-right: 2px;
+        margin-bottom: 10px;
+        margin-left: 5px;
+    }
+    
+    .flex-container p {
+        font-size: 18px;
+        font-weight: 100px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }

@@ -7,6 +7,8 @@
 
 /* Aqui comienza CSS Juan */
 
+
+
 header .top-header {
     display: flex;
     background-color:#0D353F;
@@ -26,8 +28,11 @@ header .top-header {
     height:120px;
     justify-content: space-between;
     position:relative;
-    
  }
+
+ .carrito {
+   color:black;
+}
 
  header .mid-header div {
     padding:0px 50px 0px 20px;
@@ -313,14 +318,20 @@ body{
    padding-left: 5%;
 }
 
-.precio{
+.precio_oferta{
    font-family: 'Montserrat', 'sans-serif';
    font-size: 32px;
    font-weight: bold;
    margin: auto;
    padding: 10px;
-   max-width: 150px;
+   max-width: 180px;
    border: solid 3px #0D353F;
+   color: green;
+}
+
+.precio_antes{
+   text-decoration:line-through red;
+   font-size: 18px;
 }
 
 .logoBanco{
@@ -369,3 +380,52 @@ body{
 .texto{
    text-align: justify;
 }
+
+
+@media (min-width:361px) {
+   /* Tablets */
+   header .top-header {
+   display: block;
+   background-color:#0D353F;
+   padding:20px;
+   justify-content: space-between;
+   height:auto;
+   }
+   header .mid-header {
+      display:block;
+      height:auto;
+   }
+
+   }
+
+@media (max-width: 360px) {
+   /* Mobile */
+   header .top-header {
+         display: flex;
+         background-color:#0D353F;
+         padding:20px;
+         justify-content: space-between;
+         height:50px;
+      }
+   header .mid-header {
+         display:flex;
+      }
+   .low-header {
+         display:flex;
+      }
+   .container-slider {
+         display:flex;
+      }
+   main {
+         display:flex;
+         flex-direction: column;  
+   }
+
+   footer {
+      display:flex;
+   }
+   .logo {
+      display:block;
+      font-size:200%;
+      text-align:center;
+   }}
