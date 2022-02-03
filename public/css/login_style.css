@@ -41,7 +41,6 @@ h5 {
 }
 
 .login input {
-  width: 100%;
   padding: 5px;
   font-size: 16px;
   margin-bottom: 25px;
@@ -119,4 +118,6 @@ h5 {
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
   cursor: pointer;
 }
-
+.recuerdame{
+color:#ab2e44;
+}
