@@ -214,12 +214,18 @@ main .Descrip div {
 
 .Envio {
     display: column;
-    flex-flow: nowrap;
-    align-items: center;
-    height: 250px;
-    width: 100%;
+    flex-flow: wrap;
+    align-items: flex-start;
+    height: 200px;
+    width: 95%;
     float: left;
-    margin-left: 55%;
+    border: black solid 1px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px 0px 10px;
+    border: black solid 1px;
+    margin: 10px;
+    align-items: center;
 }
 
 .interesados {
@@ -261,16 +267,4 @@ main .Descrip div {
     font-weight: 100px;
     margin-bottom: 10px;
     margin-left: 10px;
-}
-
-.legalidades {
-    display: flex;
-    background-color: #72CDAE;
-    justify-content: space-around;
-    height: 40px;
-}
-
-.legalidades a {
-    margin: 5px;
-    padding: 10px
 }
