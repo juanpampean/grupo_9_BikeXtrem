@@ -11,3 +11,13 @@ Método Estrella de Mar (https://proyectosagiles.org/2009/06/14/retrospectiva-es
    a) Ayudandonos en nuestras tareas.
 4. Hacer menos: no hay lugar para hacer menos...!
 5. Dejar de hacer: tampoco!
+
+Retro Sobre Sprint 2:
+1. Comenzar a hacer: 
+   a)recuperar los pendientes de sprint anteriores
+   b)agendar reuniones
+2. Hacer mas:
+   a) Compartir ideas de mejoras en el producto actual (detalles y funcionalidades)
+   b) Compartir dudas y necesidades de cada una de las tareas
+
+
