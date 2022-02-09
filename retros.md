@@ -11,3 +11,15 @@ Método Estrella de Mar (https://proyectosagiles.org/2009/06/14/retrospectiva-es
    a) Ayudandonos en nuestras tareas.
 4. Hacer menos: no hay lugar para hacer menos...!
 5. Dejar de hacer: tampoco!
+
+Retro sobre Sprint 2:
+1. Comenzar a hacer: 
+    a)
+2. Hacer más: 
+   a) 
+3. Continuar haciendo: 
+   a) Ayudandonos en nuestras tareas.
+4. Hacer menos: no hay lugar para hacer menos...!
+
+5. Dejar de hacer: tampoco!
+
