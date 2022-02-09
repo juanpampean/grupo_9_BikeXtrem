@@ -16,25 +16,25 @@ app.get("/", function(req, res) {
 });
 //Ruta Login
 app.get("/Login",function(req,res){
-    res.sendFile(path.resolve(__dirname,"./views/login_Registro.html"));
+    res.sendFile(path.resolve(__dirname,"./src/views/users/login_Registro.html"));
 });
 
 //Ruta ProductDetail
 app.get("/ProductDetail",function(req,res){
-    res.sendFile(path.resolve(__dirname,"./views/productDetail.html"));
+    res.sendFile(path.resolve(__dirname,"./src/views/products/productDetail.html"));
 });
 
 //Ruta ProductDetail_2
 app.get("/ProductDetail_2",function(req,res){
-    res.sendFile(path.resolve(__dirname,"./views/productDetail_2.html"));
+    res.sendFile(path.resolve(__dirname,"./src/views/products/productDetail_2.html"));
 });
 
 //Ruta ProductDetail_3
 app.get("/ProductDetail_3",function(req,res){
-    res.sendFile(path.resolve(__dirname,"./views/productDetail_3.html"));
+    res.sendFile(path.resolve(__dirname,"./src/views/products/productDetail_3.html"));
 });
 
 //Ruta ProductCart
 app.get("/ProductCart", function(req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/productCart.html"));
+    res.sendFile(path.resolve(__dirname, "./src/views/products/productCart.html"));
 });
