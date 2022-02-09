@@ -12,7 +12,7 @@ app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") }
 
 //Ruta Home
 app.get("/", function(req, res) {
-    res.sendFile(path.resolve(__dirname, "./views/index.html"));
+    res.sendFile(path.resolve(__dirname, "./src/views/users/index.html"));
 });
 //Ruta Login
 app.get("/Login",function(req,res){
