@@ -25,6 +25,7 @@ app.use('/', rutas);
 });*/
 
 //Ruta ProductDetail
+/*
 app.get("/ProductDetail",function(req,res){
     res.sendFile(path.resolve(__dirname,"./src/views/products/productDetail.html"));
 });
@@ -37,7 +38,7 @@ app.get("/ProductDetail_2",function(req,res){
 //Ruta ProductDetail_3
 app.get("/ProductDetail_3",function(req,res){
     res.sendFile(path.resolve(__dirname,"./src/views/products/productDetail_3.html"));
-});
+});*/
 
 
 //Ruta ProductCart

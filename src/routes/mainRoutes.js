@@ -11,6 +11,10 @@ const router = express.Router();
 router.get('/', mainController.index);
 router.get('/Login', mainController.login_Registro);
 router.get('/ProductCart',product.carrito);
+router.get('/ProductDetail',product.detalle_producto);
+router.get('/ProductDetail_2',product.detalle_producto2);
+router.get('/ProductDetail_3',product.detalle_producto3);
+
 
 
 
