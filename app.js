@@ -1,4 +1,5 @@
 const express = require("express");
+const { dirname } = require("path");
 const app = express();
 
 //Requiriendo path
@@ -6,6 +7,10 @@ const path = require("path");
 
 //Acceso a archivos estaticos
 app.use("/static", express.static(__dirname + "/public"));
+
+// Renderizando las Vistas con el motor de plantillas
+app.set('view engine', 'ejs');
+app.set('views', __dirname + 'views');
 
 //Levantando servidor
 app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") });
@@ -42,6 +47,9 @@ app.get("/ProductDetail_3",function(req,res){
 
 
 //Ruta ProductCart
+app.get("/productCart", (req, res) => {
+    res.render("productCart", { titulo: "BikeXtrem Carrito" });
+});
 /*app.get("/ProductCart", function(req, res) {
     res.sendFile(path.resolve(__dirname, "./src/views/products/productCart.html"));
 });*/
