@@ -1,10 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('partials/head')%>
+<head>   
+<%-include('partials/head')%>
+<link href="form_products.css">
+</head> 
     <body>
         <%-include('partials/header')%>
     <main>
-        <h2>Agregar Nuevo Producto</h2>
+        <div class="tabs">
+            <div class="tabs__sidebar">
+                <button class="tabs__button" data-for-tab="1">Agregar Producto</button>
+                <button class="tabs__button" data-for-tab="2">Editar Producto</button>
+            </div>
+            <div class="tabs__content" data-tab="1">
+                <h2>Agregar Nuevo Producto</h2>
+                <form  method="get" class="create-form">
+                    <div>
+                        <label>Código Producto</label>
+                        <input type="text" name="codigo_producto" id="codigo_producto" placeholder="Codigo Producto" required>
+                    </div>
+                    <div>
+                        <label>Nombre</label>
+                        <input type="text" name="nombre_producto" id="nombre_producto" placeholder="Nombre Producto" required>
+                    </div>
+                    <div>
+                        <label>Marca</label>
+                        <input type="text" name="marca" id="marca" placeholder="Marca" required>
+                    </div>
+                    <div>
+                        <label>Talle</label>
+                        <input type="text" name="talle_producto" id="talle_producto" placeholder="Talle" required >
+                    </div>
+                    <div>
+                            <label for="categoria">Categoria y Subcategoria</label>
+                            <select id="categoria" name="categoria">
+                                <optgroup label="Bicicletas">
+                                    <option value="ruta">Ruta</option>
+                                    <option value="MTB">MTB</option>
+                                    <option value="descenso" >Descenso</option>
+                                  </optgroup>
+                                  <optgroup label="Repuestos">
+                                    <option value="cadenas">Cadenas</option>
+                                    <option value="cubiertas">Cubiertas</option>
+                                    <option value="descarriladores">Descarriladores</option>
+                                  </optgroup>
+                                  <optgroup label="Indumentaria">
+                                    <option value="calzas">Calzas</option>
+                                    <option value="guantes">Guantes</option>
+                                    <option value="remeras">Remeras</option>
+                                  </optgroup>
+                            </select>
+                        <div>
+                            <label for="descripcion">Descripcion Producto (Optional)</label>
+                            <textarea rows="5" id="descripion" name="descripcion"></textarea>
+                        </div>    
+                        </div>
+                            <label>Foto de Producto</label>
+                            <input type="file" name="fotoProducto" id="fotoProducto" required>
+                        <div>
+                                <button type="submit" value="Guardar y volver al Home"><a href="/">GUARDAR</a></button>
+                        </div>
+            </div>
+        <div class="tabs__content" data-tab="2">
+         <h2>Agregar Nuevo Producto</h2>
         <form  method="get" class="create-form">
             <div>
                 <label>Código Producto</label>
@@ -46,6 +104,7 @@
                     <textarea rows="5" id="descripion" name="descripcion"></textarea>
                 </div>    
                 </div>
+                <div>
                     <label>Foto de Producto</label>
                     <input type="file" name="fotoProducto" id="fotoProducto" required>
                 </div>
@@ -53,6 +112,8 @@
                         <button type="submit" value="Guardar y volver al Home"><a href="/">GUARDAR</a></button>
                 
                 </div>
+            </div>
+        </div>
     </main>
     <footer>
         <%-include('partials/footer')%>
