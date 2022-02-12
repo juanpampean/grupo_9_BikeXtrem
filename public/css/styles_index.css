@@ -272,6 +272,7 @@ footer div {
    }
    footer {
       display:flex;
+      justify-content:space-between;
    }
    .logo {
       display:block;
