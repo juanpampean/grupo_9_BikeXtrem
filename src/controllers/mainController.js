@@ -4,10 +4,12 @@ const path = require('path');
 //TODO: crear el mainController con el index y el about
 const mainController = {
     index: (req, res) => {
-        res.sendFile(path.join(__dirname, '../views/users/index.html'));
+          res.render('index')
+      /*  res.sendFile(path.join(__dirname, '../views/users/index.html'))*/;
     },
     login_Registro: (req, res) => {
-        res.sendFile(path.join(__dirname, '../views/users/login_Registro.html'));
+          res.render('login_Registro')
+        /*res.sendFile(path.join(__dirname, '../views/users/login_Registro.ejs'))*/;
     },
 };
 
