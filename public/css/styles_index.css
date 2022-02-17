@@ -12,41 +12,7 @@
       font-family: 'Montserrat', sans-serif;
    }
 
-header .top-header {
-   display: block;
-   background-color:#0D353F;
-   padding:20px;
-   justify-content: space-between;
-   height:50px;
-}
 
-header .cuenta a {
-   margin:5px;
-   color:#72CDAE;
-}
-
-header .mid-header {
-   display:block;
-   background-color:#72CDAE ;
-   height:120px;
-   justify-content: space-between;
-   position:relative;
-   
-}
-.carrito {
-   color:black;
-}
-header .mid-header div {
-   padding:0px 50px 0px 20px;
-   align-self: center;
-   font-size:150%;  
-}
-
-.logo {
-   display:flex;
-   font-size:200%;
-   text-align:center;
-}
 
 .contacto a { 
    padding:20px;
@@ -54,23 +20,11 @@ header .mid-header div {
    
 }
 
-.low-header {
-   display:block;
-   background-color:#0D353F;
-   justify-content: center;
-}
-
-.low-header a {
-      margin:5px;
-      color:#72CDAE;
-      padding:10px
-   }
-
   main {
       background-color: #E6DAC6 ;
       
    }
-   .container-slider {
+   main .container-slider {
       display:block;
       margin:auto;
       background-color: #E6DAC6;
@@ -111,7 +65,7 @@ header .mid-header div {
       opacity:1;
    }
 
-   .menu {
+   main .menu {
       position:absolute;
       text-align:center;
       left:10px;
@@ -120,11 +74,11 @@ header .mid-header div {
       
 
    }
-   .menu li {
+   main .menu li {
       display:inline-flex;      
       text-align: center;
    }
-   .menu li a{
+   main .menu li a{
       display:inline-block;
       color:white;
       text-decoration: none;
@@ -145,7 +99,7 @@ header .mid-header div {
       justify-content: space-between;
       align-items:center;
    }
-   .titulo_ofertas {
+   main .titulo_ofertas {
       display:block;
       background-color:#E6DAC6;
       font-size:30px;
@@ -192,74 +146,9 @@ header .mid-header div {
       left:10px;
    }
 
-footer {
-   display:block;
-   background-color:#0D353F;
-   color:#72CDAE;
-   justify-content: space-between;
-}
 
-.logo_mision {
-   text-align:left;
-   position: relative;
-   min-height: 1px;
-   padding-right: 15px;
-   padding-left: 15px; 
-}
-
-footer .logo {
-   display:flex;
-   justify-content: column;
-   font-size:40px
-}
-
-footer div {
-   padding:15px;
-}
-.menu-footer-menu-1 {
-   
-   list-style:none;
-}
-.menu-footer-menu-1 a {
-   text-decoration:none;
-   color:#72CDAE 
-}
-.contacto {
-   list-style:none;
-}
-.contacto li {
-   margin:5px;
-}
-
-@media (min-width:361px) {
-   header .top-header {
-   display: block;
-   background-color:#0D353F;
-   padding:20px;
-   justify-content: space-between;
-   height:auto;
-   }
-   header .mid-header {
-      display:block;
-      height:auto;
-   }
-
-   }
 
 @media (min-width:769px) {
-   header .top-header {
-         display: flex;
-         background-color:#0D353F;
-         padding:20px;
-         justify-content: space-between;
-         height:50px;
-      }
-   header .mid-header {
-         display:flex;
-      }
-   .low-header {
-         display:flex;
-      }
    .container-slider {
          display:flex;
       }
@@ -270,11 +159,4 @@ footer div {
    main .ofertas-carousel {
       display:flex;
    }
-   footer {
-      display:flex;
-   }
-   .logo {
-      display:block;
-      font-size:200%;
-      text-align:center;
-   }}
+}

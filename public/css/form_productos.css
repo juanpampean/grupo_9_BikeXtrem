@@ -1,0 +1,41 @@
+.tabs {
+    border: 1px solid #cccccc;
+    display:flex;
+    justify-content: space-around;
+    padding:10px;
+}
+
+.tabs__content {
+    padding:15px;
+    font-size:0.8rem;
+    border:2px solid black;
+    border-radius:10px;
+}
+.tabs__content button a {
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.tabs .create-form div {
+    margin:5px;
+}
+
+.delete_product {
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    border:2px solid black;
+    padding:10px;
+    border-radius: 8px;
+    margin-bottom:10px;
+    width:50%;
+    text-align: center;
+}
+
+.delete_product input {
+    width:40%;
+}
+
+.delete_product button a {
+    text-decoration: none;
+}

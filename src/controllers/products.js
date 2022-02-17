@@ -16,6 +16,9 @@ const products = {
     detalle_producto3: (req, res) => {
         res.render('productDetail_3');
     },
+    form_producto: (req, res) => {
+        res.render('form_productos');
+    },
 }
 
 //TODO: exportar el modulo

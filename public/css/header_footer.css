@@ -1,0 +1,169 @@
+ /* HEADER */
+
+ *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Monserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+}
+
+header .top-header{
+    display: flex;
+    background-color: #0D353F;
+    padding: 1.5rem;
+    justify-content: space-between;
+    height: 50%;
+    width: 100%;
+}
+
+header .cuenta a{
+    margin: 0.5rem;
+    color: #72CDAE;
+}
+
+header .mid-header{
+    display: flex;
+    background-color: #72CDAE;
+    height: 8rem;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.carrito{
+    color: black;
+}
+
+header .mid-header div {
+    padding: 0rem 3.2rem 0rem 1.3rem;
+    align-self: center;
+    font-size: 150%;
+}
+
+.logo {
+    display: flex;
+    font-size: 200%;
+    justify-content: center;
+}
+
+.contacto a{
+    padding: 1.25rem;
+}
+
+.low-header{
+    display: flex;
+    background-color: #0D353F;
+    justify-content: center;
+}
+
+.low-header a{
+ margin: 0.5rem;
+ color: #72CDAE;
+ padding: 0.6rem;
+}
+.burger-menu{
+ margin: 0.5rem;
+ color: black;
+ padding: 0.6rem;
+}
+
+
+/* FOOTER */
+
+footer{
+ display: flex;
+ background-color: #0D353F;
+ color:#72CDAE;
+ justify-content: space-between;
+ padding: 1rem;
+}
+
+.logo-mision{
+ text-align: center;
+}
+
+footer .logo{
+ display: flex;
+ justify-content: column;
+ font-size: 2.5rem;
+}
+
+footer div{
+ padding: 1rem;
+ justify-content: center;
+ align-items: center;    
+}
+
+ footer .menu-item, .servicio{
+ list-style-type: none;
+ text-decoration: none;
+ color: #72CDAE;
+ box-shadow: none;
+ text-decoration-color: #72CDAE;
+}
+
+h3{
+ text-align: center;
+}
+footer .servicio, .contacto-2{
+ text-align: left;
+}
+
+
+
+@media (max-width:768px){
+ header{
+     width: 100%;
+ }
+ header .low-header a{
+     display: none;
+ }
+ .contacto{
+     display: none;
+ }
+ .logo{
+     display: block;
+     text-align: center;
+ } 
+
+ footer{
+     display: flex;
+     flex-direction: column;
+ }
+
+ footer .menu-footer-menu-1{
+     display: flex;
+     justify-content: center;
+     justify-items: center;
+ }
+
+ footer .servicio, .contacto-2{
+     text-align: center;
+     justify-content: center;
+     color: #72CDAE;
+ }
+
+ .contacto-1{
+     visibility: visible;
+     font-size: 150%;
+     text-align: center;
+ }
+
+ .burger-menu a{
+   display: none;
+ }
+}
+
+@media (min-width:769px){
+ .burger-menu{
+     display: none;
+ }
+
+ .contacto-1{
+     display: none;
+ }
+}

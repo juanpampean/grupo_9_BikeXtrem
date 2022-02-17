@@ -2,23 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Carrito
-    </title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <script src="https://kit.fontawesome.com/98d109f5a6.js" crossorigin="anonymous"></script>
+    <%-include('partials/head')%>
     <link href="static/css/style_productCart.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
         <%-include('partials/header')%>
-    </header>
-
     <main>
 
         <div class="botones">
@@ -155,40 +144,8 @@
                 </div>
             </div>
     </main>
-</body>
-<footer>
-    <div class="logo_mision ">
-        <a class="logo "><i class="fas fa-bicycle "></i>BikeXtrem</a>
-                    <p class="mision ">"BikeXtrem es una empresa dedicada a <br>brindar todo lo necesario <br>para que nuestros clientes <br>tengan la mejor experiencia <br> posible sobre sus bicicletas."<br></p>
-                    </a>
-            </div>
-            <div>
-                <h3>Contacto</h3>
-                <ul>
-                    <li><i class="fa fa-map-marker pad5"></i>Coronel Pringles 132, Barrio General Paz</li>
-                    <li>Córdoba,Argentina</li>
-                    <li>555-5555</li>
-                    <li>atencionalcliente@BikeXtrem.com</li>
-                    <li class="iconosredes">
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-facebook-square"></i>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3>Servicio al cliente</h3>
-                <ul id="menu-footer-menu-1" style="touch-action: pan-y;">
-                    <li class="menu-item"><a href="#">Envíos</a></li>
-                    <li class="menu-item"><a href="#">¿Cómo comprar?</a></li>
-                    <li class="menu-item"><a href="#">Formas de pago</a></li>
-                    <li class="menu-item"><a href="#">Políticas de privacidad</a></li>
-                    <li class="menu-item"><a href="#">Políticas de compras</a></li>
-                    <li class="menu-item"><a href="#">Políticas de cambios y devoluciones</a></li>
-                    <li class="menu-item"><a href="#">Términos y condiciones</a></li>
-                    <li class="menu-item"><a href="#">Faqs</a></li>
-                </ul>
-            </div>
-            </footer>
+
+<%-include('partials/footer')%>
 </body>
 
 </html>

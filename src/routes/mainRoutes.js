@@ -14,6 +14,7 @@ router.get('/ProductCart', products.carrito);
 router.get('/ProductDetail', products.detalle_producto);
 router.get('/ProductDetail_2', products.detalle_producto2);
 router.get('/ProductDetail_3', products.detalle_producto3);
+router.get('/form_productos', products.form_producto);
 
 
 
