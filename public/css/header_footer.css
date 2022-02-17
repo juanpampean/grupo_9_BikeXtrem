@@ -98,7 +98,7 @@ footer div{
  align-items: center;    
 }
 
- footer .menu-item, .servicio{
+ footer .menu-footer-menu-1, .servicio{
  list-style-type: none;
  text-decoration: none;
  color: #72CDAE;
@@ -133,12 +133,11 @@ footer .servicio, .contacto-2{
  footer{
      display: flex;
      flex-direction: column;
+     text-align: center;
  }
 
- footer .menu-footer-menu-1{
-     display: flex;
-     justify-content: center;
-     justify-items: center;
+.menu-footer-menu-1{
+     text-align: center;
  }
 
  footer .servicio, .contacto-2{
