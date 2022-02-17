@@ -3,7 +3,7 @@ const express = require('express');
 
 //TODO: agregar el mainController
 const mainController = require('../controllers/mainController');
-const product = require('../controllers/products');
+const products = require('../controllers/products');
 //TODO: agregar el router
 const router = express.Router();
 

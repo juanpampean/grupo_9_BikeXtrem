@@ -3,16 +3,18 @@ const path = require('path')
 const products = {
     carrito: (req, res) => {
         res.render('productCart');
+        /*res.sendFile(path.join(__dirname, '../views/products/productCart2.html'))*/
     },
 
     detalle_producto: (req, res) => {
-        res.sendFile(path.join(__dirname, '../views/products/productDetail.html'));
+        res.render('productDetail');
+        
     },
     detalle_producto2: (req, res) => {
-        res.sendFile(path.join(__dirname, '../views/products/productDetail_2.html'));
+        res.render('productDetail_2');
     },
     detalle_producto3: (req, res) => {
-        res.sendFile(path.join(__dirname, '../views/products/productDetail_3.html'));
+        res.render('productDetail_3');
     },
 }
 
