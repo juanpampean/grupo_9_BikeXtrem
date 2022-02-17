@@ -98,7 +98,7 @@ footer div{
  align-items: center;    
 }
 
-.menu-item, .servicio{
+ footer .menu-item, .servicio{
  list-style-type: none;
  text-decoration: none;
  color: #72CDAE;
@@ -156,36 +156,6 @@ footer .servicio, .contacto-2{
  .burger-menu a{
    display: none;
  }
-
- /* Aquí comienza el código del script*/
- .aside{
-     background-color: var(--items-color);
-     width: 16rem;
-     position: absolute;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     overflow-y: hidden;
-     margin-top: 3.6rem;
-     transition: 0.5s;
- }
-
- .aside:hover{
-     overflow-y: auto;
- }
-
- .desplegar{
-     transform: translateX(-100%);
- }
- .aside::-webkit-scrollbar{
-     width: 0.5rem;
- }
- aside::-webkit-scrollbar-thumb{
-     background-color: black;
-     border-radius: 5px;
- }
-
-
 }
 
 @media (min-width:769px){
@@ -196,5 +166,4 @@ footer .servicio, .contacto-2{
  .contacto-1{
      display: none;
  }
-
 }

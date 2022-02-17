@@ -192,12 +192,7 @@ header .mid-header div {
       left:10px;
    }
 
-footer {
-   display:block;
-   background-color:#0D353F;
-   color:#72CDAE;
-   justify-content: space-between;
-}
+
 
 .logo_mision {
    text-align:left;
@@ -207,29 +202,9 @@ footer {
    padding-left: 15px; 
 }
 
-footer .logo {
-   display:flex;
-   justify-content: column;
-   font-size:40px
-}
 
-footer div {
-   padding:15px;
-}
-.menu-footer-menu-1 {
-   
-   list-style:none;
-}
-.menu-footer-menu-1 a {
-   text-decoration:none;
-   color:#72CDAE 
-}
-.contacto {
-   list-style:none;
-}
-.contacto li {
-   margin:5px;
-}
+
+
 
 @media (min-width:361px) {
    header .top-header {
@@ -270,12 +245,4 @@ footer div {
    main .ofertas-carousel {
       display:flex;
    }
-   footer {
-      display:flex;
-      justify-content:space-between;
-   }
-   .logo {
-      display:block;
-      font-size:200%;
-      text-align:center;
-   }}
+}
