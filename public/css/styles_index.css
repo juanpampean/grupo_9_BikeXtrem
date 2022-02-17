@@ -13,11 +13,6 @@
    }
 
 
-.logo {
-   display:flex;
-   font-size:200%;
-   text-align:center;
-}
 
 .contacto a { 
    padding:20px;
@@ -29,7 +24,7 @@
       background-color: #E6DAC6 ;
       
    }
-   .container-slider {
+   main .container-slider {
       display:block;
       margin:auto;
       background-color: #E6DAC6;
@@ -70,7 +65,7 @@
       opacity:1;
    }
 
-   .menu {
+   main .menu {
       position:absolute;
       text-align:center;
       left:10px;
@@ -79,11 +74,11 @@
       
 
    }
-   .menu li {
+   main .menu li {
       display:inline-flex;      
       text-align: center;
    }
-   .menu li a{
+   main .menu li a{
       display:inline-block;
       color:white;
       text-decoration: none;
@@ -104,7 +99,7 @@
       justify-content: space-between;
       align-items:center;
    }
-   .titulo_ofertas {
+   main .titulo_ofertas {
       display:block;
       background-color:#E6DAC6;
       font-size:30px;
@@ -150,19 +145,6 @@
       top:10px;
       left:10px;
    }
-
-
-
-.logo_mision {
-   text-align:left;
-   position: relative;
-   min-height: 1px;
-   padding-right: 15px;
-   padding-left: 15px; 
-}
-
-
-
 
 
 

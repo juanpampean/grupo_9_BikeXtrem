@@ -10,7 +10,7 @@
         <div class="tabs">
             <div class="tabs__content" data-tab="2">
                 <h2>Agregar Producto</h2>
-               <form  method="post" class="create-form">
+               <form  method="POST" class="create-form">
                    <div>
                        <label>Código Producto</label>
                        <input type="text" name="codigo_producto" id="codigo_producto" placeholder="Codigo Producto" required>
@@ -67,7 +67,7 @@
 
             <div class="tabs__content" data-tab="2">
          <h2>Editar Producto</h2>
-        <form  method="put" class="create-form">
+        <form  method="PUT" class="create-form">
             <div>
                 <label>Producto a editar</label>
                 <input type="search" name="codigo_producto" id="codigo_producto" placeholder="Buscar Producto a editar" required>
@@ -125,7 +125,6 @@
     <div class="delete_product">
         <form method="DELETE">
         <h2>Eliminar Producto</h2>
-        <label></label>
         <input type="search" name="Busquedaproductos" placeholder="Buscar Producto a eliminar">
         <button type="submit" value="Guardar y volver al Home"><a href="/">ELIMINAR PRODUCTO</a></button> 
         </form>
