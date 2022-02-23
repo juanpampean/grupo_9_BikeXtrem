@@ -36,3 +36,36 @@
 
 ● Qué vamos a hacer hoy:
 * Googlear mejoras en los Styles de CSS.
+
+// Reunión Semanal o Weekly 23/02/2022 //
+
+  ● Qué se hizo ayer:
+* Se creó la carpeta Data Con Lista de productos y Usuarios.
+
+● Si se encontró con algún impedimento.
+* Ser ajustaron a Mobile First los archivos partials de Footer, Head y Header.
+* La modificación con Mobile First va en mejora contínua.
+
+● Qué vamos a hacer hoy:
+* Realizar las respectivas Rutas:
+
+///Kerby:///
+1. /products (GET)
+Listado de productos
+2. /products/create (GET)
+Formulario de creación de productos
+3. /products/:id (GET)
+Detalle de un producto particular
+
+///Kristina:///
+4. /products (POST)
+Acción de creación (a donde se envía el formulario)
+5. /products/:id/edit (GET)
+Formulario de edición de productos
+
+///Jonima:///
+6. /products/:id (PUT)
+Acción de edición (a donde se envía el formulario):
+7. /products/:id (DELETE)
+Acción de borrado
+
