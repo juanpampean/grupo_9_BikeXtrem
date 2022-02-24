@@ -19,3 +19,18 @@ Retro Sobre Sprint 2:
 2. Hacer mas:
    a) Compartir ideas de mejoras en el producto actual (detalles y funcionalidades)
    b) Compartir dudas y necesidades de cada una de las tareas
+   
+   
+Retro Sobre Sprint 3:
+1. Comenzar a hacer: 
+   a) Reforzar los conocimientos vistos en Clases.
+   b) Chequear la funcionalidad de la aplicación continuamente.
+
+2. Hacer más: 
+   a) Agendar reuniones (Dia 1 Sprint, Dia 7/8 Sprint, Dia -4 de final Sprint)
+
+3. Continuar haciendo: 
+   a) Ayudandonos en nuestras tareas.
+   b) Pasar de hacer 1 sola reunión a hacer 1 weekly o 3 en un sprint 
+4. Hacer menos: no hay lugar para hacer menos...!
+5. Dejar de hacer: tampoco!
