@@ -9,12 +9,11 @@ app.use("/static", express.static(__dirname + "/public"));
 
 // Renderizando las Vistas con el motor de plantillas
 app.set('view engine', 'ejs');
-/*app.set('views', path.join(__dirname, 'views'))*/
+/*app.set('views', path.join(__dirname, 'views'));*/ // Define la ubicación de la carpeta de las Vistas
+// ************ Template Engine - (don't touch) ************
 
-/*app.set ('views/products', './src/views/products')*/;
-app.set ('views', './src/views/');
-
-
+/*app.set ('views/products', './src/views/products')*/
+app.set('views', './src/views/');
 
 //Levantando servidor
 app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") });
@@ -22,7 +21,6 @@ app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") }
 // AGREGAMOS ROUTER:
 const rutas = require('./src/routes/mainRoutes.js');
 app.use('/', rutas);
-
 
 //Ruta Home
 /*app.get("/", function(req, res) {
@@ -56,4 +54,7 @@ app.get("/ProductDetail_3",function(req,res){
 });
 /*app.get("/ProductCart", function(req, res) {
     res.sendFile(path.resolve(__dirname, "./src/views/products/productCart.html"));
-});*/
+});
+*/
+
+module.exports = app;

@@ -1,9 +1,9 @@
 //TODO: agregar express
 const express = require('express');
 
-//TODO: agregar el mainController
+//TODO: agregar el Controller
 const mainController = require('../controllers/mainController');
-const products = require('../controllers/productController');
+const productController = require('../controllers/productController');
 //TODO: agregar el router
 const router = express.Router();
 
