@@ -1,4 +1,18 @@
 const path = require('path')
+const fs = require("fs");
+
+function findAll(){
+   let data = fs.readFileSync(path.join(__dirname, "../data/listadoProductos.json"), "utf-8")
+   let productos = JSON.parse(data);
+   return productos
+}
+function writeFile(array){
+    let string = JSON.stringify(array, null, 4)
+    fs.writeFileSync(path.join(__dirname, "../data/listadoProductos.json"), string)
+}
+
+//*---------------------------------------------------------------------------------------------*//
+
 
 const products = {
     carrito: (req, res) => {
