@@ -8,7 +8,7 @@
 /* Aqui comienza CSS Juan */
 
 
-
+/*
 header .top-header {
     display: flex;
     background-color:#0D353F;
@@ -48,6 +48,7 @@ header .top-header {
 
  .bikextrem{
     color: black;
+   
  }
  
  .contacto a { 
@@ -67,6 +68,8 @@ header .top-header {
        color:#72CDAE;
        padding:10px
     }
+
+    */
 
     main {
         display:flex;
@@ -382,25 +385,26 @@ body{
 }
 
 
-@media (min-width:361px) {
-   /* Tablets */
-   header .top-header {
-   display: block;
-   background-color:#0D353F;
-   padding:20px;
-   justify-content: space-between;
-   height:auto;
-   }
-   header .mid-header {
-      display:block;
+
+  /*@media (min-width:361px) {*/
+      /* Tablets */
+   /*   header .top-header {
+      display: block;
+      background-color:#0D353F;
+      padding:20px;
+      justify-content: space-between;
       height:auto;
-   }
+      }
+      header .mid-header {
+         display:block;
+         height:auto;
+      }
 
-   }
+   } */
 
-@media (max-width: 360px) {
+   /*@media (max-width: 360px) {*/
    /* Mobile */
-   header .top-header {
+  /* header .top-header {
          display: flex;
          background-color:#0D353F;
          padding:20px;
@@ -428,4 +432,6 @@ body{
       display:block;
       font-size:200%;
       text-align:center;
-   }}
+   }}*/
+
+   

@@ -63,7 +63,7 @@ Acción de creación (a donde se envía el formulario)
 5. /products/:id/edit (GET)
 Formulario de edición de productos
 
-///Jonima:////
+///Jonima:///
 6. /products/:id (PUT)
 Acción de edición (a donde se envía el formulario):
 7. /products/:id (DELETE)
