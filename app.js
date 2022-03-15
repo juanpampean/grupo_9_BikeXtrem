@@ -1,10 +1,14 @@
 const express = require("express");
 const app = express();
+const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 //Necesario para sobreescribir el json
 const bp = require('body-parser');
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: true }))
+
+// Pasar poder pasar el method="POST" en el formulario por PUT y DELETE
+app.use(methodOverride('_method')); 
 
 //Requiriendo path
 const path = require("path");
