@@ -2,21 +2,31 @@
 const express = require('express');
 
 //TODO: agregar el Controller
-const mainController = require('../controllers/mainController');
 const productController = require('../controllers/productController');
+
 //TODO: agregar el router
 const router = express.Router();
 
-//TODO: agregar el controller index y about
-router.get('/', mainController.index);
-router.get('/Login', mainController.login_Registro);
-router.get('/ProductCart', products.carrito);
-router.get('/ProductDetail', products.detalle_producto);
-router.get('/ProductDetail_2', products.detalle_producto2);
-router.get('/ProductDetail_3', products.detalle_producto3);
-router.get('/form_productos', products.form_producto);
+/*** ---------------------------------------------------------------------------------------------- ***/
 
+router.get('/form_productos', productController.form_producto);
 
+/*** GET ALL PRODUCTS ***/  
+router.get("/listadoDeProductos",productController.listadoDeProductos);
+
+/*** CREATE ONE PRODUCT ***/ 
+router.get('/create', productController.create); 
+router.post('/create', productController.store); 
+
+/*** GET ONE PRODUCT ***/ 
+router.get('/detail/:id', productController.detail); 
+
+/*** EDIT ONE PRODUCT ***/ 
+router.get("/edit/:id", productController.edit);
+router.put("/edit/:id", productController.update);
+
+/*** DELETE ONE PRODUCT***/ 
+router.delete("/delete/:id", productController.destroy);
 
 
 //TODO: exportar el modulo
