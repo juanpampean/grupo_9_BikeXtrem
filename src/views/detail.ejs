@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <base href="/">
+    <%-include('partials/head')%>
+    <link href="/static/css/style_listadoProduct.css" rel="stylesheet">
+</head>
+
+<body>
+    <%-include('partials/header')%>
+
+    <main>
+        <div class="listado-caja">
+            <article>
+                <div class="image-container">
+                    <img src="/static/images/BMC_3.png" alt="bici" width="50%">
+                </div>
+                <p> Información de la Bicicleta</p>
+                
+                <ul>
+                    <li><strong>Nombre:</strong> <%= productFound.nombre %> </li>
+                    <li><strong>Marca:</strong> <%= productFound.marca %> </li>
+                    <li><strong>Precio:</strong> <%= productFound.precio %> </li>
+                    <li><strong>Cuadro:</strong> <%= productFound.TalleCuadro %> </li>
+                    <li><strong>Descripción:</strong> <%= productFound.Descripcion %> </li>
+                    <li><strong>Rodado:</strong> <%= productFound.Rodado %> </li>
+                    <li><strong>Velocidades:</strong> <%= productFound.Velocidades %> </li>
+                    <li><strong>Color:</strong> <%= productFound.Color %> </li>
+                </ul>
+            </article>
+        </div>
+    </main>
+
+
+        <%-include('partials/footer')%>    
+</body>
+
+</html>

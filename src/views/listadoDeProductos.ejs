@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <base href="/">
+    <%-include('partials/head')%>
+    <link href="/static/css/style_listadoProduct.css" rel="stylesheet">
+<body>
+    <%-include('partials/header')%>
+
+    <main>
+        <div class="listado-caja">
+            <% producto.forEach(function(producto) { %>
+
+            <article>
+                <a href="/product/detail/<%= producto.id %>">        
+                        <div class="image-container">
+                            <img src="static/images/BMC_3.png" alt="bici" width="50%">
+                        </div>
+                        <p> Información de la Bicicleta</p>
+                        
+                        <ul>
+                            <li><strong>Nombre:</strong> <%= producto.nombre %> </li>
+                            <li><strong>Marca:</strong> <%= producto.marca %> </li>
+                            <li><strong>Precio:</strong> <%= producto.precio %> </li>
+                            <li><strong>Cuadro:</strong> <%= producto.TalleCuadro %> </li>
+                            <li><strong>Descripción:</strong> <%= producto.Descripcion %> </li>
+                            <li><strong>Rodado:</strong> <%= producto.Rodado %> </li>
+                            <li><strong>Velocidades:</strong> <%= producto.Velocidades %> </li>
+                            <li><strong>Color:</strong> <%= producto.Color %> </li>
+                        </ul>
+                </a>
+            </article>
+                
+            <% }) %>
+        </div>
+    </main>
+
+
+        <%-include('partials/footer')%>    
+</body>
+
+</html>
