@@ -14,8 +14,8 @@
                 <h2>Agregar Producto</h2>
                
                    <div>
-                       <label  for="nombre_producto">Nombre</label>
-                       <input type="text" name="nombre_producto" id="nombre_producto" placeholder="Nombre Producto" required>
+                       <label  for="nombre">Nombre</label>
+                       <input type="text" name="nombre" id="nombre" placeholder="Nombre Producto" required>
                    </div>
                    <div>
                        <label  for="marca" >Marca</label>
@@ -59,68 +59,56 @@
 
             <div class="tabs__content" data-tab="2">
          <h2>Editar Producto</h2>
-        <form  method="PUT" class="create-form">
+         <form action="/product/edit/<%= product.id%>?_method=PUT"  method="post">
             <div>
                 <label>Producto a editar</label>
-                <input type="search" name="codigo_producto" id="codigo_producto" placeholder="Buscar Producto a editar" required>
+                <input type="search" value="<%= product.id %>" name="codigo_producto" id="codigo_producto" placeholder="Buscar Producto a editar" required>
             </div>
             <div>
                 <label>Nombre</label>
-                <input type="text" name="nombre_producto" id="nombre_producto" placeholder="Nombre Producto" required>
+                <input type="text" value="<%= product.nombre %>"name="nombre" id="nombre" placeholder="Nombre Producto" required>
             </div>
             <div>
                 <label>Marca</label>
-                <input type="text" name="marca" id="marca" placeholder="Marca" required>
+                <input type="text" value="<%= product.marca %>"name="marca" id="marca" placeholder="Marca" required>
             </div>
             <div>
                 <label>Precio</label>
-                <input type="number" name="precio" id="precio" placeholder="Precio" required>
+                <input type="number" value="<%= product.precio %>"name="precio" id="precio" placeholder="Precio" required>
             </div>
             <div>
                 <label>Talle</label>
-                <input type="text" name="talle_producto" id="talle_producto" placeholder="Talle" required >
+                <input type="text" value="<%= product.talle_producto %>"name="talle_producto" id="talle_producto" placeholder="Talle" required >
             </div>
             <div>
-                    <label for="categoria">Categoria y Subcategoria</label>
-                    <select id="categoria" name="categoria">
-                        <optgroup label="Bicicletas">
-                            <option value="ruta">Ruta</option>
-                            <option value="MTB">MTB</option>
-                            <option value="descenso" >Descenso</option>
-                          </optgroup>
-                          <optgroup label="Repuestos">
-                            <option value="cadenas">Cadenas</option>
-                            <option value="cubiertas">Cubiertas</option>
-                            <option value="descarriladores">Descarriladores</option>
-                          </optgroup>
-                          <optgroup label="Indumentaria">
-                            <option value="calzas">Calzas</option>
-                            <option value="guantes">Guantes</option>
-                            <option value="remeras">Remeras</option>
-                          </optgroup>
-                    </select>
-                </div>
+                <label for="rodado">Rodado</label>
+                <input type="text" value="<%= product.rodado %>" name="rodado" id="rodado" placeholder="Rodado" required >
+            </div>
+            <div>
+                <label for="velocidad">Velocidades</label>
+                <input type="text" value="<%= product.velocidad %>" name="velocidad" id="velocidad" placeholder="Velocidad" required >
+            </div>
+            <div>
+                <label for="color">Color</label>
+                <input type="text" value="<%= product.color %>" name="color" id="color" placeholder="Color" required >
+            </div>
                  <div>
                     <label>Foto de Producto</label>
-                    <input type="file" name="fotoProducto" id="fotoProducto" required>
+                    <input type="file" value="<%= product.fotoProducto %>" name="fotoProducto" id="fotoProducto" required>
                 </div>
                 <div>
                     <label for="descripcion">Descripcion Producto (Optional)</label>
-                    <textarea rows="5" id="descripion" name="descripcion"></textarea>
+                    <textarea rows="5" value="<%= product.descripcion %>" id="descripcion" name="descripcion" required ><%= product.descripcion %></textarea>
                 </div>    
                 <div>
-                    <button type="submit" value="Guardar y volver al Home">GUARDAR</a></button>             
+                </form>
+                    <button type="submit" value="Guardar y volver al Home" >EDITAR PRODUCTO</a></button>    <br><br>
+                    <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post" 
+                        >
+                    <button type="submit" value="Guardar y volver al Home">ELIMINAR PRODUCTO</a></button> 
+                    </form>                    
                 </div>
-        </form>
-        </div>
-        </div>
-    <div class="delete_product">
-        <form method="DELETE">
-        <h2>Eliminar Producto</h2>
-        <input type="search" name="Busquedaproductos" placeholder="Buscar Producto a eliminar">
-        <button type="submit" value="Guardar y volver al Home"><a href="/">ELIMINAR PRODUCTO</a></button> 
-        </form>
-    </div>
+        
     </main>
         <%-include('partials/footer')%>
 </body>
