@@ -39,7 +39,7 @@ const controller={
         const producto = findAll();
         let newProduct = {
 			id: producto.length + 1,
-			nombre1: req.body.nombre1,
+			nombre: req.body.nombre,
             marca: req.body.marca,
 			precio: req.body.precio,
 			talle_producto: req.body.talle_producto,
@@ -68,30 +68,34 @@ const controller={
             return elemento.id == req.params.id
         })
 
-        productFound.nombre_producto = req.body.nombre;
+        productFound.nombre = req.body.nombre;
         productFound.marca = req.body.marca;
 		productFound.precio = req.body.precio;
-		productFound.talle_producto = req.body.TalleCuadro;
-		productFound.fotoProducto = req.body.Imagen;
-        productFound.rodado = req.body.Rodado;
-        productFound.velocidades = req.body.Velocidades;
+		productFound.talle_producto = req.body.talle_producto;
+		productFound.fotoProducto = req.body.fotoProducto;
+        productFound.rodado = req.body.rodado;
+        productFound.velocidad = req.body.velocidad;
         productFound.color = req.body.color;
-		productFound.descripcion = req.body.Descripcion;
+		productFound.descripcion = req.body.descripcion;
 
         writeFile(producto);
 
-        res.redirect('/listadoDeProductos')
+        res.redirect("/product/listadoDeProductos")
     },
 
     destroy: (req, res) => {
-        const producto = findAll();
-        let productIndex = producto.findIndex(function(elemento){
-            return elemento.id == req.params.id;
-        })
+        const producto = findAll()
 
-        producto.splice(productIndex,1);
-        writeFile(producto);
-        res.redirect('/listadoDeProductos');
+    //busco el producto y obtengo su indice
+        let productIndex = producto.findIndex(function(elemento){
+            return elemento.id == req.params.id
+        })
+    //elimino el producto que busque, pasando su indice
+        producto.splice(productIndex,1)
+
+
+        writeFile(producto)
+        res.redirect("/product/listadoDeProductos")
     },
 
 
