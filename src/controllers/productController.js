@@ -32,7 +32,7 @@ const controller={
     },
 
     create: (req, res) => {
-        res.render('form_productos');
+        res.render('form_productos_create');
     },
 
     store: (req, res) => {
@@ -59,7 +59,7 @@ const controller={
         let productToEdit = producto.find(function (product) {
 			return product.id == req.params.id
 		})
-        res.render("form_productos",{product:productToEdit})
+        res.render("form_productos_edit",{product:productToEdit})
     },
 
     update: (req, res) => {
@@ -117,7 +117,7 @@ const controller={
     },
 
     form_producto: (req, res) => {
-        res.render('form_productos');
+        res.render('form_productos_create');
     },
 }
 

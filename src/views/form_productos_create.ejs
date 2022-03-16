@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <base href="/">
+    <%-include('partials/head')%>
+    <link href="/static/css/form_productos.css" rel="stylesheet">
+</head> 
+    <body>
+        <%-include('partials/header')%>
+    <main>
+        <div class="tabs">
+            <div class="tabs__content" data-tab="2">
+                <form action="/product/create" method="post"  class="create-form">
+                <h2>Agregar Producto</h2>
+               
+                   <div>
+                       <label  for="nombre">Nombre</label>
+                       <input type="text" name="nombre" id="nombre" placeholder="Nombre Producto" required>
+                   </div>
+                   <div>
+                       <label  for="marca" >Marca</label>
+                       <input type="text" name="marca" id="marca" placeholder="Marca" required>
+                   </div>
+                   <div>
+                       <label for="precio">Precio</label>
+                       <input type="number" name="precio" id="precio" placeholder="Precio" required>
+                   </div>
+                   <div>
+                       <label  for="talle_producto">Talle</label>
+                       <input type="text" name="talle_producto" id="talle_producto" placeholder="Talle" required >
+                   </div>
+                   <div>
+                        <label for="rodado">Rodado</label>
+                        <input type="text" name="rodado" id="rodado" placeholder="Rodado" required >
+                    </div>
+                    <div>
+                        <label for="velocidad">Velocidades</label>
+                        <input type="text" name="velocidad" id="velocidad" placeholder="Velocidad" required >
+                    </div>
+                    <div>
+                        <label for="color">Color</label>
+                        <input type="text" name="color" id="color" placeholder="Color" required >
+                    </div>
+                   
+                        <div>
+                           <label for="fotoProducto">Foto de Producto</label>
+                           <input type="file" name="fotoProducto" id="fotoProducto" required>
+                       </div>
+                       <div>
+                           <label for="descripcion">Descripcion Producto (Optional)</label>
+                           <textarea rows="5" type="text" id="descripcion" name="descripcion"></textarea>
+                       </div>    
+                       <div>
+                           <button type="submit" value="Guardar y volver al Home">GUARDAR</a></button>             
+                       </div>
+               </form>
+            
+            </div>
+        </div>
+        
+    </main>
+        <%-include('partials/footer')%>
+</body>
+</html>

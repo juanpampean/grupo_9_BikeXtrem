@@ -9,7 +9,8 @@ const router = express.Router();
 
 /*** ---------------------------------------------------------------------------------------------- ***/
 
-router.get('/form_productos', productController.form_producto);
+router.get('/form_productos_edit', productController.form_producto);
+router.get('/form_productos_create', productController.form_producto);
 
 /*** GET ALL PRODUCTS ***/  
 router.get("/listadoDeProductos",productController.listadoDeProductos);
