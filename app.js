@@ -30,9 +30,11 @@ app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") }
 // REQUERIMOS RUTAS:
 const rutas = require('./src/routes/mainRoutes');
 const productRoutes = require('./src/routes/productRoutes');
+const usersRoutes = require('./src/routes/usersRoutes');
 
 
 app.use('/', rutas);
 app.use('/product', productRoutes);
+app.use('/users', usersRoutes);
 
 module.exports = app;
