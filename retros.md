@@ -51,5 +51,5 @@ Retro Sobre Sprint 4:
 4. Hacer menos: no hay lugar para hacer menos :) ...!
 
 5. Dejar de hacer: 
-   a) Realizar las tareas con el tiempoal límite.
+   a) Realizar las tareas con el tiempo al límite.
    
