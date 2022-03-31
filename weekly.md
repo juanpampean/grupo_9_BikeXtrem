@@ -75,11 +75,11 @@ Acción de borrado
   ● Qué se hizo ayer:
 * Se revisaron los puntos correspondientes al sprint 5 y sus respectivas asignaciones.
 
-● Si se encontró con algún impedimento.
+  ● Si se encontró con algún impedimento.
 * Se acordó separar los formularios de registro y login para su mejor funcionamiento y control.
 * La modificación con Mobile First va en mejora contínua.
 
-● Qué vamos a hacer hoy:
+  ● Qué vamos a hacer hoy:
 * Asignaciones:
 ///Jonima:///
 5. Implementar el formulario de registro de usuarios.

@@ -43,6 +43,7 @@ Retro Sobre Sprint 4:
 
 2. Hacer más: 
    a) Comunicar los avances detalladamente.
+   b) Reunión a mitad de sprint, para revisar avances.
 
 3. Continuar haciendo: 
    a) Ayudandonos en nuestras tareas.
