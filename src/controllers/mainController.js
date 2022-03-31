@@ -7,10 +7,14 @@ const mainController = {
           res.render('index')
       /*  res.sendFile(path.join(__dirname, '../views/users/index.html'))*/;
     },
-    login_Registro: (req, res) => {
-          res.render('login_Registro')
-        /*res.sendFile(path.join(__dirname, '../views/users/login_Registro.ejs'))*/;
+    login: (req, res) => {
+          res.render('login')
+        /*res.sendFile(path.join(__dirname, '../views/users/login.ejs'))*/;
     },
+    registro: (req, res) => {
+      res.render('registro')
+    /*res.sendFile(path.join(__dirname, '../views/users/registro.ejs'))*/;
+},
 };
 
 //TODO: exportar el modulo

@@ -9,7 +9,6 @@ const router = express.Router();
 
 //TODO: agregar el controller index y about
 router.get('/', mainController.index);
-router.get('/Login', mainController.login_Registro);
 router.get('/ProductCart', productController.carrito);
 router.get('/ProductDetail', productController.detalle_producto);
 router.get('/ProductDetail_2', productController.detalle_producto2);

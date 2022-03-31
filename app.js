@@ -15,6 +15,7 @@ const path = require("path");
 
 //Acceso a archivos estaticos
 app.use('/static', express.static(__dirname + "/public"));
+app.use(express.urlencoded({ extended: false}));
 
 // Renderizando las Vistas con el motor de plantillas
 app.set('view engine', 'ejs');
@@ -30,9 +31,11 @@ app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") }
 // REQUERIMOS RUTAS:
 const rutas = require('./src/routes/mainRoutes');
 const productRoutes = require('./src/routes/productRoutes');
+const usersRoutes = require('./src/routes/usersRoutes');
 
 
 app.use('/', rutas);
 app.use('/product', productRoutes);
+app.use('/users', usersRoutes);
 
 module.exports = app;
