@@ -68,5 +68,35 @@
         "cumpleaños": "2022-03-04",
         "ciudad": "CABA",
         "avatar": "image-default"
+    },
+    {
+        "id": 8,
+        "nombre": "ker",
+        "email": "ker@gmail.com",
+        "contraseña": "$2a$10$zlr4TN6dDi/AzfAxYRzf2.9wNeTFE6d1ulU7UvCQDjmuKC9rwMJPy",
+        "genero": "on",
+        "cumpleaños": "",
+        "ciudad": "ccs",
+        "avatar": "image-default"
+    },
+    {
+        "id": 9,
+        "nombre": "Kerby",
+        "email": "kerbytovar@gmail.com",
+        "contraseña": "$2a$10$f.RM5W8tkAZQbVRVllBpXezEKbRM/VvJ0kjxmcCbLlAbzgH2vsPIK",
+        "genero": "on",
+        "cumpleaños": "1991-03-22",
+        "ciudad": "Caracas",
+        "avatar": "avatar-1648684569458-.png"
+    },
+    {
+        "id": 10,
+        "nombre": "Kerby Tovar",
+        "email": "kerbyt@gmail.com",
+        "contraseña": "$2a$10$3cWTqBRxT/3hd7gguFhRm.aVO.H9FXiBXysNhSVTXYpimUWfUYuVu",
+        "genero": "on",
+        "cumpleaños": "1991-03-22",
+        "ciudad": "CABA",
+        "avatar": "avatar-1648686527879-.png"
     }
 ]

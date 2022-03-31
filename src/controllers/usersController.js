@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
-const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json"), 'utf-8'))
+const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")))
 
 
 function writeFile(array){
@@ -17,7 +17,7 @@ module.exports = {
         res.render("registro");
     },
     processRegister: function (req, res){
-        //console.log(req.file)
+        
            const newUser = {
             id: users.length + 1,
             nombre: req.body.Nombre,
