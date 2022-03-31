@@ -34,3 +34,22 @@ Retro Sobre Sprint 3:
    b) Pasar de hacer 1 sola reunión a hacer 1 weekly o 3 en un sprint 
 4. Hacer menos: no hay lugar para hacer menos...!
 5. Dejar de hacer: tampoco!
+
+
+Retro Sobre Sprint 4:
+1. Comenzar a hacer: 
+   a) Iniciar los avances la primera semana luego de iniciado el sprint.
+   b) Chequear la funcionalidad de la aplicación continuamente.
+
+2. Hacer más: 
+   a) Comunicar los avances detalladamente.
+
+3. Continuar haciendo: 
+   a) Ayudandonos en nuestras tareas.
+   b) Pasar de hacer 1 sola reunión a hacer 1 weekly o 3 en un sprint.
+
+4. Hacer menos: no hay lugar para hacer menos :) ...!
+
+5. Dejar de hacer: 
+   a) Realizar las tareas con el tiempoal límite.
+   
