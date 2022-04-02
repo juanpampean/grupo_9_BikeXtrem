@@ -1,11 +1,21 @@
 const express = require("express");
 const app = express();
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const cookieParser = require('cookie-parser');
+const session = require("express-session");
+
+
 
 //Necesario para sobreescribir el json
 const bp = require('body-parser');
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: true }))
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true
+}))
+
 
 // Pasar poder pasar el method="POST" en el formulario por PUT y DELETE
 app.use(methodOverride('_method'));
@@ -15,7 +25,7 @@ const path = require("path");
 
 //Acceso a archivos estaticos
 app.use('/static', express.static(__dirname + "/public"));
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 // Renderizando las Vistas con el motor de plantillas
 app.set('view engine', 'ejs');

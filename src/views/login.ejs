@@ -2,29 +2,46 @@
 <html lang="en">
 
 <head>
-        <base href="/">
-        <%-include('partials/head')%>
-        <link href="/static/css/login_style.css" rel="stylesheet"> 
+    <base href="/">
+    <%-include('partials/head')%>
+        <link href="/static/css/login_style.css" rel="stylesheet">
 </head>
-<body>
-        <%-include('partials/header')%>
-    <main>
-        <div class="container">
-            <div class="container2">
-                <section class="login">
-                    <h4>Ingresar</h4>
-                    <input class="datosingresados1" type="text" name="email" placeholder="Email" />
-                    <input class="datosingresados1" type="text" name="contraseña" placeholder="Contraseña" /><br>
-                    <input class="boton1" type="submit" name="" value="Ingresar" /><br>
-                    <label class="recuerdame">Recuerdame  </label><input class="recuerdame" type="checkbox" name="Recuerdame" id=recuerdame/><br>
-                    <label class="olvide"><a href="#">Olvide mi contraseña</a></label>
 
-                </section>
-                
+<body>
+    <%-include('partials/header')%>
+        <main>
+            <div class="container">
+                <div class="container2">
+                    <section class="login">
+                        <form action="/users/login" method="POST">
+                            <h4>Ingresar</h4>
+                            <input class="datosingresados1" type="text" name="email" placeholder="Email" />
+                            <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
+                                <span style="color:red">
+                                <%=locals.errorsLogin.email.msg %>
+                                    </span>
+                                <% } %>
+                                    <input class="datosingresados1" type="text" name="contraseña" placeholder="Contraseña" />
+                                    <% if(locals.errorsLogin && locals.errorsLogin.contraseña){ %>
+                                        <span style="color:red">
+                                        <%=locals.errorsLogin.contraseña.msg %>
+                                            </span>
+                                        <% } %>
+                                            <br>
+                                            <input class="boton1" type="submit" name="" value="Ingresar" /><br>
+                                            <label class="recuerdame">Recuerdame  </label><input class="recuerdame" type="checkbox" name="Recuerdame" id=recuerdame/><br>
+                                            <label class="olvide"><a href="#">Olvide mi contraseña</a></label>
+
+                        </form>
+                        <% if(locals.errorsMsg){ %>
+                            <span style="color:red">
+                            <%=errorsMsg %></span>
+                            <% } %>
+                    </section>
+                </div>
             </div>
-        </div>
-    </main>
-    <%-include('partials/footer')%>
+        </main>
+        <%-include('partials/footer')%>
 </body>
 
 </html>

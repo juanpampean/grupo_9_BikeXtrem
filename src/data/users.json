@@ -98,5 +98,45 @@
         "cumpleaños": "1991-03-22",
         "ciudad": "CABA",
         "avatar": "avatar-1648686527879-.png"
+    },
+    {
+        "id": 11,
+        "nombre": "Mirena",
+        "email": "mir123456@gmail.com",
+        "contraseña": "$2a$10$df7iP6jJIQx84PzPzpEhOOQypdkumK6u6fL2jJBQ21f8dpsLzw3TW",
+        "genero": "on",
+        "cumpleaños": "1997-03-12",
+        "ciudad": "CABA",
+        "avatar": "avatar-1648736899404-.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "Pablo",
+        "email": "p1234@gmail.com",
+        "contraseña": "$2a$10$q55ksRAPg4RSPdtWAbWl2uSkCwQ24GhMUuooKE6M9nIK96dAHHxn6",
+        "genero": "on",
+        "cumpleaños": "2000-01-02",
+        "ciudad": "Mendoza",
+        "avatar": "avatar-1648749161673-.jpg"
+    },
+    {
+        "id": 13,
+        "nombre": "Luna",
+        "email": "l2345@yje.dn",
+        "contraseña": "$2a$10$FloWY9UFhDuhBG.xA2WE2OjYBE2VSLjgCQo5oKO1gup28Sb5JMGfG",
+        "genero": "on",
+        "cumpleaños": "2001-05-10",
+        "ciudad": "Roques",
+        "avatar": "avatar-1648767396151-.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "Rio",
+        "email": "laplata@yahoo.es",
+        "contraseña": "$2a$10$834U9UgDr7Zrc7CJr.B5EuTWVKjJoOWRpG6qCfnfKAoR4JEqAqA3e",
+        "genero": "on",
+        "cumpleaños": "1997-05-10",
+        "ciudad": "Florida",
+        "avatar": "avatar-1648770283269-.jpg"
     }
 ]

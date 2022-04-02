@@ -2,47 +2,65 @@
 <html lang="en">
 
 <head>
-        <base href="/">
-        <%-include('partials/head')%>
-        <link href="/static/css/login_style.css" rel="stylesheet"> 
+    <base href="/">
+    <%-include('partials/head')%>
+        <link href="/static/css/login_style.css" rel="stylesheet">
 </head>
+
 <body>
-        <%-include('partials/header')%>
-    <main>
-        
+    <%-include('partials/header')%>
+        <main>
+
             <div class="container">
                 <div class="container2">
-                    
                     <div class="conRegistro">
                         <div class="con2Registro">
                             <section class="registro">
-        <form action="/users/registro" enctype="multipart/form-data" method="POST">
-                                <h2>Registro</h2>
-                                <input class="datosingresados" type="text" name="Nombre" placeholder="Nombre" />
-                                <input class="datosingresados" type="text" name="Email" placeholder="Email" /><br>
-                                <label class="datosingresados">Genero</label>
-                                <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> F</label>
-                                <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> M</label>
-                                <label class="datosingresados"> <input class="datosingresados" type="checkbox"
+                                <form action="/users/registro" enctype="multipart/form-data" method="POST">
+                                    <h2>Registro</h2>
+                                    <input class="datosingresados" type="text" name="Nombre" placeholder="Nombre" />
+                                    <% if(locals.errors && locals.errors.Nombre){ %>
+                                        <span> <%=errors.Nombre.msg %> </span>
+                                        <% } %>
+                                            <input class="datosingresados" type="text" name="Email" placeholder="Email" /><br>
+                                            <% if(locals.errors && locals.errors.Email){ %>
+                                                <span><%=errors.Email.msg %></span>
+                                                <% } %>
+                                                    <label class="datosingresados">Genero</label>
+                                                    <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> F</label>
+                                                    <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> M</label>
+                                                    <label class="datosingresados"> <input class="datosingresados" type="checkbox"
+                                                        <% if(locals.errors && locals.errors.Genero){ %>
+                                                            <span><%=errors.Genero.msg %></span>
+                                                            <% } %>
                     name="Genero" /> Otros </label><br>
-                                <input class="datosingresados" type="date" name="Cumpleaños" placeholder="Cumpleaños" />
-                                <input class="datosingresados" type="text" name="Ciudad" placeholder="Ciudad" />
-                                <input class="datosingresados" type="password" name="contraseña" placeholder="Contraseña" id="password"/><br>
+                                                    <input class="datosingresados" type="date" name="Cumpleaños" placeholder="Cumpleaños" />
+                                                    <% if(locals.errors && locals.errors.Cumpleaños){ %>
+                                                        <span><%=errors.Cumpleaños.msg %></span>
+                                                        <% } %>
+                                                            <input class="datosingresados" type="text" name="Ciudad" placeholder="Ciudad" />
+                                                            <% if(locals.errors && locals.errors.Ciudad){ %>
+                                                                <span><%=errors.Ciudad.msg %></span>
+                                                                <% } %>
+                                                                    <input class="datosingresados" type="password" name="contraseña" placeholder="Contraseña" id="password" /><br>
+                                                                    <% if(locals.errors && locals.errors.contraseña){ %>
+                                                                        <span><%=errors.contraseña.msg %></span>
+                                                                        <% } %>
 
-                                <div class="imagen">
-                                    <label for="avatar" class="imagen1"> Avatar</label><br>
-                                    <input type="file" class="form-control" name="avatar">                                  
-                                </div><br>
+                                                                            <div class="imagen">
+                                                                                <label for="avatar" class="imagen1"> Avatar</label><br>
+                                                                                <input type="file" class="form-control" name="avatar">
+                                                                            </div><br>
 
-                                <button class="boton" type="submit" name="" value="Registrarme"> Registrarme </button>
+                                                                            <button class="boton" type="submit" name="" value="Registrarme"> Registrarme </button>
                             </section>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
-    </main>
-    <%-include('partials/footer')%>
+            </form>
+        </main>
+        <%-include('partials/footer')%>
 </body>
 
 </html>
