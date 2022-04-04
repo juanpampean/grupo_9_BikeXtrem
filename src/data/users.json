@@ -138,5 +138,15 @@
         "cumpleaños": "1997-05-10",
         "ciudad": "Florida",
         "avatar": "avatar-1648770283269-.jpg"
+    },
+    {
+        "id": 15,
+        "nombre": "juan",
+        "email": "manuel@gmail.com",
+        "contraseña": "$2a$10$DnsoVjLT7k/9/DmMInWVQeAtKcf1nGXjKeZwe5T38z.rnlXCaeZeW",
+        "genero": "on",
+        "cumpleaños": "1984-09-03",
+        "ciudad": "General Pico",
+        "avatar": "image-default"
     }
 ]

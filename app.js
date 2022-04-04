@@ -43,6 +43,7 @@ const rutas = require('./src/routes/mainRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const usersRoutes = require('./src/routes/usersRoutes');
 
+//app.use(userLoggedMiddleware);
 
 app.use('/', rutas);
 app.use('/product', productRoutes);
