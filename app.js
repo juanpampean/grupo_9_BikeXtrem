@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 const session = require("express-session");
 
 
-
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
 //Necesario para sobreescribir el json
 const bp = require('body-parser');
 app.use(bp.json())
@@ -35,15 +35,20 @@ app.set('view engine', 'ejs');
 /*app.set ('views/products', './src/views/products')*/
 app.set('views', './src/views/');
 
+app.use(cookies());
+app.use(userLoggedMiddleware);
+
+
 //Levantando servidor
 app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") });
+
+
 
 // REQUERIMOS RUTAS:
 const rutas = require('./src/routes/mainRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const usersRoutes = require('./src/routes/usersRoutes');
 
-//app.use(userLoggedMiddleware);
 
 app.use('/', rutas);
 app.use('/product', productRoutes);
