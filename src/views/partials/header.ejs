@@ -9,11 +9,13 @@
         <div class="cuenta">
             <% if (locals.isLogged) { %>
             <a>Hola! <%= locals.userLogged.nombre %></a>
+            <a class="dropdown-item" href="/users/logout">Logout</a>
+            <a href="/profile">Perfil</a>
             <% } else { %>
             <a href="/users/Login"><i class="fas fa-user"></i></a>
             <a href="/users/registro">Registrarme</a>
             <% } %>
-            <a href="/profile">Perfil</a>
+            
         </div>
     </div>
 

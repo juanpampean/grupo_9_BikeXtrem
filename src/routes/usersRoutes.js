@@ -30,4 +30,7 @@ router.post("/registro", upload.single("avatar"), validator.registro, usersContr
 router.get('/Login',guestMiddleware, usersController.login);
 router.post('/Login', validator.login, usersController.processLogin);
 
+//logout
+router.get('/logout', usersController.logout)
+
 module.exports = router;

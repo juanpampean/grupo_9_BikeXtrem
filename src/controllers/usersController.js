@@ -10,6 +10,8 @@ function writeFile(array) {
     fs.writeFileSync(path.join(__dirname, '../data/users.json'), arrayString);
 }
 
+
+
 module.exports = {
     login: function(req, res) {
         res.render("login");
@@ -58,16 +60,18 @@ module.exports = {
                 // proceso session
             req.session.usuarioLogueado = user
             if (req.body.Recuerdame) {
-                res.coockie("user", user.nombre, { maxAge: 60000 * 24 })
+                res.cookie("user", user.nombre, { maxAge: 60000 * 24 })
+                console.log(cookie)
             }
 
             res.redirect("/")
         } else {
             res.render("login", { errorsMsg: "Error datos inválidos" })
         }
-
-    }
-
-
-
+    },
+    logout: (req, res) => {
+            res.clearCookie('user');
+            req.session.destroy();
+            return res.redirect('/');
+        }
 }
