@@ -1,0 +1,135 @@
+body {
+    background-color: aliceblue;
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.registro .login {
+    flex: 1;
+}
+
+.login {
+    padding: 40px;
+    position: relative;
+    background-color: #0d353f;
+}
+
+.bikextrem {
+    color: black;
+    text-decoration: none;
+}
+
+.carrito {
+    color: black;
+}
+
+h5 {
+    color: #ab2e44;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.login input {
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid #a8a8a8;
+  color: #333;
+  background-color: inherit;
+}
+
+.login input:active,
+.login input:focus {
+    outline: none;
+}
+
+.login .boton {
+    width: auto;
+    padding: 10px;
+    background-color: #72cdae;
+    color: #0D353F;
+    font-size: 12 px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+/*Registro----------------------------------------------------------------------------------------------------------------*/
+
+.conRegistro {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conRegistro {
+    background-image: url(../images/people-2597764_1280.jpg);
+    background-size: 100% 100%;
+    height: auto;
+    width: auto;
+    align-items: center;
+}
+
+.registro {
+    padding: 10px;
+    position: relative;
+}
+
+.con2Registro .registro .datosingresados {
+    margin-left: 10px;
+    width: auto;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid grey;
+    color: white;
+    background-color: inherit;
+}
+
+.registro input:active,
+.registro input:focus {
+    outline: none;
+}
+
+.registro ::placeholder {
+    color: white;
+    font-size: 16px;
+}
+
+.registro .boton {
+    width: auto;
+    padding: 10px;
+    background-color: #0D353F;
+    color: #72CDAE;
+    font-size: 20 px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.recuerdame{
+  color:#ab2e44;
+}
