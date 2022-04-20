@@ -1,36 +1,36 @@
-const { DataTypes } = require("sequelize/types");
+const { DataTypes } = require("sequelize");
 const { sequelize } = require(".");
 module.exports = (sequelize, DataTypes) => {
     const user = sequelize.define("user", {
         //configuraciones de las columnas//
         id: {
-            type: dataType.INTEGER(11),
+            type: DataTypes.BIGINT(11),
             primaryKey: true,
             autoIncrement: true
         },
         nombre: {
-            type: dataType.VARCHAR(45),
+            type: DataTypes.STRING(45),
         },
         apellido: {
-            type: dataType.VARCHAR(45),
+            type: DataTypes.STRING(45),
         },
         mail: {
-            type: dataType.VARCHAR(100),
+            type: DataTypes.STRING(100),
         },
         contraseña: {
-            type: dataType.VARCHAR(100),
+            type: DataTypes.STRING(100),
         },
         telefono: {
-            type: dataType.VARCHAR(100),
+            type: DataTypes.STRING(100),
         },
         domicilio_entrega: {
-            type: dataType.VARCHAR(255),
+            type: DataTypes.STRING(100),
         },
-        avatar: {
-            type: dataType.imagen
-        },
+        /*avatar: {
+            type: DataTypes.imagen
+        },*/
         rol_id: {
-            type: dataType.INTEGER(11),
+            type: DataTypes.BIGINT(11),
         }
     }, {
         tableName: 'users',

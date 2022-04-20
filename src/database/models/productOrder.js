@@ -1,28 +1,28 @@
-const { DataTypes } = require("sequelize/types");
+const { DataTypes } = require("sequelize");
 const { sequelize } = require(".");
 module.exports = (sequelize, DataTypes) => {
     const productOrder = sequelize.define("productOrder", {
             //configuraciones de las columnas//module.exports = (sequelize, dataType) => {
             id: {
-                type: dataType.INTEGER(11),
+                type: DataTypes.INTEGER(11),
                 primaryKey: true,
                 autoIncrement: true
             },
             orden_id: {
-                type: dataType.INTEGER(11),
+                type: DataTypes.BIGINT(11),
             },
             producto_id: {
-                type: dataType.INTEGER(11),
+                type: DataTypes.BIGINT(11),
             },
 
             precio: {
-                type: dataType.INTEGER(11),
+                type: DataTypes.BIGINT(11),
             },
             cantidad: {
-                type: dataType.INTEGER(11),
+                type: DataTypes.BIGINT(11),
             },
             subtotal_compra: {
-                type: dataType.FLOAT,
+                type: DataTypes.FLOAT(10,2),
             }
         },
 

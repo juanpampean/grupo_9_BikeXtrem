@@ -1,21 +1,21 @@
-const { DataTypes } = require("sequelize/types");
+const { DataTypes } = require("sequelize");
 const { sequelize } = require(".");
 module.exports = (sequelize, DataTypes) => {
     const supplier = sequelize.define("supplier", {
         //configuraciones de las columnas//
         id: {
-            type: dataType.INTEGER(11),
+            type: DataTypes.BIGINT(11),
             primaryKey: true,
             autoIncrement: true
         },
         nombre: {
-            type: dataType.VARCHAR(45),
+            type: DataTypes.STRING(45),
         },
         telefono: {
-            type: dataType.VARCHAR(100),
+            type: DataTypes.STRING(100),
         },
         mail: {
-            type: dataType.VARCHAR(100),
+            type: DataTypes.STRING(100),
         }
     }, {
         tableName: 'suppliers',

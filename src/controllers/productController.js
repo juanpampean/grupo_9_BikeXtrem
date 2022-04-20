@@ -1,8 +1,11 @@
 const path = require('path');
-const fs = require("fs");
+const fs = require('fs');
+const db = require('../database/models')
+const sequelize = db.sequelize;
 
 const productsFilePath = path.join(__dirname, '../data/listadoProductos.json');
 const products1 = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 
 
 function findAll(){
