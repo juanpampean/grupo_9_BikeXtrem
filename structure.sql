@@ -27,6 +27,9 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `orders`
 --
 
+CREATE DATABASE bikextrem;
+USE bikextrem;
+
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `fecha_orden` datetime DEFAULT NULL,
