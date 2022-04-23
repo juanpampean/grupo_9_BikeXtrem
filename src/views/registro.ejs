@@ -29,11 +29,11 @@
                                                     <label class="datosingresados">Genero</label>
                                                     <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> F</label>
                                                     <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> M</label>
-                                                    <label class="datosingresados"> <input class="datosingresados" type="checkbox"
+                                                    <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> Otros </label><br>
                                                         <% if(locals.errors && locals.errors.Genero){ %>
                                                             <span><%=errors.Genero.msg %></span>
                                                             <% } %>
-                    name="Genero" /> Otros </label><br>
+                    
                                                     <input class="datosingresados" type="date" name="Cumpleaños" placeholder="Cumpleaños" />
                                                     <% if(locals.errors && locals.errors.Cumpleaños){ %>
                                                         <span><%=errors.Cumpleaños.msg %></span>
