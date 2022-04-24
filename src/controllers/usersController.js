@@ -61,7 +61,7 @@ module.exports = {
             req.session.usuarioLogueado = user
             if (req.body.Recuerdame) {
                 res.cookie("user", user.nombre, { maxAge: 60000 * 24 })
-                console.log(cookie)
+                
             }
 
             res.redirect("/")
