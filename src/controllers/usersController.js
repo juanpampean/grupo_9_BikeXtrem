@@ -3,12 +3,14 @@ const path = require("path");
 const bcrypt = require("bcryptjs");
 const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")))
 const { validationResult } = require("express-validator");
+const db = require("../database/models");
+const sequelize = db.sequelize;
 
 
-function writeFile(array) {
+/*function writeFile(array) {
     const arrayString = JSON.stringify(array, null, 4);
     fs.writeFileSync(path.join(__dirname, '../data/users.json'), arrayString);
-}
+}*/
 
 
 
@@ -19,12 +21,17 @@ module.exports = {
     register: function(req, res) {
         res.render("registro");
     },
+    profile: (req, res) => {
+		res.render('userProfile', {
+			user: req.session.usuarioLogueado
+		});
+	},
     processRegister: function(req, res) {
         const errors = validationResult(req)
         if (errors.errors.length > 0) {
             return res.render("registro", { errors: errors.mapped() })
         }
-        const newUser = {
+        /*const newUser = {
             id: users.length + 1,
             nombre: req.body.Nombre,
             email: req.body.Email,
@@ -37,7 +44,7 @@ module.exports = {
 
         users.push(newUser);
 
-        writeFile(users);
+        writeFile(users);*/
 
         res.redirect('/users/Login');
 
