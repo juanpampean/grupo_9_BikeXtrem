@@ -1,8 +1,7 @@
-const { DataTypes } = require("sequelize");
-const { sequelize } = require(".");
 module.exports = (sequelize, DataTypes) => {
-    const user = sequelize.define("user", {
-        //configuraciones de las columnas//
+    let alias = "user";
+    //configuraciones de las columnas
+    let cols = {
         id: {
             type: DataTypes.BIGINT(11),
             primaryKey: true,
@@ -32,10 +31,24 @@ module.exports = (sequelize, DataTypes) => {
         rol_id: {
             type: DataTypes.BIGINT(11),
         }
-    }, {
+    };
+    let config = {
         tableName: 'users',
         timestamps: false
-    });
+    };
+    //Establecemos las relaciones entre tablas
+    const user = sequelize.define(alias, cols, config);
+    user.associate = function(models) {
+        user.hasMany(models.order, {
+            as: "usuarioOrden",
+            foreignKey: "usuario_id",
+        })
+        user.belongsTo(models.rol, {
+            as: "usuarioRol",
+            foreignKey: "rol_id"
+        })
+
+    };
 
     return user;
 }
