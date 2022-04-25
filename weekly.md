@@ -106,3 +106,65 @@ Implementar rutas de huéspedes y de usuarios
 ● Rutas accesibles por cualquiera → sin cambios.
 ● Rutas accesibles solo sin login → redirigen al perfil.
 ● Rutas accesibles solo con login → redireccionan al login.
+
+// Reunión Semanal o Weekly 08/04/2022 //
+● Qué se hizo ayer:
+* Se revisaron los puntos correspondientes al sprint 6 y sus respectivas asignaciones.
+ 
+ ● Si se encontró con algún impedimento.
+* Botón de logout que sólo se vé si haces login.(RESUELTO)
+* Botón de recuerdame.(RESUELTO)
+
+ ● Qué vamos a hacer hoy:
+ *Asignaciones:
+
+///Juan:///
+Punto 4. Diagrama de base de datos
+● Usuarios (recuerden ver los campos sugeridos en el sprint 3).
+● Productos (recuerden ver los campos sugeridos en el sprint 3).
+● Tablas secundarias (según lo requiera su proyecto).
+○ Para productos: categorías, marcas, colores, talles, etc.
+
+
+///Kerby:///
+5. Script de estructura
+Tomando como referencia el diagrama del punto anterior, tienen que escribir las
+sentencias de SQL que crearán las tablas y sus relaciones.
+● Deberá incluir la creación de la base de datos (create database…).
+● Deberá incluir la creación de todas las tablas del sitio (create table…).
+● Deberá incluir los tipos de datos de los campos y sus restricciones (primary keys,
+(not) null, unique, default, etc).
+● Deberá incluir las relaciones entre las diferentes tablas (foreign keys)
+
+///Jonima:///
+7. Creación de carpeta Sequelize y archivos de
+modelos
+Mediante la herramienta sequelize-cli deberán crear la carpeta que contenga los
+archivos de configuración de Sequelize. Una vez configurado Sequelize, seguirá crear los
+archivos de modelos para explicarle cómo es la estructura de la base de datos.
+La carpeta database deberá incluir:
+● Los archivos de configuración para que Sequelize se conecte a la base de datos.
+● Los archivos de modelos para representar las tablas de:
+○ Usuarios.
+○ Productos.
+○ Tablas secundarias (categorías, marcas, colores, talles, etc).
+○ (Opcional) Carrito de compras.
+○ (Opcional) Productos de cada carrito de compras.
+● Los modelos deben incluir todas las relaciones existentes en la base de datos.
+
+///Kristina:///
+8. ¡CRUD!
+● Para productos:
+○ Crear
+○ Editar
+○ Eliminar
+○ Listar
+○ Ver el detalle
+○ Buscar
+
+///Todos:///
+8. ¡CRUD!
+● Para usuarios:
+○ Crear
+○ Editar
+○ Ver el detalle
