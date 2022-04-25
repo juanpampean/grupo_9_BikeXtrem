@@ -10,12 +10,16 @@ module.exports = (sequelize, DataTypes) => {
         },
         nombre_rol: {
             type: DataTypes.STRING(50),
-        },
-        tableName: 'rols',
-        //Si el nombre de la tabla no coincide con el del modelo
-
-        timestamps: false,
-        //Si no tengo timestamps que como createdAt: {type: DataTypes.DATE} //
+        },},{
+        tableName: 'rols',//Si el nombre de la tabla no coincide con el del modelo//
+        timestamps: false//Si no tengo timestamps que como createdAt: {type: DataTypes.DATE} //
+        
     });
+    rol.associate = function(models) {
+        rol.hasMany(models.user, {
+            as:"users",
+            foreignKey:"rol_id"
+        })
+    }
     return rol;
 }

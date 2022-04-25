@@ -22,6 +22,14 @@
                                     <% if(locals.errors && locals.errors.Nombre){ %>
                                         <span> <%=errors.Nombre.msg %> </span>
                                         <% } %>
+                                    <input class="datosingresados" type="number" name="rol_id" placeholder="Rol" />
+                                        <% if(locals.errors && locals.errors.Nombre){ %>
+                                            <span> <%=errors.Nombre.msg %> </span>
+                                            <% } %>
+                                    <input class="datosingresados" type="text" name="Apellido" placeholder="Apellido" />
+                                        <% if(locals.errors && locals.errors.Nombre){ %>
+                                            <span> <%=errors.Nombre.msg %> </span>
+                                            <% } %><br> 
                                             <input class="datosingresados" type="text" name="Email" placeholder="Email" /><br>
                                             <% if(locals.errors && locals.errors.Email){ %>
                                                 <span><%=errors.Email.msg %></span>

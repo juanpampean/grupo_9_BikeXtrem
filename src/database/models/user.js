@@ -16,6 +16,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         mail: {
             type: DataTypes.STRING(100),
+            allowNull:false,
+            unique:true,
         },
         contraseña: {
             type: DataTypes.STRING(100),
@@ -26,16 +28,30 @@ module.exports = (sequelize, DataTypes) => {
         domicilio_entrega: {
             type: DataTypes.STRING(100),
         },
-        /*avatar: {
-            type: DataTypes.imagen
-        },*/
-        rol_id: {
-            type: DataTypes.BIGINT(11),
-        }
+        ciudad: {
+            type: DataTypes.STRING(100),
+        },
+        codigo_postal: {
+            type: DataTypes.STRING(100),
+        },
+        fecha_nacimiento: {
+            type: DataTypes.DATEONLY,
+        },
+        avatar: {
+            type: DataTypes.STRING(100),
+            allowNull:true,
+        },
+
     }, {
         tableName: 'users',
         timestamps: false
     });
+    user.associate = function(models){
+        user.belongsTo(models.rol, {
+            as:"rols",
+            foreignKey:"rol_id"
+        })
+    }
 
     return user;
 }

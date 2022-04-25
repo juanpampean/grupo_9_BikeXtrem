@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<%-include('partials/head')%>
-<link href="/static/css/login_style.css" rel="stylesheet">>
+<base href="/">
+<%-include('partials/head.ejs') %>
+<link href="/static/css/userProfile.css" rel="stylesheet">
 </head>
-
 <body>
-<%-include('partials/header')%>
+
+<%-include('partials/header.ejs')%>
+
 <main>
-	<div class="container" style="margin-top: 40px;">
-		<div class="row">
-			<div class="col-md-3">
+	<div class="" >
+		<div class="">
+			<div class="">
 				<h2>Hi <%= user.nombre %> </h2>
+	
 				<!--<img src="/images/avatars/<%= user.avatar %> ">-->
 				<br>
 				<br>
@@ -19,7 +22,9 @@
 			</div>
 		</div>
 	</div>
-</main>	
-<%-include('partials/footer')%>
+</main>
+<footer>
+<%-include('partials/footer.ejs')%>
+</footer>
 </body>
 </html>
