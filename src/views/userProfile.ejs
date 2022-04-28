@@ -11,16 +11,16 @@
 
 <main>
 
-    <h1>Hola <%= userLog.nombre %> </h1> 
-    <h1> <%= userLogged.apellido %> </h1> 
-   <h1> <%= userLogged.mail  %> </h1>
-   <h2><%= userLogged.ciudad  %></h2>
+    <h1>Hola <%= user.nombre %> </h1> 
+    <h1> <%= user.apellido %> </h1> 
+   <h1> <%= user.mail  %> </h1>
+   <h2><%= user.ciudad  %></h2>
   
 
 
     <br>
     <section>
-		<a class="botonModificar" href="/edit/<%= userLog.id %>">Modificar</a>
+		<a class="botonModificar" href="/users/edit/<%= user.id %>">Modificar</a>
     </section>
 </main>
 <footer>

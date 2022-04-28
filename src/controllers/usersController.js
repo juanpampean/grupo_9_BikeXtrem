@@ -25,7 +25,7 @@ module.exports = {
         .catch(error => res.send(error));
     },
     profile: (req, res) => {
-        db.user.findAll({
+       /* db.user.findAll({
             include: ['rols'],
             where:{ mail : req.session.usuarioLogueado.mail
 
@@ -33,7 +33,8 @@ module.exports = {
         })
             .then(userLog => {
                 res.render('userProfile', {userLog})
-            })
+            })*/
+        res.render('userProfile',{user:req.session.usuarioLogueado})
     
     },
     processRegister: function(req, res) {
@@ -58,10 +59,12 @@ module.exports = {
          }).catch(error => res.send(error))}
     },
     edit: function(req,res) {
-        let userId = req.params.id;
-        db.user.findOne(userId,{include:"rols"})
+        
+        db.user.findOne({
+            include:["rols"],
+            where:{
+                id:req.params.id}})
         .then((user) => {
-            user.fecha_nacimiento = moment(user.fecha_nacimiento).format('L');
             return res.render('userEdit', user)})
         .catch(error => res.send(error))
     },
