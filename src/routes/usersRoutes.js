@@ -23,6 +23,7 @@ const upload = multer({ storage });
 /* GET users listing. */
 
 //register
+
 router.get("/registro",guestMiddleware, usersController.register);
 router.post("/registro", upload.single("avatar"), validator.registro, usersController.processRegister);
 
@@ -35,6 +36,12 @@ router.post('/Login', validator.login, usersController.processLogin);
 router.get('/logout', usersController.logout)
 
 // Perfil de Usuario
-router.get('/profile', authMiddleware, usersController.profile);
 
+router.get('/profile', authMiddleware, usersController.profile);
+router.get('/edit/:id', authMiddleware, usersController.edit);
+
+// Bajar suscripción:
+/*router.get('/delete/:id', usersController.delete);
+router.delete('/delete/:id', usersController.destroy);
+*/
 module.exports = router;

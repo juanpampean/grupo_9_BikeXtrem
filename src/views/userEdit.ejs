@@ -10,16 +10,15 @@
 <%-include('partials/header.ejs')%>
 
 <main>
-    <h1>Hola <%= userLogged.nombre %> </h1> 
-    <h1> <%= userLogged.apellido %> </h1> 
-   <h1> <%= userLogged.mail  %> </h1>
-   <h2><%= userLogged.ciudad  %></h2>
-  
-
+    <h1><%= user.nombre %> </h1>    
+    <br>
+    <p>Cumpleaños: <%= user.cumpleaños %> </p>
+    <p>Ciudad: <%= user.ciudad %> </p>
+    <p>Email: <%= user.email%> </p>
 
     <br>
     <section>
-		<a class="botonModificar" href="/edit/<%= userLogged.id %>">Modificar</a>
+      
     </section>
 </main>
 <footer>

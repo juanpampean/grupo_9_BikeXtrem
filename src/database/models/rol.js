@@ -6,10 +6,12 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.BIGINT(11),
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull:false,
         },
         nombre_rol: {
             type: DataTypes.STRING(50),
+            allowNull:false,
         },},{
         tableName: 'rols',//Si el nombre de la tabla no coincide con el del modelo//
         timestamps: false//Si no tengo timestamps que como createdAt: {type: DataTypes.DATE} //
