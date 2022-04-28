@@ -25,23 +25,21 @@ module.exports = {
         .catch(error => res.send(error));
     },
     profile: (req, res) => {
-        /*let promUser = db.user.findAll({
-            where: {
-                mail : user.mail
+        db.user.findAll({
+            include: ['rols'],
+            where:{ mail : req.session.usuarioLogueado.mail
+
             }
         })
-        let promRolls = db.rol.findAll()
-        Promise
-        .all([promUser,promRolls])
-        .then(([user,allRols])=>{
-            res.render("userProfile",{user,allRols})})
-        .catch(error=>res.send(error))*/
-       res.render("userProfile")
+            .then(userLog => {
+                res.render('userProfile', {userLog})
+            })
+    
     },
     processRegister: function(req, res) {
         const errors = validationResult(req)
         if (errors.errors.length > 0) {
-            return res.render("registro", { errors: errors.mapped(),allRols})
+            return res.render("registro", { errors: errors.mapped()})
         } else 
         {db.user.create({
             nombre:req.body.nombre,
@@ -93,6 +91,7 @@ module.exports = {
                 const password_valid =  bcrypt.compareSync(req.body.contraseña,userIn.contraseña);
                 if(password_valid){
                  let user = {
+                     id:userIn.id,
                      nombre: userIn.nombre,
                      cumpleaños: userIn.cumpleaños,
                      ciudad: userIn.ciudad,
@@ -112,6 +111,14 @@ module.exports = {
                 };
                 
         });
+    },
+    list: (req, res) => {
+        db.user.findAll({
+            include: ['rols']
+        })
+            .then(users => {
+                res.render('listadoUser.ejs', {users})
+            })
     },
        
         /*delete: function (req,res) {

@@ -40,6 +40,10 @@ router.get('/logout', usersController.logout)
 router.get('/profile', authMiddleware, usersController.profile);
 router.get('/edit/:id', authMiddleware, usersController.edit);
 
+// Lista Usuarios
+
+router.get('/usuariosList', usersController.list);
+
 // Bajar suscripción:
 /*router.get('/delete/:id', usersController.delete);
 router.delete('/delete/:id', usersController.destroy);

@@ -10,7 +10,8 @@
 <%-include('partials/header.ejs')%>
 
 <main>
-    <h1>Hola <%= userLogged.nombre %> </h1> 
+
+    <h1>Hola <%= userLog.nombre %> </h1> 
     <h1> <%= userLogged.apellido %> </h1> 
    <h1> <%= userLogged.mail  %> </h1>
    <h2><%= userLogged.ciudad  %></h2>
@@ -19,7 +20,7 @@
 
     <br>
     <section>
-		<a class="botonModificar" href="/edit/<%= userLogged.id %>">Modificar</a>
+		<a class="botonModificar" href="/edit/<%= userLog.id %>">Modificar</a>
     </section>
 </main>
 <footer>
