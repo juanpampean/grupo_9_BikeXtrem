@@ -10,31 +10,26 @@
 <%-include('partials/header.ejs')%>
 
 <main>
-    <h1 class="titulo">Aqui podrás editar tu usuario  <%= user.nombre %></h1>
+    <h1 class="titulo">Aqui podrás editar tu usuario  <%= userLog.nombre %></h1>
     <section class="formulario">
-        <form action="/users/update/<%= user.id %>?_method=PUT" method="POST">
+        <form action="/users/update/<%= userLog.id %>?_method=PUT" method="POST">
             <label for="nombre">Nombre </label>
-            <p><input type="text" name="apellido" id="" value="<%= user.nombre %>" required></p>
+            <p><input type="text" name="nombre" id="" value="<%= userLog.nombre %>" required></p>
             <label for="apellido">Apellido </label>
-            <p><input type="text" name="apellido" id="" value="<%= user.apellido %>" required></p>
+            <p><input type="text" name="apellido" id="" value="<%= userLog.apellido %>" required></p>
             <label for="telefono">Teléfono Contacto </label>
-            <p><input type="number" name="telefono" id="" value="<%= user.telefono %>" required></p>
+            <p><input type="number" name="telefono" id="" value="<%= userLog.telefono %>" required></p>
             <label for="fecha_nacimiento">Fecha de Nacimiento </label>
-            <p><input type="date" name="fecha_nacimiento" id="" value="<%= user.fecha_nacimiento %>" required ></p>
+            <p><input type="date" name="fecha_nacimiento" id="" value="<%= userLog.fecha_nacimiento %>" required ></p>
             <label for="domicilio_entrega">Domicilio de Entrega </label>
-            <p><input type="text" name="domicilio_entrega" id="" value="<%= user.domicilio_entrega %>" required></p>
+            <p><input type="text" name="domicilio_entrega" id="" value="<%= userLog.domicilio_entrega %>" required></p>
             <label for="codigo_postal">Código Postal </label>
-            <p><input type="text" name="codigo_postal" id="" value="<%= user.codigo_postal %>" required></p>
+            <p><input type="text" name="codigo_postal" id="" value="<%= userLog.codigo_postal %>" required></p>
             <label for="ciudad">Ciudad </label>
-            <p><input type="text" name="ciudad" id="" value="<%= user.ciudad %>" required></p>
+            <p><input type="text" name="ciudad" id="" value="<%= userLog.ciudad %>" required></p>
             <label for="rol_id">Rol </label>
-            <p>
-                <select name="rol_id" id="" required>
-                    <% allRols.forEach(rol => { %>
-                    <option value="<%= rol.id %>" <% if (user.rol.id == rol.id) { %><%= 'selected' %><% }; %>><%= rol.name %></option>
-                    <% }); %>
-                </select>
-            </p>
+
+            
 
 
             

@@ -10,17 +10,19 @@
 <%-include('partials/header.ejs')%>
 
 <main>
+    <h1>Datos de <%= userLog.nombre %> <%= userLog.apellido %></h1>
 
-    <h1>Hola <%= user.nombre %> </h1> 
-    <h1> <%= user.apellido %> </h1> 
-   <h1> <%= user.mail  %> </h1>
-   <h2><%= user.ciudad  %></h2>
-  
-
-
+    <p>Nombre: <%= userLog.nombre %></p> 
+    <p>Apellido: <%= userLog.apellido %> </p> 
+    <p>telefono: <%= userLog.telefono  %> </p>
+    <p>Domicilio: <%=userLog.domicilio_entrega %></p>
+    <p>Código Postal <%=userLog.codigo_postal %> </p>
+    <p>Ciudad:<%= userLog.ciudad  %></p>
+    <p>Rol <%= userLog.rol_id  %></p>
+    <p>Fecha de Nacimiento:<%= userLog.fecha_nacimiento %> </p>
     <br>
     <section>
-		<a class="botonModificar" href="/users/edit/<%= user.id %>">Modificar</a>
+		<a class="botonModificar" href="/users/edit/<%= userLog.id %>">Editar mis datos</a>
     </section>
 </main>
 <footer>

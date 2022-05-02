@@ -35,10 +35,11 @@ router.post('/Login', validator.login, usersController.processLogin);
 //logout
 router.get('/logout', usersController.logout)
 
-// Perfil de Usuario
-
+// CRUD
+// Datos Usuario / Editar / Actualizar
 router.get('/profile', authMiddleware, usersController.profile);
 router.get('/edit/:id', authMiddleware, usersController.edit);
+router.put('/edit/:id', authMiddleware, usersController.update);
 
 // Lista Usuarios
 

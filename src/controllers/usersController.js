@@ -25,17 +25,10 @@ module.exports = {
         .catch(error => res.send(error));
     },
     profile: (req, res) => {
-       /* db.user.findAll({
-            include: ['rols'],
-            where:{ mail : req.session.usuarioLogueado.mail
-
-            }
-        })
+       db.user.findByPk(res.locals.userLogged.id)
             .then(userLog => {
                 res.render('userProfile', {userLog})
-            })*/
-        res.render('userProfile',{user:req.session.usuarioLogueado})
-    
+            })
     },
     processRegister: function(req, res) {
         const errors = validationResult(req)
@@ -59,13 +52,8 @@ module.exports = {
          }).catch(error => res.send(error))}
     },
     edit: function(req,res) {
-        
-        db.user.findOne({
-            include:["rols"],
-            where:{
-                id:req.params.id}})
-        .then((user) => {
-            return res.render('userEdit', user)})
+        db.user.findByPk(res.locals.userLogged.id)
+        .then((userLog) => res.render('userEdit', {userLog}))
         .catch(error => res.send(error))
     },
     update: function (req,res) {
@@ -77,8 +65,7 @@ module.exports = {
             apellido: req.body.apellido,
             ciudad: req.body.ciudad,
             fecha_nacimiento: req.body.cumpleaños,
-            length: req.body.length,
-            rol_id: req.body.rol_id
+
         },
         {
             where: {id: userId}
@@ -96,6 +83,7 @@ module.exports = {
                  let user = {
                      id:userIn.id,
                      nombre: userIn.nombre,
+                     apellido:userIn.apellido,
                      cumpleaños: userIn.cumpleaños,
                      ciudad: userIn.ciudad,
                      avatar: userIn.avatar,
