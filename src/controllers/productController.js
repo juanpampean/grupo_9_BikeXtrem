@@ -21,40 +21,42 @@ function writeFile(array){
 //*---------------------------------------------------------------------------------------------*//
 
 const controller={
-    listadoDeProductos: (req, res) => {
-        const producto = findAll();
-        res.render('listadoDeProductos', {producto: producto})
-    },
+        list: (req, res) => {
+        db.product.findAll({
+            include: [{association: "productoProveedor"}],
+            include: [{association: "categoriaProducto"}]
+        })
+        .then(function(product){
+            res.render('listadoDeProductos', {product})
+        })
+    },   
 
     detail: (req, res) => {
-        const producto = findAll();
-        let productFound = producto.find (function(elemento){
-            return elemento.id == req.params.id;
-        });
-        res.render('detail', {productFound: productFound});
+        db.product.findByPk(req.params.id)
+        .then(function(product){
+            res.render('detail', {product});
+        })},
+
+    add: (req, res) => {
+        db.product.findAll()
+        .then(function (product){
+            res.render('form_productos_create', {product: product});
+        })
     },
 
-    create: (req, res) => {
-        res.render('form_productos_create');
-    },
-
-    store: (req, res) => {
-        const producto = findAll();
-        let newProduct = {
-			id: producto.length + 1,
-			nombre: req.body.nombre,
-            marca: req.body.marca,
+    create:(req, res) => {
+        db.product.create({
+            id:req.body.id,
+            SKU:req.body.SKU,
+            nombre: req.body.nombre,
 			precio: req.body.precio,
-			talle_producto: req.body.talle_producto,
-			fotoProducto: req.body.fotoProducto,
-            rodado: req.body.rodado,
-            velocidad: req.body.velocidad,
-            color: req.body.color,
-			descripcion: req.body.descripcion}
-
-        producto.push(newProduct)
-        writeFile(producto)
-        res.redirect("/product/listadoDeProductos")
+			peso: req.body.peso,
+            descripcion: req.body.descripcion,
+            create_date:req.body.create_date,
+            stock:req.body.stock,
+            proveedor_id:req.body.proveedor_id,
+        })
+           return res.redirect("/product/listadoDeProductos");    
     },
 
     edit: (req, res) => {

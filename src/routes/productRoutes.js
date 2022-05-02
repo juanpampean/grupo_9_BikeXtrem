@@ -13,11 +13,11 @@ router.get('/form_productos_edit', productController.form_producto);
 router.get('/form_productos_create', productController.form_producto);
 
 /*** GET ALL PRODUCTS ***/  
-router.get("/listadoDeProductos",productController.listadoDeProductos);
+router.get("/listadoDeProductos",productController.list);
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create', productController.create); 
-router.post('/create', productController.store); 
+router.get('/create', productController.add); 
+router.post('/create', productController.create); 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productController.detail); 
