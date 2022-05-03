@@ -26,19 +26,13 @@
                                         <% if(locals.errors && locals.errors.apellido){ %>
                                         <span> <%=errors.apellido.msg %> </span>
                                         <% } %><br> 
-                                    <input class="datosingresados" type="text" name="email" placeholder="Email" /><br>
-                                        <% if(locals.errors && locals.errors.Email){ %>
-                                        <span><%=errors.email.msg %></span>
-                                        <% } %>
 
-                                    <input class="datosingresados" type="date" name="cumpleaños" placeholder="Cumpleaños" />
-                                        <% if(locals.errors && locals.errors.cumpleaños){ %>
-                                        <span><%=errors.cumpleaños.msg %></span>
-                                        <% } %>
+
+
                                     <input class="datosingresados" type="number" name="telefono" placeholder="Teléfono" />
                                         <% if(locals.errors && locals.errors.telefono){ %>
                                         <span><%=errors.telefono.msg %></span>
-                                        <% } %>
+                                        <% } %><br>
                                     <input class="datosingresados" type="text" name="domicilio_entrega" placeholder="Domicilio Entrega" />
                                         <% if(locals.errors && locals.errors.domicilio_entrega){ %>
                                         <span><%=errors.domicilio_entrega.msg %></span>
@@ -46,15 +40,36 @@
                                     <input class="datosingresados" type="text" name="ciudad" placeholder="Ciudad" />
                                         <% if(locals.errors && locals.errors.ciudad){ %>
                                         <span><%=errors.ciudad.msg %></span>
-                                        <% } %>
+                                        <% } %><br>
                                     <input class="datosingresados" type="text" name="codigo_postal" placeholder="Código Postal" />
                                         <% if(locals.errors && locals.errors.codigo_postal){ %>
                                         <span><%=errors.codigo_postal.msg %></span>
+                                        <% } %>
+                                    <input class="datosingresados" type="date" name="cumpleaños" placeholder="Cumpleaños" />
+                                        <% if(locals.errors && locals.errors.cumpleaños){ %>
+                                        <span><%=errors.cumpleaños.msg %></span>
+                                        <% } %>
+                                    <p>
+                                            <select class="datosingresados" name="genre_id" id="" required>
+                                              <option value="" disabled selected>- Seleccione el Género - </option>
+                                              <% allGenre.forEach(genre => { %>
+                                              <option value="<%= genre.id %>"><%= genre.nombre_genero %></option>
+                                              <% }); %>
+                                              </select>
+                                    </p>
+
+
+
+
+                                    <input class="datosingresados" type="text" name="email" placeholder="Email" /><br>
+                                        <% if(locals.errors && locals.errors.Email){ %>
+                                        <span><%=errors.email.msg %></span>
                                         <% } %>
                                     <input class="datosingresados" type="password" name="contraseña" placeholder="Contraseña" id="password" /><br>
                                         <% if(locals.errors && locals.errors.contraseña){ %>
                                         <span><%=errors.contraseña.msg %></span>
                                         <% } %>
+
                                             
 
                                     <div class="imagen">
