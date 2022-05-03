@@ -19,9 +19,9 @@ module.exports = {
         res.render("login");
     },
     register: function(req, res) {
-        db.rol.findAll()
-        .then(allRols => {
-        res.render('registro', {allRols},)})
+        db.genres.findAll()
+        .then(allGenre => {
+        res.render('registro', {allGenre})})
         .catch(error => res.send(error));
     },
     profile: (req, res) => {
@@ -46,7 +46,7 @@ module.exports = {
             codigo_postal:req.body.codigo_postal,
             fecha_nacimiento:req.body.cumpleaños,
             avatar:req.body.avatar,
-            rol_id:req.body.rol_id,
+            genero_id:req.body.genre_id,
         }).then(function(){
             return res.redirect('/users/Login')
          }).catch(error => res.send(error))}
@@ -56,10 +56,8 @@ module.exports = {
         .then((userLog) => res.render('userEdit', {userLog}))
         .catch(error => res.send(error))
     },
-    update: function (req,res) {
-        let userId = req.params.id;
-    db.user
-    .update(
+    update: function(req,res) {
+    db.user.update(
         {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
@@ -68,7 +66,9 @@ module.exports = {
 
         },
         {
-            where: {id: userId}
+            where:{
+                id: res.locals.userLogged.id
+            }
         })
     .then(()=>{
         return res.redirect("/")
@@ -105,7 +105,7 @@ module.exports = {
     },
     list: (req, res) => {
         db.user.findAll({
-            include: ['rols']
+            include: ['genres']
         })
             .then(users => {
                 res.render('listadoUser.ejs', {users})

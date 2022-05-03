@@ -55,14 +55,7 @@
                                         <% if(locals.errors && locals.errors.contraseña){ %>
                                         <span><%=errors.contraseña.msg %></span>
                                         <% } %>
-                                    <p>
-                                            <select class="datosingresados" name="rol_id" id="" required>
-                                              <option value="" disabled selected>- Seleccione el Rol - </option>
-                                              <% allRols.forEach(rol => { %>
-                                              <option value="<%= rol.id %>"><%= rol.nombre_rol %></option>
-                                              <% }); %>
-                                              </select>
-                                    </p>
+                                            
 
                                     <div class="imagen">
                                         <label for="avatar" class="imagen1"> Avatar</label><br>
