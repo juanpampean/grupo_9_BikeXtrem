@@ -46,7 +46,7 @@ router.put('/update/:id', authMiddleware, usersController.update);
 router.get('/usuariosList', usersController.list);
 
 // Bajar suscripción:
-router.get('/delete/:id', usersController.delete);
-router.delete('/delete/:id', usersController.destroy);
+router.get('/delete/:id',authMiddleware, usersController.delete);
+router.delete('/delete/:id',authMiddleware, usersController.destroy);
 
 module.exports = router;
