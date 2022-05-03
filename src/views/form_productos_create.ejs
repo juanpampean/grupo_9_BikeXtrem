@@ -17,10 +17,7 @@
                        <label  for="nombre">Nombre</label>
                        <input type="text" name="nombre" id="nombre" placeholder="Nombre Producto" required>
                    </div>
-                   <div>
-                       <label  for="id" >id</label>
-                       <input type="text" name="id" id="id" placeholder="id" required>
-                   </div>
+                   
                    <div>
                        <label for="precio">Precio</label>
                        <input type="number" name="precio" id="precio" placeholder="Precio" required>
@@ -34,7 +31,7 @@
                         <input type="text" name="peso" id="peso" placeholder="peso" required >
                     </div>
                     <div>
-                        <label for="create_date">create_dates</label>
+                        <label for="create_date">create_datees</label>
                         <input type="text" name="create_date" id="create_date" placeholder="create_date" required >
                     </div>
                     <div>
@@ -43,14 +40,37 @@
                     </div>
                     <div>
                         <label for="proveedor_id">proveedor_id</label>
-                        <input type="text" name="proveedor_id" id="proveedor_id" placeholder="proveedor_id" required >
+                        
+                        <p>
+                            <select class="proveedor_id" name="proveedor_id" id="" required>
+                              <option value="" disabled selected>- proveedor_id - </option>
+                              <% productoProveedor.forEach(provedor => { %>
+                              <option value="<%= provedor.id %>"><%= provedor.nombre %></option>
+                              <% }); %>
+                            </select>
+                        </p>               
+                                                        
                     </div>
+                    <div>
+                        <label for="categoria_id">categoria_id</label>
+                        <input type="text" name="categoria_id" id="categoria_id" placeholder="categoria_id" required >
+                    </div>
+                    <p>
+                        <select class="categoria_id" name="categoria_id" id="" required>
+                          <option value="" disabled selected>- categoria_id - </option>
+                          <% categoriaProducto.forEach(categoria => { %>
+                          <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                          <% }); %>
+                        </select>
+                    </p>
+
+
+
                    
-                       
-                       <div>
+                    <div>
                            <label for="descripcion">Descripcion Producto (Optional)</label>
                            <textarea rows="5" type="text" id="descripcion" name="descripcion"></textarea>
-                       </div>    
+                    </div>    
                        <div>
                            <button type="submit" value="Guardar y volver al Home">GUARDAR</a></button>             
                        </div>

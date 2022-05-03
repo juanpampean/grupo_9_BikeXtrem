@@ -32,27 +32,34 @@ const controller={
     },   
 
     detail: (req, res) => {
-        db.product.findByPk(req.params.id)
+        db.product.findByPk(req.params.id,{
+            include: [{association: "productoProveedor"}],
+            include: [{association: "categoriaProducto"}]
+        })
         .then(function(product){
             res.render('detail', {product});
         })},
 
     add: (req, res) => {
-        db.product.findAll()
-        .then(function (product){
-            res.render('form_productos_create', {product: product});
-        })
+        let product = db.product.findByPk(req.params.id);
+        let categoriaProducto = db.productCategory.findAll();
+        let productoProveedor = db.supplier.findAll();
+        
+        Promise.all([product,categoriaProducto,productoProveedor])
+        .then(function([product,categoriaProducto,productoProveedor]){
+            return res.render('form_productos_create', {product: product,categoriaProducto:categoriaProducto,productoProveedor:productoProveedor });
+        });
     },
 
     create:(req, res) => {
         db.product.create({
-            id:req.body.id,
             SKU:req.body.SKU,
             nombre: req.body.nombre,
 			precio: req.body.precio,
 			peso: req.body.peso,
             descripcion: req.body.descripcion,
             create_date:req.body.create_date,
+            categoria_id:req.body.categoria_id,
             stock:req.body.stock,
             proveedor_id:req.body.proveedor_id,
         })
@@ -60,30 +67,29 @@ const controller={
     },
 
     edit: (req, res) => {
-        const producto = findAll()
-        let productToEdit = producto.find(function (product) {
-			return product.id == req.params.id
-		})
-        res.render("form_productos_edit",{product:productToEdit})
+        let product = db.product.findByPk(req.params.id);
+        let categoriaProducto = db.productCategory.findAll();
+        let productoProveedor = db.supplier.findAll();
+
+        Promise.all([product,categoriaProducto,productoProveedor])
+        .then(function([product,categoriaProducto,productoProveedor]){
+            return res.render('form_productos_edit', {product: product,categoriaProducto:categoriaProducto,productoProveedor:productoProveedor });
+        });
     },
 
     update: (req, res) => {
-        const producto = findAll();
-        let productFound = producto.find(function(elemento){
-            return elemento.id == req.params.id
+        db.product.update({
+            SKU:req.body.SKU,
+            nombre: req.body.nombre,
+			precio: req.body.precio,
+			peso: req.body.peso,
+            descripcion: req.body.descripcion,
+            create_date:req.body.create_date,
+            categoria_id:req.body.categoria_id,
+            stock:req.body.stock,
+            proveedor_id:req.body.proveedor_id,
         })
-
-        productFound.nombre = req.body.nombre;
-        productFound.marca = req.body.marca;
-		productFound.precio = req.body.precio;
-		productFound.talle_producto = req.body.talle_producto;
-		productFound.fotoProducto = req.body.fotoProducto;
-        productFound.rodado = req.body.rodado;
-        productFound.velocidad = req.body.velocidad;
-        productFound.color = req.body.color;
-		productFound.descripcion = req.body.descripcion;
-
-        writeFile(producto);
+    
 
         res.redirect("/product/listadoDeProductos")
     },

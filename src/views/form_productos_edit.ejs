@@ -45,22 +45,29 @@
                 <label for="color">Color</label>
                 <input type="text" value="<%= product.color %>" name="color" id="color" placeholder="Color" required >
             </div>
-                 <div>
-                    <label>Foto de Producto</label>
-                    <input type="file" value="<%= product.fotoProducto %>" name="fotoProducto" id="fotoProducto" required>
-                </div>
+                 
                 <div>
                     <label for="descripcion">Descripcion Producto (Optional)</label>
                     <textarea rows="5" value="<%= product.descripcion %>" id="descripcion" name="descripcion" required ><%= product.descripcion %></textarea>
-                </div>    
-                <div>
-                </form>
+                </div>
+
+                    
+                <p>
+                    <label for="categoria_id">categoria_id</label>
+                    <select name="categoria_id" id="" required>
+                        <% categoriaProducto.forEach(categoria => { %>
+                        <option value="<%= categoria.id %>" <% if (product.categoria_id == categoria.id) { %><%= 'selected' %><% }; %>><%= categoria.nombre %></option>
+                        <% }); %>
+                    </select>
+                </p>
+                
                     <button type="submit" value="Guardar y volver al Home" >EDITAR PRODUCTO</a></button>    <br><br>
+                </form>                    
                     <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post" 
                         >
                     <button type="submit" value="Guardar y volver al Home">ELIMINAR PRODUCTO</a></button> 
                     </form>                    
-                </div>
+                
         </div>
     </main>
         <%-include('partials/footer')%>
