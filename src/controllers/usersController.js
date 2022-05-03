@@ -33,7 +33,12 @@ module.exports = {
     processRegister: function(req, res) {
         const errors = validationResult(req)
         if (errors.errors.length > 0) {
-            return res.render("registro", { errors: errors.mapped()})
+            db.genres.findAll()
+            .then(allGenre => {
+            res.render('registro', {allGenre,errors: errors.mapped()})})
+            .catch(error => res.send(error));
+
+            /*return res.render("registro", { errors: errors.mapped()})*/
         } else 
         {db.user.create({
             nombre:req.body.nombre,
@@ -52,8 +57,11 @@ module.exports = {
          }).catch(error => res.send(error))}
     },
     edit: function(req,res) {
-        db.user.findByPk(res.locals.userLogged.id)
-        .then((userLog) => res.render('userEdit', {userLog}))
+        let promGenres = db.genres.findAll();
+        let promUser = db.user.findByPk(res.locals.userLogged.id,{inclute :["genres"]});
+        Promise
+        .all([promGenres,promUser])
+        .then(([allGenres,userLog]) => res.render('userEdit', {allGenres,userLog}))
         .catch(error => res.send(error))
     },
     update: function(req,res) {

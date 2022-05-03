@@ -27,8 +27,14 @@
             <p><input type="text" name="codigo_postal" id="" value="<%= userLog.codigo_postal %>" required></p>
             <label for="ciudad">Ciudad </label>
             <p><input type="text" name="ciudad" id="" value="<%= userLog.ciudad %>" required></p>
-            <label for="rol_id">Rol </label>
-
+            <label for="gebre_id">Género </label>
+            <p>
+                <select name="genre_id" id="" required>
+                    <% allGenres.forEach(genre => { %>
+                    <option value="<%= genre.id %>" <% if (userLog.genero_id == genre.id) { %><%= 'selected' %><% }; %>><%= genre.nombre_genero %></option>
+                    <% }); %>
+                </select>
+            </p>
             
 
 
