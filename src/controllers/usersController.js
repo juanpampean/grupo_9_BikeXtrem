@@ -8,6 +8,7 @@ const { isError } = require("util");
 const user = require("../database/models/user");
 const { localsName } = require("ejs");
 const sequelize = db.sequelize;
+const moment = require('moment')
 
 
 
@@ -27,6 +28,7 @@ module.exports = {
     profile: (req, res) => {
        db.user.findByPk(res.locals.userLogged.id)
             .then(userLog => {
+                userLog.fecha_nacimiento = moment(userLog.fecha_nacimiento).format('L');
                 res.render('userProfile', {userLog})
             })
     },
@@ -67,10 +69,16 @@ module.exports = {
     update: function(req,res) {
     db.user.update(
         {
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            ciudad: req.body.ciudad,
-            fecha_nacimiento: req.body.cumpleaños,
+            nombre:req.body.nombre,
+            apellido:req.body.apellido,
+            mail:req.body.email,
+            telefono:req.body.telefono,
+            ciudad:req.body.ciudad,
+            domicilio_entrega:req.body.domicilio_entrega,
+            codigo_postal:req.body.codigo_postal,
+            fecha_nacimiento:req.body.fecha_nacimiento,
+            avatar:req.body.avatar,
+            genero_id:req.body.genre_id,
 
         },
         {
@@ -120,22 +128,20 @@ module.exports = {
             })
     },
        
-        /*delete: function (req,res) {
-            let movieId = req.params.id;
-            Movies
-            .findByPk(movieId)
-            .then(Movie => {
-                return res.render(path.resolve(__dirname, '..', 'views',  'moviesDelete'), {Movie})})
-            .catch(error => res.send(error))
-        },
-        destroy: function (req,res) {
-            let movieId = req.params.id;
-            Movies
-            .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
+        delete: function (req,res) {
+       db.user.findByPk(res.locals.userLogged.id)
+            .then(userLog => {
+                userLog.fecha_nacimiento = moment(userLog.fecha_nacimiento).format('L');
+                res.render('userUnregister', {userLog})
+            })
+    },
+       destroy: function (req,res) {
+            db.user
+            .destroy({where: {id:res.locals.userLogged.id }, force: true}) // force: true es para asegurar que se ejecute la acción
             .then(()=>{
-                return res.redirect('/movies')})
+                return res.redirect('/')})
             .catch(error => res.send(error)) 
-        }*/
+        },
         
 
     logout: (req, res) => {

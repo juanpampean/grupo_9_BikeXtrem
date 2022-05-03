@@ -39,14 +39,14 @@ router.get('/logout', usersController.logout)
 // Datos Usuario / Editar / Actualizar
 router.get('/profile', authMiddleware, usersController.profile);
 router.get('/edit/:id', authMiddleware, usersController.edit);
-router.put('/edit/:id', authMiddleware, usersController.update);
+router.put('/update/:id', authMiddleware, usersController.update);  
 
 // Lista Usuarios
 
 router.get('/usuariosList', usersController.list);
 
 // Bajar suscripción:
-/*router.get('/delete/:id', usersController.delete);
+router.get('/delete/:id', usersController.delete);
 router.delete('/delete/:id', usersController.destroy);
-*/
+
 module.exports = router;
