@@ -132,7 +132,9 @@ main .datosingresados1 {
 
 }
 
-
+span {
+    color: red
+}
 .con2Registro, .registro, .datosingresados {
     margin-left: 10px;
     width: auto;
