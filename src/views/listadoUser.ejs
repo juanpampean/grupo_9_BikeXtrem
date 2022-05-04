@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<base href="/">
+<%-include('partials/head.ejs') %>
+<link href="/static/css/userProfile.css" rel="stylesheet">
+</head>
+<body>
+
+<%-include('partials/header.ejs')%>
+
+<main>
+
+    <h1>LISTADO DE USUARIOS</h1>
+    <br>
+    <p>
+
+        <a class="botonVolver" href="/">inicio</a>
+
+    </p>
+    <br>
+    <ul>
+        <% for( let i = 0; i < users.length; i++ ) { %>
+        <li>
+            <a href="/users/profile/<%= users[i].id %>">Nro de Usuario: <%= users[i].id %> Nombre Completo: <%= users[i].nombre %> <%= users[i].apellido %> Genero: <%= users[i].genero_id.nombre_genero %></a>
+        </li>
+        <% } %>
+
+    </ul>
+</main>
+<footer>
+<%-include('partials/footer.ejs')%>
+</footer>
+</body>
+</html>

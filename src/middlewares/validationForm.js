@@ -1,53 +1,64 @@
 const { check, body, validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
+const db = require("../database/models")
 
-function findAll() {
-    const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")));
-    return users;
-}
+
 module.exports = {
     registro: [
-        check("Nombre")
+        check("nombre")
         .notEmpty()
         .withMessage("campo nombre vacío"),
 
-        check("Email")
+        check("apellido")
+        .notEmpty()
+        .withMessage("campo nombre vacío"),
+
+        check("email")
         .notEmpty()
         .withMessage("Email vacío")
         .bail()
         .isEmail()
         .withMessage("formato de email incorrecto")
         .custom(function(value) {
-            let users = findAll()
-                //busco al usuario
-            let userFound = users.find(function(user) {
-                    return user.Email == value
-                })
-                //si existe un usuario devuelvo un error
-            if (userFound) {
-                throw new Error("Email ya registrado")
-            }
-            //sino devuelvo true
-            return true;
+            return db.user.findOne({
+                where:{mail:value}
+            }).then(user=>{
+                if (user){
+                    return Promise.reject("Email ya registrado")
+                }
+            }) 
 
         }),
+        check("contraseña")
+        .notEmpty()
+        .withMessage("campo password vacío"),
 
-        check("Genero")
+        check("genre_id")   
         .notEmpty()
         .withMessage("campo genero vacío"),
 
-        check("Cumpleaños")
+        check("cumpleaños")
         .notEmpty()
         .withMessage("campo cumpleaños vacío"),
 
-        check("Ciudad")
+        check("ciudad")
         .notEmpty()
         .withMessage("campo Ciudad vacío"),
 
-        check("contraseña")
+        check("domicilio_entrega")
         .notEmpty()
-        .withMessage("campo password vacío")
+        .withMessage("campo domicilio vacío"),
+
+        check("codigo_postal")
+        .notEmpty()
+        .withMessage("campo código postal vacío"),
+
+        check("telefono")
+        .notEmpty()
+        .withMessage("campo teléfono vacío"),
+
+
     ],
     login: [
         check("email")

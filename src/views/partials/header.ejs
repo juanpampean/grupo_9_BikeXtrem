@@ -1,6 +1,4 @@
 <header>
-
-
     <div class="top-header">
         <div class="navegacion">
             <input type="search" name="Busquedaproductos" placeholder="¿Qué estás buscando?">
@@ -10,7 +8,7 @@
             <% if (locals.isLogged) { %>
             <a>Hola! <%= locals.userLogged.nombre %></a>
             <a class="dropdown-item" href="/users/logout">Logout</a>
-            <a href="/profile">Perfil</a>
+            <a href="/users/profile">Perfil</a>
             <% } else { %>
             <a href="/users/Login"><i class="fas fa-user"></i></a>
             <a href="/users/registro">Registrarme</a>

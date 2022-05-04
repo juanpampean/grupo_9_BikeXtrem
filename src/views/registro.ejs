@@ -18,41 +18,66 @@
                             <section class="registro">
                                 <form action="/users/registro" enctype="multipart/form-data" method="POST">
                                     <h2>Registro</h2>
-                                    <input class="datosingresados" type="text" name="Nombre" placeholder="Nombre" />
-                                    <% if(locals.errors && locals.errors.Nombre){ %>
-                                        <span> <%=errors.Nombre.msg %> </span>
+                                    <input class="datosingresados" type="text" name="nombre" placeholder="Nombre" />
+                                        <% if(locals.errors && locals.errors.nombre){ %>
+                                        <span> <%=errors.nombre.msg %> </span>
                                         <% } %>
-                                            <input class="datosingresados" type="text" name="Email" placeholder="Email" /><br>
-                                            <% if(locals.errors && locals.errors.Email){ %>
-                                                <span><%=errors.Email.msg %></span>
-                                                <% } %>
-                                                    <label class="datosingresados">Genero</label>
-                                                    <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> F</label>
-                                                    <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> M</label>
-                                                    <label class="datosingresados"> <input class="datosingresados" type="checkbox" name="Genero" /> Otros </label><br>
-                                                        <% if(locals.errors && locals.errors.Genero){ %>
-                                                            <span><%=errors.Genero.msg %></span>
-                                                            <% } %>
-                    
-                                                    <input class="datosingresados" type="date" name="Cumpleaños" placeholder="Cumpleaños" />
-                                                    <% if(locals.errors && locals.errors.Cumpleaños){ %>
-                                                        <span><%=errors.Cumpleaños.msg %></span>
-                                                        <% } %>
-                                                            <input class="datosingresados" type="text" name="Ciudad" placeholder="Ciudad" />
-                                                            <% if(locals.errors && locals.errors.Ciudad){ %>
-                                                                <span><%=errors.Ciudad.msg %></span>
-                                                                <% } %>
-                                                                    <input class="datosingresados" type="password" name="contraseña" placeholder="Contraseña" id="password" /><br>
-                                                                    <% if(locals.errors && locals.errors.contraseña){ %>
-                                                                        <span><%=errors.contraseña.msg %></span>
-                                                                        <% } %>
+                                    <input class="datosingresados" type="text" name="apellido" placeholder="Apellido" />
+                                        <% if(locals.errors && locals.errors.apellido){ %>
+                                        <span> <%=errors.apellido.msg %> </span>
+                                        <% } %><br> 
 
-                                                                            <div class="imagen">
-                                                                                <label for="avatar" class="imagen1"> Avatar</label><br>
-                                                                                <input type="file" class="form-control" name="avatar">
-                                                                            </div><br>
 
-                                                                            <button class="boton" type="submit" name="" value="Registrarme"> Registrarme </button>
+
+                                    <input class="datosingresados" type="number" name="telefono" placeholder="Teléfono" />
+                                        <% if(locals.errors && locals.errors.telefono){ %>
+                                        <span><%=errors.telefono.msg %></span>
+                                        <% } %><br>
+                                    <input class="datosingresados" type="text" name="domicilio_entrega" placeholder="Domicilio Entrega" />
+                                        <% if(locals.errors && locals.errors.domicilio_entrega){ %>
+                                        <span><%=errors.domicilio_entrega.msg %></span>
+                                        <% } %>
+                                    <input class="datosingresados" type="text" name="ciudad" placeholder="Ciudad" />
+                                        <% if(locals.errors && locals.errors.ciudad){ %>
+                                        <span><%=errors.ciudad.msg %></span>
+                                        <% } %><br>
+                                    <input class="datosingresados" type="text" name="codigo_postal" placeholder="Código Postal" />
+                                        <% if(locals.errors && locals.errors.codigo_postal){ %>
+                                        <span><%=errors.codigo_postal.msg %></span>
+                                        <% } %>
+                                    <input class="datosingresados" type="date" name="cumpleaños" placeholder="Cumpleaños" />
+                                        <% if(locals.errors && locals.errors.cumpleaños){ %>
+                                        <span><%=errors.cumpleaños.msg %></span>
+                                        <% } %>
+                                    <p>
+                                            <select class="datosingresados" name="genre_id" id="" required>
+                                              <option value="" disabled selected>- Seleccione el Género - </option>
+                                              <% allGenre.forEach(genre => { %>
+                                              <option value="<%= genre.id %>"><%= genre.nombre_genero %></option>
+                                              <% }); %>
+                                              </select>
+                                    </p>
+
+
+
+
+                                    <input class="datosingresados" type="text" name="email" placeholder="Email" /><br>
+                                        <% if(locals.errors && locals.errors.email){ %>
+                                        <span><%=errors.email.msg %></span>
+                                        <% } %>
+                                    <input class="datosingresados" type="password" name="contraseña" placeholder="Contraseña" id="password" /><br>
+                                        <% if(locals.errors && locals.errors.contraseña){ %>
+                                        <span><%=errors.contraseña.msg %></span>
+                                        <% } %>
+
+                                            
+
+                                    <div class="imagen">
+                                        <label for="avatar" class="imagen1"> Avatar</label><br>
+                                        <input type="file" class="form-control" name="avatar">
+                                    </div><br>
+
+                                    <button class="boton" type="submit" name="" value="Registrarme"> Registrarme </button>
                             </section>
                         </div>
                     </div>

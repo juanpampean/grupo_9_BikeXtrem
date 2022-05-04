@@ -15,14 +15,14 @@ router.get('/ProductDetail', productController.detalle_producto);
 router.get('/ProductDetail_2', productController.detalle_producto2);
 router.get('/ProductDetail_3', productController.detalle_producto3);
 
-router.get("/profile", function(req, res) {
+/*router.get("/profile", function(req, res) {
     console.log(req.session.usuarioLogueado)
     if (req.session.usuarioLogueado)
         res.send("Hola" + " " + req.session.usuarioLogueado.nombre)
     else {
         res.send("No estas logueado")
     }
-})
+})*/
 
 
 
