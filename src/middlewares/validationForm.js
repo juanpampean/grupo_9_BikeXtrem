@@ -34,7 +34,7 @@ module.exports = {
         .notEmpty()
         .withMessage("campo password vacío"),
 
-        check("genre_id")
+        check("genre_id")   
         .notEmpty()
         .withMessage("campo genero vacío"),
 

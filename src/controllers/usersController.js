@@ -40,7 +40,6 @@ module.exports = {
             res.render('registro', {allGenre,errors: errors.mapped()})})
             .catch(error => res.send(error));
 
-            /*return res.render("registro", { errors: errors.mapped()})*/
         } else 
         {db.user.create({
             nombre:req.body.nombre,
