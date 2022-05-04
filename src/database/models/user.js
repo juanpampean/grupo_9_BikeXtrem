@@ -51,6 +51,10 @@ module.exports = (sequelize, DataTypes) => {
             as:"genres",
             foreignKey:"genero_id"
         })
+        user.hasMany(models.order, {
+            as: "usuarioOrden",
+            foreignKey: "usuario_id",
+        })
     }
 
     return user;
