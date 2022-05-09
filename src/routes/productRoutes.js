@@ -29,6 +29,10 @@ router.put("/edit/:id", productController.update);
 /*** DELETE ONE PRODUCT***/ 
 router.delete("/delete/:id", productController.destroy);
 
+/***FIND ONE PRODUCT */
+router.get("/search",productController.buscar);
+router.get("/search",productController.search);
+
 
 //TODO: exportar el modulo
 module.exports = router;

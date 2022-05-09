@@ -88,10 +88,13 @@ const controller={
             categoria_id:req.body.categoria_id,
             stock:req.body.stock,
             proveedor_id:req.body.proveedor_id,
-        })
-    
-
-        res.redirect("/product/listadoDeProductos")
+        },{
+            where:{
+                id: req.params.id
+            }
+        }
+        )
+                res.redirect("/product/listadoDeProductos")
     },
 
     destroy: (req, res) => {
@@ -107,6 +110,21 @@ const controller={
 
         writeFile(producto)
         res.redirect("/product/listadoDeProductos")
+    },
+
+    search:(req,res,next)=>{
+        
+      db.product.findALL({
+          where:{
+              id:{ [Op.like]: '%'+req.query.search+'%'}
+      }})
+      .then(function(product){
+        res.render('listadoDeProductos', {product})
+    })
+    },
+
+    buscar: (req, res) => {
+        res.render('form_search');
     },
 
 
