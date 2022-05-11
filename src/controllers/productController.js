@@ -1,3 +1,4 @@
+const Sequelize = require("sequelize");
 const path = require('path');
 const fs = require('fs');
 const db = require('../database/models')
@@ -95,31 +96,23 @@ const controller={
         }
         )
                 res.redirect("/product/listadoDeProductos")
-    },
+    },   
 
-    destroy: (req, res) => {
-        const producto = findAll()
-
-    //busco el producto y obtengo su indice
-        let productIndex = producto.findIndex(function(elemento){
-            return elemento.id == req.params.id
+    destroy: (req,res)=>{
+        db.product.destroy({
+                where:{
+                id: req.params.id
+            }
         })
-    //elimino el producto que busque, pasando su indice
-        producto.splice(productIndex,1)
-
-
-        writeFile(producto)
         res.redirect("/product/listadoDeProductos")
     },
-
     search:(req,res,next)=>{
-        
-      db.product.findALL({
-          where:{
-              id:{ [Op.like]: '%'+req.query.search+'%'}
+            db.product.findALL({
+        where:{
+            nombre:{ [Op.like]: '%'+req.query.search+'%'}
       }})
       .then(function(product){
-        res.render('listadoDeProductos', {product})
+     res.render('listadoDeProductos', {product})
     })
     },
 
@@ -127,27 +120,10 @@ const controller={
         res.render('form_search');
     },
 
-
     carrito: (req, res) => {
         res.render('productCart');
     },
-
-    detalle_producto: (req, res) => {
-        res.render('productDetail');
-
-    },
-
-    detalle_producto2: (req, res) => {
-        res.render('productDetail_2');
-    },
-
-    detalle_producto3: (req, res) => {
-        res.render('productDetail_3');
-    },
-
-    form_producto: (req, res) => {
-        res.render('form_productos_create');
-    },
+   
 }
 
 //TODO: exportar el modulo

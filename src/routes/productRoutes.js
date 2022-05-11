@@ -9,8 +9,6 @@ const router = express.Router();
 
 /*** ---------------------------------------------------------------------------------------------- ***/
 
-router.get('/form_productos_edit', productController.form_producto);
-router.get('/form_productos_create', productController.form_producto);
 
 /*** GET ALL PRODUCTS ***/  
 router.get("/listadoDeProductos",productController.list);
@@ -30,7 +28,7 @@ router.put("/edit/:id", productController.update);
 router.delete("/delete/:id", productController.destroy);
 
 /***FIND ONE PRODUCT */
-router.get("/search",productController.buscar);
+router.get("/buscar",productController.buscar);
 router.get("/search",productController.search);
 
 
