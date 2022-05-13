@@ -5,15 +5,15 @@ const path = require('path');
 const mainController = {
     index: (req, res) => {
           res.render('index')
-      /*  res.sendFile(path.join(__dirname, '../views/users/index.html'))*/;
+
     },
     login: (req, res) => {
           res.render('login')
-        /*res.sendFile(path.join(__dirname, '../views/users/login.ejs'))*/;
+
     },
     registro: (req, res) => {
       res.render('registro')
-    /*res.sendFile(path.join(__dirname, '../views/users/registro.ejs'))*/;
+
 },
 };
 

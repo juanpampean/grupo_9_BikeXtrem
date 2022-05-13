@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "user";
+    const user = sequelize.define("user",
     //configuraciones de las columnas
-    let cols = {
+    {
         id: {
             type: DataTypes.BIGINT(11),
             primaryKey: true,
@@ -15,6 +15,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         mail: {
             type: DataTypes.STRING(100),
+            allowNull:false,
+            unique:true,
         },
         contraseña: {
             type: DataTypes.STRING(100),
@@ -25,30 +27,35 @@ module.exports = (sequelize, DataTypes) => {
         domicilio_entrega: {
             type: DataTypes.STRING(100),
         },
-        /*avatar: {
-            type: DataTypes.imagen
-        },*/
-        rol_id: {
-            type: DataTypes.BIGINT(11),
-        }
-    };
-    let config = {
-        tableName: 'users',
-        timestamps: false
-    };
-    //Establecemos las relaciones entre tablas
-    const user = sequelize.define(alias, cols, config);
-    user.associate = function(models) {
+        ciudad: {
+            type: DataTypes.STRING(100),
+        },
+        codigo_postal: {
+            type: DataTypes.STRING(100),
+        },
+        fecha_nacimiento: {
+            type: DataTypes.DATEONLY,
+        },
+        avatar: {
+            type: DataTypes.STRING(100),
+            allowNull:true,
+        },
+
+    }, {
+    
+        tableName:'users',
+        timestamps:false,
+    });
+    user.associate = function(models){
+        user.belongsTo(models.genres, {
+            as:"genres",
+            foreignKey:"genero_id"
+        })
         user.hasMany(models.order, {
             as: "usuarioOrden",
             foreignKey: "usuario_id",
         })
-        user.belongsTo(models.rol, {
-            as: "usuarioRol",
-            foreignKey: "rol_id"
-        })
-
-    };
+    }
 
     return user;
 }

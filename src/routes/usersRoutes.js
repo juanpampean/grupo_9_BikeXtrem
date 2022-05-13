@@ -6,6 +6,7 @@ const multer = require('multer');
 const { check } = require("express-validator");
 const validator = require("../middlewares/validationForm");
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require("../middlewares/authMiddleware")
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -22,6 +23,7 @@ const upload = multer({ storage });
 /* GET users listing. */
 
 //register
+
 router.get("/registro",guestMiddleware, usersController.register);
 router.post("/registro", upload.single("avatar"), validator.registro, usersController.processRegister);
 
@@ -32,5 +34,16 @@ router.post('/Login', validator.login, usersController.processLogin);
 
 //logout
 router.get('/logout', usersController.logout)
+
+// CRUD
+// Datos Usuario / Editar / Actualizar
+router.get('/profile', authMiddleware, usersController.profile);
+router.get('/edit/:id', authMiddleware, usersController.edit);
+router.put('/update/:id', authMiddleware, usersController.update);  
+
+// Lista Usuarios
+
+router.get('/usuariosList', usersController.list);
+
 
 module.exports = router;

@@ -113,8 +113,8 @@ main .datosingresados1 {
 .conRegistro {
     padding: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 }
 
 .conRegistro {
@@ -132,7 +132,9 @@ main .datosingresados1 {
 
 }
 
-
+form span {
+    color: red
+}
 .con2Registro, .registro, .datosingresados {
     margin-left: 10px;
     width: auto;

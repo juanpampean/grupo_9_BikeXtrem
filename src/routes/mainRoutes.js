@@ -13,14 +13,14 @@ router.get('/', mainController.index);
 router.get('/ProductCart', productController.carrito);
 
 
-router.get("/profile", function(req, res) {
+/*router.get("/profile", function(req, res) {
     console.log(req.session.usuarioLogueado)
     if (req.session.usuarioLogueado)
         res.send("Hola" + " " + req.session.usuarioLogueado.nombre)
     else {
         res.send("No estas logueado")
     }
-})
+})*/
 
 
 

@@ -13,7 +13,7 @@ app.use(bp.urlencoded({ extended: true }))
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: false
 }))
 
 
@@ -48,6 +48,7 @@ app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") }
 const rutas = require('./src/routes/mainRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const usersRoutes = require('./src/routes/usersRoutes');
+const user = require("./src/database/models/user");
 
 
 app.use('/', rutas);

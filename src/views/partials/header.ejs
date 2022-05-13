@@ -1,6 +1,4 @@
 <header>
-
-
     <div class="top-header">
         <div class="tabs__content" data-tab="2">
             <form action="/product/search" method="GET"  class="create-form">
@@ -15,7 +13,7 @@
             <% if (locals.isLogged) { %>
             <a>Hola! <%= locals.userLogged.nombre %></a>
             <a class="dropdown-item" href="/users/logout">Logout</a>
-            <a href="/profile">Perfil</a>
+            <a href="/users/profile">Perfil</a>
             <% } else { %>
             <a href="/users/Login"><i class="fas fa-user"></i></a>
             <a href="/users/registro">Registrarme</a>
