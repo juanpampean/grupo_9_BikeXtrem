@@ -2,9 +2,14 @@
 
 
     <div class="top-header">
-        <div class="navegacion">
-            <input type="search" name="Busquedaproductos" placeholder="¿Qué estás buscando?">
-            <input type="submit" value="Buscar">
+        <div class="tabs__content" data-tab="2">
+            <form action="/product/search" method="GET"  class="create-form">
+
+            <input type="text" name="search" id="" placeholder="¿Que estas buscando?">
+            <button type="submit">
+                buscar
+            </button>
+            </form>
         </div>
         <div class="cuenta">
             <% if (locals.isLogged) { %>

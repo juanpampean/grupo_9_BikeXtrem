@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const db = require('../database/models')
 const sequelize = db.sequelize;
+const Op = Sequelize.Op;
 
 const productsFilePath = path.join(__dirname, '../data/listadoProductos.json');
 const products1 = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -107,7 +108,7 @@ const controller={
         res.redirect("/product/listadoDeProductos")
     },
     search:(req,res,next)=>{
-            db.product.findALL({
+            db.product.findAll({
         where:{
             nombre:{ [Op.like]: '%'+req.query.search+'%'}
       }})
