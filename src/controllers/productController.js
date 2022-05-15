@@ -124,6 +124,17 @@ const controller={
     carrito: (req, res) => {
         res.render('productCart');
     },
+
+    productDetail: (req, res) => {
+        res.render('productDetail')
+  },
+    productDetail_2: (req, res) => {
+        res.render('productDetail_2')
+  },
+  productDetail_3: (req, res) => {
+    res.render('productDetail_3')
+},
+
    
 }
 
