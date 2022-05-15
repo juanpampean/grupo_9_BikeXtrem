@@ -130,6 +130,17 @@ const controller = {
         res.render('productCart');
     },
 
+    productDetail: (req, res) => {
+        res.render('productDetail')
+    },
+    productDetail_2: (req, res) => {
+        res.render('productDetail_2')
+    },
+    productDetail_3: (req, res) => {
+        res.render('productDetail_3')
+    },
+
+
 }
 
 //TODO: exportar el modulo

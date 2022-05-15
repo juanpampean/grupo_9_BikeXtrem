@@ -13,8 +13,8 @@ const mainController = {
     },
     registro: (req, res) => {
       res.render('registro')
-
 },
+
 };
 
 //TODO: exportar el modulo
