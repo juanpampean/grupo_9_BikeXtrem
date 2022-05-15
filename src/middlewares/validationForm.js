@@ -71,11 +71,11 @@ module.exports = {
     ],
     processEdit: [
         body("nombre").notEmpty().isLength({ min: 5 }).withMessage("campo nombre vacío"),
-        body("precio").notEmpty().isNumeric().withMessage("campo nombre vacío"),
-        body("talle_producto").notEmpty().withMessage("Coloca Talle"),
+        body("precio").notEmpty().isNumeric().withMessage("campo precio vacío"),
+        body("talle_producto").notEmpty().withMessage("Coloca Talle del Producto"),
         body("rodado").notEmpty().withMessage("campo rodado vacío"),
         body("velocidad").notEmpty().withMessage("campo velocidad vacío").isDate(),
-        body("color").notEmpty().withMessage("campo stock vacío"),
+        body("color").notEmpty().withMessage("campo color vacío"),
         body("descripcion").isLength({ min: 20 }).withMessage("Coloca descripción del producto acá"),
     ]
 }
