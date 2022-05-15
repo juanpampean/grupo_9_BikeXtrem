@@ -148,5 +148,15 @@
         "cumpleaños": "1984-09-03",
         "ciudad": "General Pico",
         "avatar": "image-default"
+    },
+    {
+        "id": 16,
+        "nombre": "Loli",
+        "email": "loli@gmail.com",
+        "contraseña": "$2a$10$hIPl6/ZnCPVWbEB2ASBhmeeD5jXRy.Ne2ugGSQfo8oeocPzcE1g6.",
+        "genero": "on",
+        "cumpleaños": "2000-03-12",
+        "ciudad": "Tigre",
+        "avatar": "avatar-1652540277606-.jpg"
     }
 ]

@@ -22,19 +22,19 @@ module.exports = {
         .withMessage("formato de email incorrecto")
         .custom(function(value) {
             return db.user.findOne({
-                where:{mail:value}
-            }).then(user=>{
-                if (user){
+                where: { mail: value }
+            }).then(user => {
+                if (user) {
                     return Promise.reject("Email ya registrado")
                 }
-            }) 
+            })
 
         }),
         check("contraseña")
         .notEmpty()
         .withMessage("campo password vacío"),
 
-        check("genre_id")   
+        check("genre_id")
         .notEmpty()
         .withMessage("campo genero vacío"),
 
@@ -68,5 +68,14 @@ module.exports = {
         check("contraseña")
         .notEmpty()
         .withMessage("campo password vacío")
+    ],
+    processEdit: [
+        body("nombre").notEmpty().isLength({ min: 5 }).withMessage("campo nombre vacío"),
+        body("precio").notEmpty().isNumeric().withMessage("campo nombre vacío"),
+        body("talle_producto").notEmpty().withMessage("Coloca Talle"),
+        body("rodado").notEmpty().withMessage("campo rodado vacío"),
+        body("velocidad").notEmpty().withMessage("campo velocidad vacío").isDate(),
+        body("color").notEmpty().withMessage("campo stock vacío"),
+        body("descripcion").isLength({ min: 20 }).withMessage("Coloca descripción del producto acá"),
     ]
 }
