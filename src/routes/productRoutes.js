@@ -9,7 +9,6 @@ const router = express.Router();
 
 /*** ---------------------------------------------------------------------------------------------- ***/
 
-
 /*** GET ALL PRODUCTS ***/  
 router.get("/listadoDeProductos",productController.list);
 

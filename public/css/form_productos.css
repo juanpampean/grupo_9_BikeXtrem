@@ -39,3 +39,7 @@
 .delete_product button a {
     text-decoration: none;
 }
+
+div.errores{
+    color: red
+}
