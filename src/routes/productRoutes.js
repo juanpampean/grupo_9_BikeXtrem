@@ -17,7 +17,7 @@ router.get("/listadoDeProductos",productController.list);
 
 /*** CREATE ONE PRODUCT ***/
 router.get('/create', productController.add);
-router.post('/create', productController.create);
+router.post('/create',validator.processEdit, productController.create);
 
 /*** GET ONE PRODUCT ***/
 router.get('/detail/:id', productController.detail);
