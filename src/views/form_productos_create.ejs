@@ -15,7 +15,7 @@
                     <ul></ul>
                 </div>
 
-                <form action="/product/create" method="post"  class="create-form">
+                <form action="/product/create" method="post"  class="create-form" id="create-form">
                 <h2>Agregar Producto</h2>
                
                    <div>
@@ -29,22 +29,22 @@
                    </div>
                    <div>
                        <label  for="SKU">Talle</label>
-                       <input type="text" name="SKU" id="SKU" placeholder="Talle"  >
+                       <input type="text" name="SKU" id="SKU" placeholder="Talle" >
                    </div>
                    <div>
-                        <label for="peso">peso</label>
-                        <input type="text" name="peso" id="peso" placeholder="peso"  >
+                        <label for="peso">Peso</label>
+                        <input type="text" name="peso" id="peso" placeholder="peso" >
                     </div>
                     <div>
-                        <label for="create_date">create_datees</label>
-                        <input type="text" name="create_date" id="create_date" placeholder="create_date"  >
+                        <label for="create_date">Create Date</label>
+                        <input type="text" name="create_date" id="create_date" placeholder="create_date" >
                     </div>
                     <div>
-                        <label for="stock">stock</label>
-                        <input type="text" name="stock" id="stock" placeholder="stock"  >
+                        <label for="stock">Stock</label>
+                        <input type="text" name="stock" id="stock" placeholder="stock" >
                     </div>
                     <div>
-                        <label for="proveedor_id">proveedor_id</label>
+                        <label for="proveedor_id">Proveedor_id</label>
                         
                         <p>
                             <select class="proveedor_id" name="proveedor_id" id="" >
@@ -57,7 +57,7 @@
                                                         
                     </div>
                     <div>
-                        <label for="categoria_id">categoria_id</label>
+                        <label for="categoria_id">Categoria_id</label>
                     </div>
                     <p>
                         <select class="categoria_id" name="categoria_id" id="" >
@@ -73,20 +73,26 @@
                            <textarea rows="5" type="text" id="descripcion" name="descripcion"></textarea>
                     </div>
                     
+                <!-- File input field -->
                     <div>
                         <label>Foto de Producto</label>
-                        <input type="file" name="fotoProducto" id="fotoProducto" >
+                        <input type="file" name="file"  id="file" onchange= "return fileValidation()" />
                     </div>
+                    
+                    <!-- Image preview -->
+                    <div id="imagePreview"></div>
 
                        <div>
-                           <button type="submit" value="Guardar y volver al Home">GUARDAR</a></button>             
+                           <button type="submit" value="Guardar">GUARDAR</a></button>            
                        </div>
+
                </form>
             
             </div>
         </div>
-        
+        <script src="/static/js/validatorCreateProd-front.js"> </script>
     </main>
         <%-include('partials/footer')%>
+           
 </body>
 </html>
