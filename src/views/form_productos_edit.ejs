@@ -12,8 +12,9 @@
 
             <div class="tabs__content" data-tab="2">
          <h2>Editar Producto</h2>
-         <form action="/product/edit/<%= product.id%>?_method=PUT"  method="post">
-            <ul class="errores"></ul>
+         <ul class="errores"></ul>
+         <form class="form" action="/product/edit/<%= product.id%>?_method=PUT"  method="post">
+            
             <div>
                 <label>Producto a editar</label>
                 <input type="search" value="<%= product.id %>" name="codigo_producto" id="codigo_producto" placeholder="Buscar Producto a editar" >
