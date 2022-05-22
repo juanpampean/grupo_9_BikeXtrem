@@ -7,7 +7,7 @@ const formulario = document.getElementById('create-form');
 
 let errores = [];
 
-//evento para el boton al hacer submit
+//Evento para el boton al hacer submit
 formulario.addEventListener('submit', function(e){
     //console.log(e.target);
     
@@ -26,11 +26,6 @@ formulario.addEventListener('submit', function(e){
             errores.push('Deberá agregar más detalle a la descripción');
         }
 
-
-    
-        
-
-
     //Array de errores
     if (errores.length > 0) {
         e.preventDefault();
@@ -45,7 +40,7 @@ formulario.addEventListener('submit', function(e){
             alert('El producto fue creado satirfactoriamente');
         }
 
-})
+});
 
 //validar imagen
 function fileValidation(){
