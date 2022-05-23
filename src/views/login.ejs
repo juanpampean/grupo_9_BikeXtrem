@@ -15,13 +15,13 @@
                     <section class="login">
                         <form action="/users/login" method="POST">
                             <h4>Ingresar</h4>
-                            <input class="datosingresados1" type="text" name="email" placeholder="Email" />
+                            <input class="datosingresados1" id=email type="text" name="email" placeholder="Email" />
                             <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
                                 <span style="color:red">
                                 <%=locals.errorsLogin.email.msg %>
                                     </span>
                                 <% } %>
-                                    <input class="datosingresados1" type="text" name="contraseña" placeholder="Contraseña" />
+                                    <input class="datosingresados1" id=clave type="text" name="contraseña" placeholder="Contraseña" />
                                     <% if(locals.errorsLogin && locals.errorsLogin.contraseña){ %>
                                         <span style="color:red">
                                         <%=locals.errorsLogin.contraseña.msg %>
@@ -33,7 +33,7 @@
                                             <label class="olvide"><a href="#">Olvide mi contraseña</a></label>
 
                         </form>
-                       <% if(locals.errorsMsg){ %>
+                        <% if(locals.errorsMsg){ %>
                             <span style="color:red">
                             <%=errorsMsg %></span>
                             <% } %>
@@ -42,6 +42,7 @@
             </div>
         </main>
         <%-include('partials/footer')%>
+            <script src="/js/validacionesFront.js"></script>
 </body>
 
 </html>
