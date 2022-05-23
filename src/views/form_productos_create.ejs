@@ -4,86 +4,97 @@
 <head>
     <base href="/">
     <%-include('partials/head')%>
-        <link href="/static/css/form_productos.css" rel="stylesheet">
-</head>
+    <link href="/static/css/form_productos.css" rel="stylesheet">
+</head> 
+    <body>
+        <%-include('partials/header')%>
+    <main>
+        <div class="tabs">
+            <div class="tabs__content" data-tab="2">
 
-<body>
-    <%-include('partials/header')%>
-        <main>
-            <div class="tabs">
-                <div class="tabs__content" data-tab="2">
-                    <form action="/product/create" method="post" class="create-form">
-                        <h2>Agregar Producto</h2>
+                <div class="errores">
+                    <ul></ul>
+                </div>
 
-                        <div>
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre Producto" required>
-                        </div>
-
-                        <div>
-                            <label for="precio">Precio</label>
-                            <input type="number" name="precio" id="precio" placeholder="Precio" required>
-                        </div>
-                        <div>
-                            <label for="SKU">Talle</label>
-                            <input type="text" name="SKU" id="SKU" placeholder="Talle" required>
-                        </div>
-                        <div>
-                            <label for="peso">peso</label>
-                            <input type="text" name="peso" id="peso" placeholder="peso" required>
-                        </div>
-                        <div>
-                            <label for="create_date">create_datees</label>
-                            <input type="text" name="create_date" id="create_date" placeholder="create_date" required>
-                        </div>
-                        <div>
-                            <label for="stock">stock</label>
-                            <input type="text" name="stock" id="stock" placeholder="stock" required>
-                        </div>
-                        <div>
-                            <label for="proveedor_id">proveedor_id</label>
-
-                            <p>
-                                <select class="proveedor_id" name="proveedor_id" id="" required>
+                <form action="/product/create" method="post"  class="create-form" id="create-form">
+                <h2>Agregar Producto</h2>
+               
+                   <div>
+                       <label  for="nombre">Nombre</label>
+                       <input type="text" name="nombre" id="nombre" placeholder="Nombre Producto" >
+                   </div>
+                   
+                   <div>
+                       <label for="precio">Precio</label>
+                       <input type="number" name="precio" id="precio" placeholder="Precio" >
+                   </div>
+                   <div>
+                       <label  for="SKU">Talle</label>
+                       <input type="text" name="SKU" id="SKU" placeholder="Talle" >
+                   </div>
+                   <div>
+                        <label for="peso">Peso</label>
+                        <input type="text" name="peso" id="peso" placeholder="peso" >
+                    </div>
+                    <div>
+                        <label for="create_date">Create Date</label>
+                        <input type="text" name="create_date" id="create_date" placeholder="create_date" >
+                    </div>
+                    <div>
+                        <label for="stock">Stock</label>
+                        <input type="text" name="stock" id="stock" placeholder="stock" >
+                    </div>
+                    <div>
+                        <label for="proveedor_id">Proveedor_id</label>
+                        
+                        <p>
+                            <select class="proveedor_id" name="proveedor_id" id="" >
                               <option value="" disabled selected>- proveedor_id - </option>
                               <% productoProveedor.forEach(provedor => { %>
                               <option value="<%= provedor.id %>"><%= provedor.nombre %></option>
                               <% }); %>
                             </select>
-                            </p>
-
-                        </div>
-                        <div>
-                            <label for="categoria_id">categoria_id</label>
-                        </div>
-                        <p>
-                            <select class="categoria_id" name="categoria_id" id="" required>
+                        </p>               
+                                                        
+                    </div>
+                    <div>
+                        <label for="categoria_id">Categoria_id</label>
+                    </div>
+                    <p>
+                        <select class="categoria_id" name="categoria_id" id="" >
                           <option value="" disabled selected>- categoria_id - </option>
                           <% categoriaProducto.forEach(categoria => { %>
                           <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
                           <% }); %>
                         </select>
-                        </p>
+                    </p>
+                  
+                    <div>
+                           <label for="descripcion">Descripcion Producto (Optional)</label>
+                           <textarea rows="5" type="text" id="descripcion" name="descripcion"></textarea>
+                    </div>
+                    
+                <!-- File input field -->
+                    <div>
+                        <label>Foto de Producto</label>
+                        <input type="file" name="file"  id="file" onchange= "return fileValidation()" />
+                    </div>
+                    
+                <!-- Image preview -->
+                    <div id="imagePreview"></div>
 
-                        <div class="imagenProduct">
-                            <label for="avatar" class="imagenP"> Imagen del Producto</label><br>
-                            <input type="file" class="form-create-product" name="ImagenProduct">
-                        </div><br>
+                       <div>
+                           <button type="submit" value="Guardar">GUARDAR</a></button>            
+                       </div>
 
-                        <div>
-                            <label for="descripcion">Descripcion Producto (Optional)</label>
-                            <textarea rows="5" type="text" id="descripcion" name="descripcion"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" value="Guardar y volver al Home">GUARDAR</a></button>
-                        </div>
-                    </form>
-
-                </div>
+               </form>
+            
             </div>
-
-        </main>
+        </div>
+        <script src="/static/js/validatorCreateProd-front.js"> </script>
+    </main>
         <%-include('partials/footer')%>
+           
 </body>
 
 </html>
