@@ -76,7 +76,7 @@ module.exports = {
             domicilio_entrega:req.body.domicilio_entrega,
             codigo_postal:req.body.codigo_postal,
             fecha_nacimiento:req.body.fecha_nacimiento,
-            avatar:req.body.avatar,
+            avatar:req.file.filename,
             genero_id:req.body.genre_id,
 
         },

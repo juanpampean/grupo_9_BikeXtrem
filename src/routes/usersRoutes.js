@@ -30,7 +30,7 @@ router.get('/logout', usersController.logout)
 // Datos Usuario / Editar / Actualizar
 router.get('/profile', authMiddleware, usersController.profile);
 router.get('/edit/:id', authMiddleware, usersController.edit);
-router.put('/update/:id', authMiddleware, usersController.update);  
+router.put('/update/:id',uploadFile.single("avatar"), authMiddleware, usersController.update);  
 
 // Lista Usuarios
 
