@@ -9,7 +9,7 @@ window.onload = function() {
 
     let errores = [];
 
-    boton.style.backgroundColor = "Red";
+   
 
     boton.addEventListener("submit", function(e) {
 

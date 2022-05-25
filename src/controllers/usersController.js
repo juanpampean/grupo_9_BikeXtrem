@@ -51,7 +51,7 @@ module.exports = {
             domicilio_entrega:req.body.domicilio_entrega,
             codigo_postal:req.body.codigo_postal,
             fecha_nacimiento:req.body.cumpleaños,
-            avatar:req.body.avatar,
+            avatar:req.file.filename,
             genero_id:req.body.genre_id,
         }).then(function(){
             return res.redirect('/users/Login')
