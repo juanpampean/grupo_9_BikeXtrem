@@ -11,7 +11,7 @@
 
 <main>
     <h1>Datos de <%= userLog.nombre %> <%= userLog.apellido %></h1>
-    <img src="/images/avatars/<%= userLog.avatar %> ">
+    <img src="static/images/avatars/<%= userLog.avatar %> " onerror="this.src='static/images/avatars/error.jpg';this.onerror='';" with=70% height=70%><br>
     <p>Nombre: <%= userLog.nombre %></p> 
     <p>Apellido: <%= userLog.apellido %> </p> 
     <p>telefono: <%= userLog.telefono  %> </p>

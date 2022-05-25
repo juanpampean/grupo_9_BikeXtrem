@@ -133,6 +133,7 @@ module.exports = {
                 userLog.fecha_nacimiento = moment(userLog.fecha_nacimiento).format('L');
                 res.render('userUnregister', {userLog})
             })
+
     },
        destroy: function (req,res) {
             db.user
