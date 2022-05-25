@@ -10,15 +10,16 @@
 <body>
     <%-include('partials/header')%>
         <main>
-
+            
             <div class="container">
                 <div class="container2">
                     <div class="conRegistro">
                         <div class="con2Registro">
                             <section class="registro">
-                                <form action="/users/registro" enctype="multipart/form-data" method="POST">
-                                    <h2>Registro</h2>
-                                    <input class="datosingresados" type="text" name="nombre" placeholder="Nombre" />
+                              <ul class="errores"></ul>                          
+                                <form action="/users/registro" method="POST" enctype="multipart/form-data"  id="registro_usuarios" class="registro_usuarios">
+                                    <h2 id="titulo">Registro</h2>
+                                    <input class="datosingresados" type="text" name="nombre" placeholder="Nombre" id="nombre"/>
                                     <% if(locals.errors && locals.errors.nombre){ %>
                                         <span> <%=errors.nombre.msg %> </span>
                                         <% } %>
@@ -56,7 +57,7 @@
                                               </select>
                                                                                             </p>
 
-                                                                                            <input class="datosingresados" type="text" name="email" placeholder="Email" />
+                                                                                            <input class="datosingresados" type="text" name="email" placeholder="Email" id="email" />
                                                                                             <% if(locals.errors && locals.errors.email){ %>
                                                                                                 <span><%=errors.email.msg %></span>
                                                                                                 <% } %>
@@ -69,7 +70,7 @@
 
                                                                                                             <div class="imagen">
                                                                                                                 <label for="avatar" class="imagen1"> Avatar</label><br>
-                                                                                                                <input type="file" class="form-control" name="avatar">
+                                                                                                                <input type="file" class="form-control" name="avatar" onchange= "return fileValidation()"/>
                                                                                                                 <% if (locals.errors && errors.avatar) { %>
                                                                                                                 <span><%= errors.avatar.msg %></span>
                                                                                                                 <% } %>
@@ -82,6 +83,8 @@
                 </div>
             </div>
             </form>
+            <script src="/static/js/registroValidationFront.js"> </script>
+
         </main>
         <%-include('partials/footer')%>
 </body>
