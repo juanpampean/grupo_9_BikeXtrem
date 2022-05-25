@@ -12,12 +12,12 @@ window.onload = function(){
     form.addEventListener("submit", function(e){
         let errores = [];
         if (nombre.value == ""){
-            errores.push("El campo de título está vacío")
+            errores.push("El campo de nombre está vacío")
         } else if (nombre.value.length <5){
             errores.push("El campo de nombre debe tener al menos 5 carácteres")
         } else{}
         if (descripcion.value.length <20){
-            errores.push("El campo Descripción debe tener al menos  carácteres")
+            errores.push("El campo Descripción debe tener al menos 20 carácteres")
         } else{} 
 
 

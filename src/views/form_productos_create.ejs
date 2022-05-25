@@ -22,6 +22,9 @@
                    <div>
                        <label  for="nombre">Nombre</label>
                        <input type="text" name="nombre" id="nombre" placeholder="Nombre Producto" >
+                       <% if(locals.errors && locals.errors.nombre){ %>
+                        <span> <%=errors.nombre.msg %> </span>
+                        <% } %>
                    </div>
                    
                    <div>
@@ -78,6 +81,9 @@
                     <div>
                         <label for="file">Foto de Producto</label>
                         <input type="file" name="file"  id="file" onchange= "return fileValidation()" />
+                        <% if (locals.errors && errors.file) { %>
+                            <span><%= errors.file.msg %></span> 
+                            <% } %>
                     </div>
                     
                 <!-- Image preview -->
