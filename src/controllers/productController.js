@@ -94,7 +94,7 @@ const controller = {
             categoria_id: req.body.categoria_id,
             stock: req.body.stock,
             proveedor_id: req.body.proveedor_id,
-            imagen:req.file.filename,
+            imagen: req.file ? req.file.filename : req.body.imagen
         }, {
             where: {
                 id: req.params.id

@@ -8,6 +8,7 @@ const { body } = require("express-validator");
 const validator = require("../middlewares/validationForm");
 const uploadProductPhoto = require('../middlewares/multerMiddlewareP');
 
+
 //TODO: agregar el Controller
 const productController = require('../controllers/productController');
 
@@ -19,7 +20,7 @@ router.get("/listadoDeProductos",productController.list);
 
 /*** CREATE ONE PRODUCT ***/
 router.get('/create', productController.add);
-router.post('/create',uploadProductPhoto.single("file"),validator.processEdit, productController.create);
+router.post('/create',validator.productCreate,uploadProductPhoto.single("file"), productController.create);
 
 /*** GET ONE PRODUCT ***/
 router.get('/detail/:id', productController.detail);

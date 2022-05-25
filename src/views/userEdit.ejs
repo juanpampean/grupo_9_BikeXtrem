@@ -40,8 +40,8 @@
 
             
             <label for="avatar" class="imagen1"> Avatar</label><br>
-            <input type="file" class="form-control" name="avatar" value="static/images/avatars/<%= userLog.avatar %>">
-
+            <input type="file" class="form-control" name="avatar" >
+            <img src="static/images/avatars/<%= userLog.avatar %>" onerror="this.src='static/images/avatars/error.jpg';this.onerror='';">
 
             
             <br>
