@@ -65,10 +65,11 @@ const controller = {
             descripcion: req.body.descripcion,
             create_date: req.body.create_date,
             categoria_id: req.body.categoria_id,
+            imagen:req.file.filename,
             stock: req.body.stock,
             proveedor_id: req.body.proveedor_id,
-        })
-        return res.redirect("/product/listadoDeProductos");
+        }).then(function(){
+            return res.redirect('/product/listadoDeProductos')})
     },
 
     edit: (req, res) => {
@@ -93,6 +94,7 @@ const controller = {
             categoria_id: req.body.categoria_id,
             stock: req.body.stock,
             proveedor_id: req.body.proveedor_id,
+            imagen:req.file.filename,
         }, {
             where: {
                 id: req.params.id

@@ -3,6 +3,7 @@ const express = require('express');
 
 //TODO: agregar el router
 const router = express.Router();
+const multer  = require('multer');
 const { body } = require("express-validator");
 const validator = require("../middlewares/validationForm");
 const uploadProductPhoto = require('../middlewares/multerMiddlewareP');
@@ -25,7 +26,7 @@ router.get('/detail/:id', productController.detail);
 
 /*** EDIT ONE PRODUCT ***/
 router.get("/edit/:id", productController.edit);
-router.put("/edit/:id", validator.processEdit, productController.update);
+router.put("/edit/:id",uploadProductPhoto.single("file"), validator.processEdit, productController.update);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/delete/:id", productController.destroy);
