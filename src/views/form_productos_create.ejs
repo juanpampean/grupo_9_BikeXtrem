@@ -16,7 +16,7 @@
                     <ul></ul>
                 </div>
 
-                <form action="/product/create" method="post"  class="create-form" id="create-form">
+                <form action="/product/create" method="POST"  class="create-form" id="create-form" enctype="multipart/form-data">
                 <h2>Agregar Producto</h2>
                
                    <div>
@@ -76,7 +76,7 @@
                     
                 <!-- File input field -->
                     <div>
-                        <label>Foto de Producto</label>
+                        <label for="file">Foto de Producto</label>
                         <input type="file" name="file"  id="file" onchange= "return fileValidation()" />
                     </div>
                     
