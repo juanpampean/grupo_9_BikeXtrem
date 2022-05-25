@@ -7,25 +7,16 @@ const { check } = require("express-validator");
 const validator = require("../middlewares/validationForm");
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require("../middlewares/authMiddleware")
+const uploadFile = require('../middlewares/multerMiddleware');
 
-const storage = multer.diskStorage({
-    destination: function(req, file, cb) {
-        cb(null, path.join(__dirname, "../../public/images/users"));
-    },
-    filename: function(req, file, cb) {
 
-        cb(null, file.fieldname + "-" + Date.now() + "-" + path.extname(file.originalname));
-    }
-});
-
-const upload = multer({ storage });
 
 /* GET users listing. */
 
 //register
 
 router.get("/registro",guestMiddleware, usersController.register);
-router.post("/registro", upload.single("avatar"), validator.registro, usersController.processRegister);
+router.post("/registro", uploadFile.single("avatar"), validator.registro, usersController.processRegister);
 
 
 //login

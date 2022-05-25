@@ -12,6 +12,8 @@
 <main>
     <h1>Datos de <%= userLog.nombre %> <%= userLog.apellido %></h1>
 
+    <p><%= userLog.avatar %></p>
+
     <p>Nombre: <%= userLog.nombre %></p> 
     <p>Apellido: <%= userLog.apellido %> </p> 
     <p>telefono: <%= userLog.telefono  %> </p>
@@ -20,6 +22,7 @@
     <p>Ciudad:<%= userLog.ciudad  %></p>
     <p>Género <%= userLog.genres  %></p>
     <p>Fecha de Nacimiento:<%= userLog.fecha_nacimiento %> </p>
+
     <br>
     <section>
 		<a class="botonModificar" href="/users/edit/<%= userLog.id %>">Editar mis datos</a>
