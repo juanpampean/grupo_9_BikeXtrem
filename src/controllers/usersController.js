@@ -51,7 +51,7 @@ module.exports = {
             domicilio_entrega:req.body.domicilio_entrega,
             codigo_postal:req.body.codigo_postal,
             fecha_nacimiento:req.body.cumpleaños,
-            avatar:req.body.avatar,
+            avatar: req.file ? req.file.filename : req.userLog.avatar,
             genero_id:req.body.genre_id,
         }).then(function(){
             return res.redirect('/users/Login')
@@ -76,7 +76,7 @@ module.exports = {
             domicilio_entrega:req.body.domicilio_entrega,
             codigo_postal:req.body.codigo_postal,
             fecha_nacimiento:req.body.fecha_nacimiento,
-            avatar:req.body.avatar,
+            avatar:req.file.filename,
             genero_id:req.body.genre_id,
 
         },
@@ -133,6 +133,7 @@ module.exports = {
                 userLog.fecha_nacimiento = moment(userLog.fecha_nacimiento).format('L');
                 res.render('userUnregister', {userLog})
             })
+
     },
        destroy: function (req,res) {
             db.user

@@ -24,11 +24,13 @@ module.exports = (sequelize, DataTypes) => {
         categoria_id: {
             type: DataTypes.BIGINT(11),
         },
-        /*imagen: {
-            type: DataTypes.IMAGEN
-        },*/
+        imagen: {
+            type: DataTypes.STRING(100),
+            allowNull:true,
+        },
         create_date: {
             type: DataTypes.DATE,
+            allowNull:true,
         },
 
         stock: {
@@ -37,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
 
         proveedor_id: {
             type: DataTypes.BIGINT(11),
+            allowNull:true,
         }
     };
     let config = {

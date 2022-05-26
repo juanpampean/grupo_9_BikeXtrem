@@ -12,7 +12,7 @@
 <main>
     <h1 class="titulo">Aqui podrás editar tu usuario  <%= userLog.nombre %></h1>
     <section class="formulario">
-        <form action="/users/update/<%= userLog.id %>?_method=PUT" method="POST">
+        <form action="/users/update/<%= userLog.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <label for="nombre">Nombre </label>
             <p><input type="text" name="nombre" id="" value="<%= userLog.nombre %>" required></p>
             <label for="apellido">Apellido </label>
@@ -37,8 +37,11 @@
             </p>
             <label for="email">Email </label>
             <p><input type="text" name="email" id="" value="<%= userLog.mail %>" required></p>
-            
 
+            
+            <label for="avatar" class="imagen1"> Avatar</label><br>
+            <input type="file" class="form-control" name="avatar" >
+            <img src="static/images/avatars/<%= userLog.avatar %>" onerror="this.src='static/images/avatars/error.jpg';this.onerror='';">
 
             
             <br>

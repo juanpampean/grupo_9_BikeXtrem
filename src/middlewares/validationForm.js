@@ -8,18 +8,23 @@ module.exports = {
     registro: [
         check("nombre")
         .notEmpty()
-        .withMessage("campo nombre vacío"),
+        .withMessage("campo nombre vacío")
+        .isLength({min: 2})
+        .withMessage("campo nombre debe tener al menos 2 caracteres"),
+
 
         check("apellido")
         .notEmpty()
-        .withMessage("campo nombre vacío"),
+        .withMessage("campo nombre vacío")
+        .isLength({min: 2})
+        .withMessage("campo apellido debe tener al menos 2 caracteres"),
 
         check("email")
         .notEmpty()
         .withMessage("Email vacío")
         .bail()
-        .isEmail()
-        .withMessage("formato de email incorrecto")
+            .isEmail()
+            .withMessage("formato de email incorrecto")
         .custom(function(value) {
             return db.user.findOne({
                 where: { mail: value }
@@ -32,7 +37,9 @@ module.exports = {
         }),
         check("contraseña")
         .notEmpty()
-        .withMessage("campo password vacío"),
+        .withMessage("campo password vacío")
+        .isLength({min: 8})
+        .withMessage("contraseña debe tener al menos 8 caracteres"),
 
         check("genre_id")
         .notEmpty()
@@ -57,13 +64,28 @@ module.exports = {
         check("telefono")
         .notEmpty()
         .withMessage("campo teléfono vacío"),
-
-
+        
+        body('avatar').custom((value, { req }) => {
+            let file = req.file;
+            let acceptedExtensions = ['.jpg', '.png', '.gif','.jpeg'];
+            
+            if (!file) {
+                throw new Error('Tienes que subir una imagen');
+            } else {
+                let fileExtension = path.extname(file.originalname);
+                if (!acceptedExtensions.includes(fileExtension)) {
+                    throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+                }
+            }
+            return true;
+        })
     ],
     login: [
         check("email")
         .notEmpty()
-        .withMessage("Email vacío"),
+        .withMessage("Email vacío")
+        .isEmail()
+        .withMessage("formato de email incorrecto"),
 
         check("contraseña")
         .notEmpty()
@@ -77,5 +99,29 @@ module.exports = {
         body("velocidad").notEmpty().withMessage("campo velocidad vacío").isDate(),
         body("color").notEmpty().withMessage("campo color vacío"),
         body("descripcion").isLength({ min: 20 }).withMessage("Coloca descripción del producto acá"),
+
+    ],
+    productCreate:[
+        check("nombre")
+        .notEmpty()
+        .withMessage("campo nombre vacío")
+        .isLength({min:15})
+        .withMessage("campo nombre debe tener al menos 15 caracteres"),
+
+        body('file').custom((value, { req }) => {
+            let file = req.file;
+            let acceptedExtensions = ['.jpg', '.png', '.gif','.jpeg'];
+            
+            if (!file) {
+                throw new Error('Tienes que subir una imagen');
+            } else {
+                let fileExtension = path.extname(file.originalname);
+                if (!acceptedExtensions.includes(fileExtension)) {
+                    throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+                }
+            }
+            return true;
+        })
+        
     ]
 }

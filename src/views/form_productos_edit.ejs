@@ -10,7 +10,7 @@
 <div class="tabs__content" data-tab="2">
     <h2>Editar Producto</h2>
     <ul class="errores"></ul>
-    <form class="form" action="/product/edit/<%= product.id%>?_method=PUT" method="post">
+    <form class="form" action="/product/edit/<%= product.id%>?_method=PUT" method="post" enctype="multipart/form-data">
 
         <div>
             <label>Producto a editar</label>
@@ -47,8 +47,9 @@
         </div>
 
         <div>
-            <label for="descripcion">Descripcion Producto (Optional)</label>
-            <textarea rows="5" value="<%= product.descripcion %>" id="descripcion" name="descripcion" required><%= product.descripcion %></textarea>
+            <label for="file">Imagen Producto</label>
+            <input type="file" class="form-control" name="file">
+            <img src="static/images/product/<%= product.imagen %>">
         </div>
 
 

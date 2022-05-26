@@ -14,7 +14,7 @@
         <div class="listado-caja">
             <article>
                 <div class="image-container">
-                    <img src="/static/images/BMC_3.png" alt="bici" width="50%">
+                    <img src="static/images/product/<%= product.imagen %>" onerror="this.src='static/images/product/errorBici.jpg';this.onerror='';" width="50%">
                 </div>
                 <p> Información de la Bicicleta</p>
                 
@@ -27,6 +27,7 @@
                 </ul>
             </article>
         </div>
+        <a class="botonModificar" href="/product/edit/<%= product.id %>">Editar Información de la Bicicleta</a>
     </main>
 
 
