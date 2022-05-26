@@ -1,0 +1,163 @@
+/* Paleta de Colores 
+0D353F • 72CDAE • E6DAC6 • F5562A • AB2E44 ( + info https://www.instagram.com/p/CXmj97eM2PR/)
+   Tipografia: MONTSERRAT
+   Link para los html:
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   CSS Rule para especificar> font-family: 'Montserrat', sans-serif; */
+
+   *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+   }
+
+
+
+.contacto a { 
+   padding:20px;
+;
+   
+}
+
+  main {
+      background-color: #E6DAC6 ;
+      
+   }
+   main .container-slider {
+      display:block;
+      margin:auto;
+      background-color: #E6DAC6;
+      width:100%;
+      padding:5px;
+   }
+   
+
+   ul.slider {
+      position:relative;
+      width:inherit;
+      height:300px;
+   }
+
+   ul.slider li {
+      position:absolute;
+      left:0px;
+      top:0px;
+      opacity: 0;
+      width:inherit;
+      height: inherit;
+      transition: opacity 0.5s;
+   }
+
+   ul.slider li img {
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      padding:0;
+   }
+
+   ul.slider li:target{
+      opacity:1;
+
+   }
+
+   ul.slider li:first-child{
+      opacity:1;
+   }
+
+   main .menu {
+      position:absolute;
+      text-align:center;
+      left:10px;
+      top:68%;
+      cursor:pointer;
+      
+
+   }
+   main .menu li {
+      display:inline-flex;      
+      text-align: center;
+   }
+   main .menu li a{
+      display:inline-block;
+      color:white;
+      text-decoration: none;
+      background-color:#72CDAE;
+      width:20px;
+      height:20px;
+      font-size:20px; 
+      border-radius: 100%;
+   }
+   main {
+      display:block;
+      
+   }
+
+   main .ofertas-carousel {
+      display:block;
+      background-color: #E6DAC6;
+      justify-content: space-between;
+      align-items:center;
+   }
+   main .titulo_ofertas {
+      display:block;
+      background-color:#E6DAC6;
+      font-size:30px;
+      margin-left:15px;
+   }
+   .ofertas-carousel img {
+      width:100%;
+      height:40%;
+      padding:0px;
+      margin:0px;
+      background-color: white;
+   }
+   .ofertas-carousel .producto-oferta {
+      position:relative;
+      margin:10px 20px;
+      padding:0px;
+      border:0;
+      background-color: white;
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+   }
+
+   .ofertas-carousel .nombre {
+      position:relative;
+      bottom:40px;
+      left:10px;
+      margin:0;
+      font-size:28px;
+   }
+   .ofertas-carousel .precio_antes {
+      text-decoration:line-through red;
+      width:30%;
+      margin-bottom:0;
+      
+   }
+   .ofertas-carousel .precio_oferta {
+      color:green;
+      font-weight: 500;
+      margin-bottom:0;
+      font-size:26px;
+   }
+   .ofertas-carousel .detalle_oferta {
+      position:absolute;
+      top:10px;
+      left:10px;
+   }
+
+
+
+@media (min-width:769px) {
+   .container-slider {
+         display:flex;
+      }
+   main {
+         display:flex;
+         flex-direction: column;  
+   }
+   main .ofertas-carousel {
+      display:flex;
+   }
+}
+

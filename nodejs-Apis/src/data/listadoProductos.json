@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "nombre": "Downage",
+        "marca": "Specialized",
+        "precio": "$68230.31",
+        "TalleCuadro": "XS",
+        "Descripcion": "45.183.140.117",
+        "Imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKfSURBVDjLfZNLaNRXFIe/O//JTCePxqQiRq2CDcQkGFoQF0VaCS4MAVGoiEhDpEigi0JxXYKhthTaTRcuVOhCIgXBFCtVCLb1laoNKkl8tIyPSCoTY8aOJqP538evixiZUOKBw+Uezve7h3PONZKYs81fntPuLfX8MZonOOF9wPtA8AHnAhveeYsDvVcZPPCRmWOSlFjwnhCEsy9BN3t6N+vOCe98KUKi9PLqNetxsaex7BIdb36FjT3W+lnB1wkE55kuWpZVpbGxp7X8J9bV3mGpbvN2dYap4gzev7YC3/Pn8DiL00maa56yOjVEoraVTZVnWFKR4vK1MYLzPQsKnPumrXvk74mey0M51pf/RrJuO4lF79Oc6OfK9VGG/8r13Ort7C5ljCTsxVUZKWpQUBQEX1zs6OpqOb1nZcseSKSIH/zIkfPRzzuahvZJCUIQ3hYn6rY/emAkEZ+tG1N543IJJKEgEjUfQPkqZJ8gW8BODuGLjxCGYC3xs/vE+ccdRhLF42ZLsPRGTZ9WJpfvRHGOED8h2Dz4IsiBSWKSVQRnKQweJT84coI0u8zcIhWOmPrgOZlas60hWrEVxePITaNQRP45mAiXf0ju1DEfP6O75Xvtn9fE6o+VJc26F/f6+sLTmyAhzaAwA4oxRIz/eixvZ2ibg/83hZqdmjKZin5byCIDKGAwII9CgIiptd+qf8ExAog32stq3sWYJHKOOP8QU1ZLIlVNasnSlcP7zNrS/Hl/YbJvcSaI1mhRE4Ur3zE5MJDFcKGiob6zas1G0nXN5O/k2oHhBTbRfWgqV2cmTu5l4veBg87yXuPX2v3v7Wzb3eOH/4mfx7yYpn1+ydIrHzvEJ9n93B35nM2lcUlc+ozqM7v44Zdt3CiN/wel+5Gy/cSN+gAAAABJRU5ErkJggg==",
+        "Rodado": "26",
+        "Velocidades": "5",
+        "Color": "Teal"
+    },
+    {
+        "id": 2,
+        "nombre": "Cheston",
+        "marca": "Scott",
+        "precio": "$52771.75",
+        "TalleCuadro": "L",
+        "Descripcion": "9.155.238.96",
+        "Imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJjSURBVDjLpVPPaxNBGH2zu026piEpTayhJVBzswR/BBVvXiyKiJeACv4LnnsRQ/DqIYcilApevQuWHIpgqIhiSJQiCrEBf9EGarqm2eyP2fGbSZMWjCC4MHwMM+99771vhwkh8D+fcXhTrVYf+75/2/M8gyqoquW6rqxP8vn8rZEE9Xo9RoBH8Xg8Hw4fgUMgBAGUNlI4ORlHubx6k3Z/EtRqtcsSnEgkZiKRCDab3yC7B4FAIAIiEuBE5jjOaAt0eTWdTquNbffgEfh9/S0RBMN1aeGKsjGSQHoMhUKwLKvfmXOcmD+luov97jLovyqQzJxA8pIciJRer72hyimgLsAYGo0owqaG5ZUl8gQmk2nvtKYXF4stpaCflVBEkmA+ewaatYZo6BmMCJ0LDsdOYmv3Ivthxa7R9ae9nn2MassYeOsrkJK5kj4VXsdMbpb2LepJ1qwuxhvPxdef13d1nUm7akiaJBiC+UFw+hgdGiac7fOwv+dgTpiqUdfVlWTf7ys3ZDiDv1EGJy0IGZwG6Bp1TdYphi40Nib7EdBlno/hVJQCOQVd15X0YF8FYwE87mLn8xzeradJnaUA3HPpjq8mpghIwetKpYJOp4NoNIpxM0x/IEMgLToaYqkaTp7dAHqaAuiMjwnuCd/tKNlMyi+VSldpGsVUKpWbO55BLDYFu/UCem+NQjTgenvwHBsvN5JfYtOnZ51u2//QbGVXlh5+ZIdfY6FQWCCiB7Syg8cka+TcXVi2D/PTfS5FKCuZe+LXHhfsX57zjeIr3t7aRDooX2C+lbF5aKJz9M6ytd0UvwHmbqDcpFnnSAAAAABJRU5ErkJggg==",
+        "Rodado": "20",
+        "Velocidades": "10",
+        "Color": "Violet"
+    },
+    {
+        "id": 3,
+        "nombre": "Medcraft",
+        "marca": "Trek",
+        "precio": "$72243.08",
+        "TalleCuadro": "2XL",
+        "Descripcion": "40.164.19.55",
+        "Imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFuSURBVDjLpZPdS8JgFIf9F6UoieiDogKllUNhM4IIKYhCRAqlIkqKmYVGERZFUZB9kBgJ9uH9dARdeDfn6T3ndbJFN7kfPDDGe55zONvrAgCXE1zuacW7nK3UQ3ufIO8yku8gbZchuFWCwOYriBsv4E8UYCr+DMLqI/hi9yAnbutYR4JwumJEcyr8FyFybZAAO3fC2NIVkEBOfkAnGVm44AJp541eFItFAjOU0QhMvBAhms2m/Uz4rCVgC+tEMDB3ygW47b+CBSaGYdjA9M+ecAF+qt9dzU5YDCmRwMLv0jiB6Zs54gJx3T62dVTq1hI0Gg2bwCNnuEBYe2qPbB0TC6zout4G0x1Ic8Fk7IELBC+Bh83F4bM5DRZal9glprjAF83zreXvOCzlrxKBUVUVqtUqPddqNdA0vie3XwHzLigTKzf0Z40uXsJw+BwG53Nsy8e0KE8oC73SIfQED9jY+6yzAqwGUUjg+DY6FfwA5i1AjZKvAWgAAAAASUVORK5CYII=",
+        "Rodado": "12",
+        "Velocidades": "15",
+        "Color": "Puce"
+    },
+    {
+        "id": 4,
+        "nombre": "Codie",
+        "marca": "Giant",
+        "precio": "$38187.71",
+        "TalleCuadro": "M",
+        "Descripcion": "40.15.212.233",
+        "Imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGXSURBVBgZBcHPi0xxAADwz3szfoxRGqzV7C6hVhwcJU6Ii5xxWBJFDuIitaX8FViExMVNIoe9IAeSH+vHJqsVOWBmlpmdNzPv++b5fKIcMLU5HMp2/xttLUrm5p+1bp5+DEQ5PhSz8ezs4LKypodKhs2E5v3o5JnfRLkPC7LrlbEBsY55P701Y70RX16U9h39E+XeXlh+cbWgLxXJJWp6lqibupceiN5szF6tKk+KbLVOoi3R1dNUNuvb/jiMrSxf8sCMr/oymUxHW+qXqt6pOOzp+2yJlo/m9HR05L6b1FSQbiuGDU11bX/l5sUSwbSb/qk5qFeI03jAiJqKIxZq6/nkqjreq0sV0x8LK+Me2WlASx9z2mIULRbE6ZOGQQes0BUEHcOWiuTWKUnfxent130SqSCV6olUlVTt8kW4HOXuXhs9tkZNQaJpXksiNaTn0fOwu0h67sWm+vbPGtYakiuoqGh4OJsdu9KJcpyvdm8M7a1oKNmhoGXay6fh5MRHohxw4nD3eLolL1ZD1g9T4VZ2Z6IL/wGvx8Nbuo22qgAAAABJRU5ErkJggg==",
+        "Rodado": "27.5",
+        "Velocidades": "30",
+        "Color": "Orange"
+    },
+    {
+        "id": 5,
+        "nombre": "Orran",
+        "marca": "Cannondale",
+        "precio": "$80582.91",
+        "TalleCuadro": "M",
+        "Descripcion": "56.29.252.209",
+        "Imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALeSURBVDjLY/j//z8DDKvNusuTturRzro9L95NO/b674RDr37W73z+Pmnxg9PypRcUkNXCMIaAcu9Nj7rjb24ee/rt/9HH3/47zry7Si7/vKZM5hlGggYodd5g1J9wc+KiKx8+Wk+5vSh367OLlp3XF8kknxbGphnDAIWGK4kbb37+pV13pV82+6xF1Y7nt90m3NwinX3JWrP51hzz3nsHTTrv7jZpvbPbrPXWQc3Sa8sQmqsuq5bsfHF15ul3b2TSzphJx5/UmXLw9Wv/KbcPSGdecFauuDnZZ97jz9kbX/zPXPPiv07pjXXisRfK4AYYtVydufn6pz/zTr77MOHAqxczDr5+e+Dmp/+xs+6eEfM6IKffcGt9wLxH/5x6795NXPbkv0T0+Wax8LNsDMAAYgEGUOySM+8++027s1cy9GikRODhYHG/g3lT97x4mzL77mXJhLMZMUue/rdtu3sZaKt7xNzH/2WizveCwwAYQHrZax5fmnTg1SuJoCOGMBeJeu5VT5px52LGrHsP3Cbff+824d5Lsajz1kBbgyJnPvyvmnhhGdiAjp3Pv087+Op/89ZnX5Jn3N4GEhRx32Mc3HPj5LJDb/5HT7r3P3HJk/9iEWdrwXIhp73Dp97/r518YQvWdICMgc6NiZ7/+H/yoif/U2fM/58zJf5/Wp///6hWj/82ucU3BL2OCOPWHH3ezLr+5mWv3rvffKvrTzeuTvy/5crU/xee7frfvzvrf3i/7n/jdJ15OA3QzL60JmHeo/9iwSebY9tdvm+8POH/xmuT/oNAz57U//170v+bZ0v9wNAIDCRj0dAzxe5tdz54tN35Kux3Itin2vD/titz/iODTZemAg2QxLTZvfPuJ9++u/99e+789+m4898o7eIxyxzp7927kv6370oAa27fmQB2gUW2/H+8gQjDQJtagns0/vfuSgHbDKJBfKB4D1EGQA3pAOJPIGdD6Q6QOADllJVJzH+HzQAAAABJRU5ErkJggg==",
+        "Rodado": "29",
+        "Velocidades": "20",
+        "Color": "Fuscia"
+    }
+]

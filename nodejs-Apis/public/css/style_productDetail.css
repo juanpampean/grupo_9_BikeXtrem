@@ -1,0 +1,437 @@
+/**{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+ }*/
+
+/* Aqui comienza CSS Juan */
+
+
+/*
+header .top-header {
+    display: flex;
+    background-color:#0D353F;
+    padding:20px;
+    justify-content: space-between;
+    height:50px;
+ }
+
+ header .cuenta a {
+    margin:5px;
+    color:#72CDAE;
+ }
+
+ header .mid-header {
+    display:flex;
+    background-color:#72CDAE ;
+    height:120px;
+    justify-content: space-between;
+    position:relative;
+ }
+
+ .carrito {
+   color:black;
+}
+
+ header .mid-header div {
+    padding:0px 50px 0px 20px;
+    align-self: center;
+    font-size:150%;  
+ }
+ 
+ .logo {
+    display:block;
+    font-size:200%;
+    text-align:center;
+ }
+
+ .bikextrem{
+    color: black;
+   
+ }
+ 
+ .contacto a { 
+    padding:20px;
+ ;
+    
+ }
+ 
+ .low-header {
+    display:flex;
+    background-color:#0D353F;
+    justify-content: center;
+ }
+ 
+ .low-header a {
+       margin:5px;
+       color:#72CDAE;
+       padding:10px
+    }
+
+    */
+
+    main {
+        display:flex;
+        background-color: #e6dac6;
+        text-align: center;  
+        width: 100%;
+     }
+  
+  footer {
+     display:flex;
+     background-color:#0D353F;
+     color:#72CDAE;
+     justify-content: space-between;
+  }
+  
+  .logo_mision {
+     text-align:left;
+     position: relative;
+     min-height: 1px;
+     padding-right: 15px;
+     padding-left: 15px; 
+  }
+  
+  footer .logo {
+     display:flex;
+     justify-content: column;
+     font-size:40px
+  }
+  
+  footer div {
+     padding:15px;
+  }
+
+
+/* CSS Kerby */
+
+
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#col1{
+    height: 800px;
+    width: 50%;
+    float: left;
+    padding: 1%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.zoom{
+   height: 250px;
+   transition: transform 6s;
+   border:solid 1px black;
+}
+
+.zoom:hover{
+   transform: scale(1.5);
+   cursor: zoom-in;
+}
+
+.carrusel{
+   display: flex;
+   height: 170px;
+   width: 170px;
+   margin-left: 170px;
+}
+
+.carrusel1{
+   border:solid 1px black;
+   margin: 20px;
+}
+
+.carrusel1:hover{
+   cursor:pointer;
+}
+
+.cuadro-texto{
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 10%;
+}
+
+.lista{
+   display: flex;
+   list-style: none;
+}
+
+.descripcion, .informacion, .comentarios{
+   border: solid 1px rgba(128, 128, 128, 0.575);
+   margin-right: 0px;
+   padding: 10px;
+   background-color: #ab2e45b7;
+}
+
+.descripcion, .informacion, .comentarios:hover{
+   cursor:pointer;
+}
+
+.texto{
+   margin-left: 40px;
+   margin-right: 80px;
+   padding: 20px 5px 5px 5px;
+   margin-top: -17px;
+}
+
+.metodo{
+   font-size: 28px;
+}
+
+#col2{
+    height: 800px;
+    width: 30%;
+    float: left;
+    padding: 1%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.stock{
+   font-size: 20px;
+   border: solid 1px black;
+   background-color: white;
+   margin-bottom: 0px;
+   padding: 10px;
+   max-width: 100px;
+   margin-left: 35%;
+}
+
+.caja2{
+   display: flex;
+   justify-content: space-around;
+}
+
+.caja2:hover{
+   cursor:pointer;
+}
+
+.caja3{
+   display: flex;
+   justify-content:space-evenly;
+   margin-right: 1px;
+   margin-left: 1px;
+   padding-left: 15%;
+   padding-right: 15%;
+}
+
+.caja3:hover{
+   cursor:pointer;
+}
+
+.caja1Color{
+   background-color: rgba(228, 245, 0, 0.76);
+   border:dotted 3px rgb(139, 136, 136);
+   border-radius: 10px;
+   height: 50px;
+   width: 50px;
+   margin-top: 40px;
+}
+
+.caja2Color{
+   background-color: rgba(255, 0, 0, 0.76);
+   border:dotted 3px rgb(139, 136, 136);
+   border-radius: 10px;
+   height: 50px;
+   width: 50px;
+   margin-top: 40px;
+}
+
+.caja3Color{
+   background-color: rgba(181, 167, 233, 0.76);
+   border:dotted 3px rgb(139, 136, 136);
+   border-radius: 10px;
+   height: 50px;
+   width: 50px;
+   margin-top: 40px;
+}
+
+.caja4Color{
+   background-color: rgba(8, 146, 146, 0.76);
+   border:dotted 3px rgb(139, 136, 136);
+   border-radius: 10px;
+   height: 50px;
+   width: 50px;
+   margin-top: 40px;
+}
+
+.tamaño1{
+   background-color: white;
+   border:dotted 3px rgb(139, 136, 136);
+   border-radius: 10px;
+   height: 40px;
+   width: 40px;
+   margin: 30px;
+
+}
+
+.pulgada{
+   text-align: center;
+   font-size: 18px; 
+   margin-top: 10px;
+}
+
+.tamaño2{
+   background-color: white;
+   border:dotted 3px rgb(139, 136, 136);
+   border-radius: 10px;
+   height: 40px;
+   width: 40px;
+   margin: 30px 30px 0px 30px;
+}
+.tamaño3{
+   background-color: white;
+   border:dotted 3px rgb(139, 136, 136);
+   border-radius: 10px;
+   height: 40px;
+   width: 40px;
+   margin: 30px 30px 0px 30px;
+}
+
+.button{
+   margin-top: 40px;
+   height: 40px;
+   width: auto;
+   font-size: 18px;
+   font-family: 'Montserrat', sans-serif;
+   color: #72CDAE;
+   border-radius: 10px;
+   font-weight: bold;
+   background-color:#0D353F;
+   border-color: #72CDAE;
+}
+
+.button:hover{
+   cursor:pointer;
+}
+
+#col3{
+    height: 800px;
+    width: 40%;
+    float: left;
+    padding: 1%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.caja1{
+   text-align: left;
+   padding-left: 5%;
+}
+
+.precio_oferta{
+   font-family: 'Montserrat', 'sans-serif';
+   font-size: 32px;
+   font-weight: bold;
+   margin: auto;
+   padding: 10px;
+   max-width: 180px;
+   border: solid 3px #0D353F;
+   color: green;
+}
+
+.precio_antes{
+   text-decoration:line-through red;
+   font-size: 18px;
+}
+
+.logoBanco{
+   height: 8%;
+   width: 13%;
+   overflow: hidden;
+   margin-top: 8px;
+   margin-bottom: 0px;
+   border: solid 1px black;
+   background-color: white;
+}
+
+.navegacion, .retiro{
+   text-align: left;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 20px;
+   padding-left: 5%;
+}
+
+.retiro:hover{
+   cursor: pointer;
+}
+
+.noInteres{
+   color: rgb(21, 128, 0);
+}
+.banco{
+   display: flex;
+}
+
+.banco:hover{
+   cursor: pointer;
+}
+
+.interes{
+   margin: 0px 0px 0px 15px;
+   font-size: 20px;
+   max-width: 200vmax;
+}
+
+.cuadro-texto{
+   display: flex;
+   align-items: flex-end;
+}
+
+.texto{
+   text-align: justify;
+}
+
+
+
+  /*@media (min-width:361px) {*/
+      /* Tablets */
+   /*   header .top-header {
+      display: block;
+      background-color:#0D353F;
+      padding:20px;
+      justify-content: space-between;
+      height:auto;
+      }
+      header .mid-header {
+         display:block;
+         height:auto;
+      }
+
+   } */
+
+   /*@media (max-width: 360px) {*/
+   /* Mobile */
+  /* header .top-header {
+         display: flex;
+         background-color:#0D353F;
+         padding:20px;
+         justify-content: space-between;
+         height:50px;
+      }
+   header .mid-header {
+         display:flex;
+      }
+   .low-header {
+         display:flex;
+      }
+   .container-slider {
+         display:flex;
+      }
+   main {
+         display:flex;
+         flex-direction: column;  
+   }
+
+   footer {
+      display:flex;
+   }
+   .logo {
+      display:block;
+      font-size:200%;
+      text-align:center;
+   }}*/
+
+   
