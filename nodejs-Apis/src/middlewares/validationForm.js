@@ -101,6 +101,7 @@ module.exports = {
         body("velocidad").notEmpty().withMessage("campo velocidad vacío").isDate(),
         body("color").notEmpty().withMessage("campo color vacío"),
         body("descripcion").isLength({ min: 20 }).withMessage("Coloca descripción del producto acá"),
+        
         body('file').custom((value, { req }) => {
             let file = req.file;
             let acceptedExtensions = ['.jpg', '.png', '.gif','.jpeg'];
@@ -117,12 +118,16 @@ module.exports = {
         })
 
     ],
-    productCreate:[
-        body("nombre")
+    productCreate:  [
+        check("nombre")
         .notEmpty()
         .withMessage("campo nombre vacío")
         .isLength({min:15})
         .withMessage("campo nombre debe tener al menos 15 caracteres"),
+
+        check("descripcion")
+        .isLength({min:20})
+        .withMessage("este campo debe tener al menos 20 caracteres"),
 
         body('file').custom((value, { req }) => {
             let file = req.file;

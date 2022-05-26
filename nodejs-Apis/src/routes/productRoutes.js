@@ -26,7 +26,7 @@ router.post('/create',validator.productCreate,uploadProductPhoto.single("file"),
 router.get('/detail/:id', productController.detail);
 
 /*** EDIT ONE PRODUCT ***/
-router.get("/edit/:id", productController.edit);
+router.get("/edit/:id", validator.processEdit, productController.edit);
 router.put("/edit/:id",uploadProductPhoto.single("file"), validator.processEdit, productController.update);
 
 /*** DELETE ONE PRODUCT***/

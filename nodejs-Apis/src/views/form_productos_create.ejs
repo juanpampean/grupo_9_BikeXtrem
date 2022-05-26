@@ -75,6 +75,9 @@
                     <div>
                            <label for="descripcion">Descripcion Producto (Optional)</label>
                            <textarea rows="5" type="text" id="descripcion" name="descripcion"></textarea>
+                           <% if(locals.errors && locals.errors.descripcion){ %>
+                            <span> <%=errors.descripcion.msg %> </span>
+                            <% } %>
                     </div>
                     
                 <!-- File input field -->
@@ -94,7 +97,7 @@
                        </div>
 
                </form>
-               <script src="/static/js/validatorCreateProd-front.js"> </script>
+ 
             </div>
         </div>
 

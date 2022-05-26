@@ -30,9 +30,7 @@ window.onload = function(){
                 ulErrores.innerHTML += "<li>" + error +  "</li>"
             })
             console.log(ulErrores)
-        }else{
-            alert("El producto se editó satisfactoriamente")
-        }
+        }else{  }
     
     })
 }
