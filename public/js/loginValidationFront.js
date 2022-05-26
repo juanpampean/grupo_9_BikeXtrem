@@ -9,10 +9,6 @@ window.onload = function() {
         let errores = [];
         if (mail.value == "") {
             errores.push("El campo de email está vacío")
-        } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(mail)) {
-            alert("La dirección de email " + mail + " es correcta.");
-        } else {
-            alert("La dirección de email es incorrecta.");
         }
         if (clave.value.length < 8) {
             errores.push("El campo Contraseña debe tener al menos 8 carácteres")
@@ -28,9 +24,7 @@ window.onload = function() {
             })
             console.log(ulErrores)
             ulErrores.style.color = "red";
-        } else {
-            alert("Usuario Logueado Satisfactoriamente")
-        }
+        } else {}
 
     })
 }

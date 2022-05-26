@@ -2,8 +2,8 @@ body {
     background-color: aliceblue;
 }
 
-/*0D353F • 72CDAE • E6DAC6 • F5562A • AB2E44*/
 
+/*0D353F • 72CDAE • E6DAC6 • F5562A • AB2E44*/
 
 .container {
     width: 100%;
@@ -12,7 +12,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .container2 {
@@ -22,8 +21,6 @@ body {
     background-color: white;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
-
-
 
 .login {
     padding: 40px;
@@ -47,23 +44,23 @@ h2 {
     margin-bottom: 30px;
 }
 
-h4{
-    color:#ab2e44;
+h4 {
+    color: #ab2e44;
     margin-bottom: 30px;
     text-align: left;
     font-size: 40px;
 }
 
 .login input {
-  padding: 5px;
-  font-size: 16px;
-  margin-bottom: 25px;
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom: 1px solid #a8a8a8;
-  color: #333;
-  background-color: inherit;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid #a8a8a8;
+    color: #333;
+    background-color: inherit;
 }
 
 .login input:active,
@@ -82,7 +79,7 @@ h4{
     border-radius: 8px;
 }
 
-main .boton1{
+main .boton1 {
     padding: 10px;
     background-color: #72CDAE;
     color: #0D353F;
@@ -92,7 +89,6 @@ main .boton1{
     cursor: pointer;
     border-radius: 8px;
 }
-
 
 main .datosingresados1 {
     margin-left: 10px;
@@ -123,19 +119,20 @@ main .datosingresados1 {
     height: 50rem;
     width: 100%;
     align-items: center;
-
 }
 
 .registro {
     padding: 10px;
     position: relative;
-
 }
 
 form span {
     color: red
 }
-.con2Registro, .registro, .datosingresados {
+
+.con2Registro,
+.registro,
+.datosingresados {
     margin-left: 10px;
     width: auto;
     font-size: 25px;
@@ -158,7 +155,6 @@ form span {
     font-size: 25px;
 }
 
-
 .registro .boton {
     width: auto;
     padding: 10px;
@@ -170,8 +166,7 @@ form span {
     border-radius: 8px;
 }
 
-.recuerdame{
-  color:#ab2e44;
-  font-size: 20px;
+.recuerdame {
+    color: #ab2e44;
+    font-size: 20px;
 }
-

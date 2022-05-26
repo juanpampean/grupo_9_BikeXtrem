@@ -201,7 +201,7 @@
         justify-content: space-between;
         padding: 10px 15px 0px 10px;
         border: black solid 1px;
-        margin: 10px;
+        margin: 8px;
         align-items: center;
     }
     
@@ -228,13 +228,13 @@
     }
     
     main .Descrip div {
-        margin-left: 5%;
+        margin-left: 10%;
     }
     
     #Precio {
         font-size: 20px;
         align-items: center;
-        height: 5px;
+        height: 3px;
         padding-bottom: 2px;
     }
     
