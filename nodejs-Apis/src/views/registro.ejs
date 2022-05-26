@@ -10,73 +10,143 @@
 <body>
     <%-include('partials/header')%>
         <main>
-            
+        
             <div class="container">
                 <div class="container2">
                     <div class="conRegistro">
                         <div class="con2Registro">
                             <section class="registro">
-                              <ul class="errores"></ul>                          
-                                <form action="/users/registro" method="POST" enctype="multipart/form-data"  id="registro_usuarios" class="registro_usuarios">
+                                <ul class="errores"></ul>
+                                <form action="/users/registro" method="POST" enctype="multipart/form-data"
+                                    id="registro_usuarios" class="registro_usuarios">
                                     <h2 id="titulo">Registro</h2>
-                                    <input class="datosingresados" type="text" name="nombre" placeholder="Nombre" id="nombre"/>
+                                    <input class="datosingresados" type="text" name="nombre" placeholder="Nombre" id="nombre" />
                                     <% if(locals.errors && locals.errors.nombre){ %>
-                                        <span> <%=errors.nombre.msg %> </span>
+                                        <span>
+                                            <%=errors.nombre.msg %>
+                                        </span>
                                         <% } %>
                                             <input class="datosingresados" type="text" name="apellido" placeholder="Apellido" />
                                             <% if(locals.errors && locals.errors.apellido){ %>
-                                                <span> <%=errors.apellido.msg %> </span>
+                                                <span>
+                                                    <%=errors.apellido.msg %>
+                                                </span>
                                                 <% } %><br>
-                                                    <input class="datosingresados" type="number" name="telefono" placeholder="Teléfono" />
+                                                    <input class="datosingresados" type="number" name="telefono"
+                                                        placeholder="Teléfono" />
                                                     <% if(locals.errors && locals.errors.telefono){ %>
-                                                        <span><%=errors.telefono.msg %></span>
+                                                        <span>
+                                                            <%=errors.telefono.msg %>
+                                                        </span>
                                                         <% } %><br>
-                                                            <input class="datosingresados" type="text" name="domicilio_entrega" placeholder="Domicilio Entrega" />
+                                                            <input class="datosingresados" type="text" name="domicilio_entrega"
+                                                                placeholder="Domicilio Entrega" />
                                                             <% if(locals.errors && locals.errors.domicilio_entrega){ %>
-                                                                <span><%=errors.domicilio_entrega.msg %></span>
+                                                                <span>
+                                                                    <%=errors.domicilio_entrega.msg %>
+                                                                </span>
                                                                 <% } %>
-                                                                    <input class="datosingresados" type="text" name="ciudad" placeholder="Ciudad" />
+                                                                    <input class="datosingresados" type="text" name="ciudad"
+                                                                        placeholder="Ciudad" />
                                                                     <% if(locals.errors && locals.errors.ciudad){ %>
-                                                                        <span><%=errors.ciudad.msg %></span>
+                                                                        <span>
+                                                                            <%=errors.ciudad.msg %>
+                                                                        </span>
                                                                         <% } %><br>
-                                                                            <input class="datosingresados" type="text" name="codigo_postal" placeholder="Código Postal" />
-                                                                            <% if(locals.errors && locals.errors.codigo_postal){ %>
-                                                                                <span><%=errors.codigo_postal.msg %></span>
+                                                                            <input class="datosingresados" type="text"
+                                                                                name="codigo_postal"
+                                                                                placeholder="Código Postal" />
+                                                                            <% if(locals.errors && locals.errors.codigo_postal){
+                                                                                %>
+                                                                                <span>
+                                                                                    <%=errors.codigo_postal.msg %>
+                                                                                </span>
                                                                                 <% } %><br>
-                                                                                    <label class="datosingresados">Fecha de Nacimiento</label>
-                                                                                    <input class="datosingresados" type="date" name="cumpleaños" placeholder="Cumpleaños" />
-                                                                                    <% if(locals.errors && locals.errors.cumpleaños){ %>
-                                                                                        <span><%=errors.cumpleaños.msg %></span>
+                                                                                    <label class="datosingresados">Fecha de
+                                                                                        Nacimiento</label>
+                                                                                    <input class="datosingresados" type="date"
+                                                                                        name="cumpleaños"
+                                                                                        placeholder="Cumpleaños" />
+                                                                                    <% if(locals.errors &&
+                                                                                        locals.errors.cumpleaños){ %>
+                                                                                        <span>
+                                                                                            <%=errors.cumpleaños.msg %>
+                                                                                        </span>
                                                                                         <% } %>
                                                                                             <p>
-                                                                                                <select class="datosingresados" name="genre_id" id="" required>
-                                              <option value="" disabled selected>- Seleccione el Género - </option>
-                                              <% allGenre.forEach(genre => { %>
-                                              <option value="<%= genre.id %>"><%= genre.nombre_genero %></option>
-                                              <% }); %>
-                                              </select>
+                                                                                                <select class="datosingresados"
+                                                                                                    name="genre_id" id=""
+                                                                                                    required>
+                                                                                                    <option value="" disabled
+                                                                                                        selected>- Seleccione el
+                                                                                                        Género - </option>
+                                                                                                    <% allGenre.forEach(genre=>
+                                                                                                        { %>
+                                                                                                        <option
+                                                                                                            value="<%= genre.id %>">
+                                                                                                            <%= genre.nombre_genero
+                                                                                                                %>
+                                                                                                        </option>
+                                                                                                        <% }); %>
+                                                                                                </select>
                                                                                             </p>
-
-                                                                                            <input class="datosingresados" type="text" name="email" placeholder="Email" id="email" />
-                                                                                            <% if(locals.errors && locals.errors.email){ %>
-                                                                                                <span><%=errors.email.msg %></span>
+        
+                                                                                            <input class="datosingresados"
+                                                                                                type="text" name="email"
+                                                                                                placeholder="Email"
+                                                                                                id="email" />
+                                                                                            <% if(locals.errors &&
+                                                                                                locals.errors.email){ %>
+                                                                                                <span>
+                                                                                                    <%=errors.email.msg %>
+                                                                                                </span>
                                                                                                 <% } %>
-                                                                                                    <input class="datosingresados" type="password" name="contraseña" placeholder="Contraseña" id="password" />
-                                                                                                    <% if(locals.errors && locals.errors.contraseña){ %>
-                                                                                                        <span><%=errors.contraseña.msg %></span>
+                                                                                                    <input
+                                                                                                        class="datosingresados"
+                                                                                                        type="password"
+                                                                                                        name="contraseña"
+                                                                                                        placeholder="Contraseña"
+                                                                                                        id="password" />
+                                                                                                    <% if(locals.errors &&
+                                                                                                        locals.errors.contraseña){
+                                                                                                        %>
+                                                                                                        <span>
+                                                                                                            <%=errors.contraseña.msg
+                                                                                                                %>
+                                                                                                        </span>
                                                                                                         <% } %>
-
-
-
+        
+        
+        
                                                                                                             <div class="imagen">
-                                                                                                                <label for="avatar" class="imagen1"> Avatar</label><br>
-                                                                                                                <input type="file" class="form-control" name="avatar" onchange= "return fileValidation()"/>
-                                                                                                                <% if (locals.errors && errors.avatar) { %>
-                                                                                                                <span><%= errors.avatar.msg %></span>
-                                                                                                                <% } %>
+                                                                                                                <label
+                                                                                                                    for="avatar"
+                                                                                                                    class="imagen1">
+                                                                                                                    Avatar</label><br>
+                                                                                                                <input
+                                                                                                                    type="file"
+                                                                                                                    class="form-control"
+                                                                                                                    name="avatar"
+                                                                                                                    onchange="return fileValidation()" />
+                                                                                                                <% if
+                                                                                                                    (locals.errors
+                                                                                                                    &&
+                                                                                                                    errors.avatar)
+                                                                                                                    { %>
+                                                                                                                    <span>
+                                                                                                                        <%= errors.avatar.msg
+                                                                                                                            %>
+                                                                                                                    </span>
+                                                                                                                    <% } %>
                                                                                                             </div><br>
-
-                                                                                                            <button class="boton" type="submit" name="" value="Registrarme"> Registrarme </button>
+        
+                                                                                                            <button
+                                                                                                                class="boton"
+                                                                                                                type="submit"
+                                                                                                                name=""
+                                                                                                                value="Registrarme">
+                                                                                                                Registrarme
+                                                                                                            </button>
                             </section>
                         </div>
                     </div>

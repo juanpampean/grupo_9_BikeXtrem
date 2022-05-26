@@ -92,15 +92,15 @@ module.exports = {
         .withMessage("campo password vacío")
     ],
     processEdit: [
-        body("nombre")
+        check("nombre")
         .notEmpty().withMessage("campo nombre vacío")
-        .isLength({ min: 5 }).withMessage("el campo debe tener al menos 5 caracteres"),
-        body("precio").notEmpty().isNumeric().withMessage("campo precio vacío"),
-        body("talle_producto").notEmpty().withMessage("Coloca Talle del Producto"),
-        body("rodado").notEmpty().withMessage("campo rodado vacío"),
-        body("velocidad").notEmpty().withMessage("campo velocidad vacío").isDate(),
-        body("color").notEmpty().withMessage("campo color vacío"),
-        body("descripcion").isLength({ min: 20 }).withMessage("Coloca descripción del producto acá"),
+        .isLength({ min: 5 }).withMessage("el campo debe tener al menos 10 caracteres"),
+        check("precio").notEmpty().isNumeric().withMessage("campo precio vacío"),
+        check("talle_producto").notEmpty().withMessage("Coloca Talle del Producto"),
+        check("rodado").notEmpty().withMessage("campo rodado vacío"),
+        check("velocidad").notEmpty().withMessage("campo velocidad vacío").isDate(),
+        check("color").notEmpty().withMessage("campo color vacío"),
+        check("descripcion").isLength({ min: 20 }).withMessage("Coloca descripción del producto acá"),
         
         body('file').custom((value, { req }) => {
             let file = req.file;
