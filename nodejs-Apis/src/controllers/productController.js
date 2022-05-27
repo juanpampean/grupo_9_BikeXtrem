@@ -95,7 +95,18 @@ const controller = {
     },
 
     update: (req, res) => {
-        db.product.update({
+        const errors = validationResult(req)
+        if (errors.errors.length > 0) {
+            let product = db.product.findByPk(req.params.id);
+            let categoriaProducto = db.productCategory.findAll();
+            let productoProveedor = db.supplier.findAll();
+            Promise.all([product, categoriaProducto, productoProveedor])
+            .then(function([product, categoriaProducto, productoProveedor]) {
+                return res.render('form_productos_create', {product: product, categoriaProducto: categoriaProducto, productoProveedor: productoProveedor,errors: errors.mapped()})
+            })         
+            .catch(error => res.send(error))
+            }else
+        {db.product.update({
             SKU: req.body.SKU,
             nombre: req.body.nombre,
             precio: req.body.precio,
@@ -112,7 +123,7 @@ const controller = {
             }
         })
         res.redirect("/product/listadoDeProductos")
-    },
+    }},
 
     destroy: (req, res) => {
         db.product.destroy({
