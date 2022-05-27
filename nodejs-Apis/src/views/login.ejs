@@ -17,7 +17,7 @@
                         <form class="form" action="/users/login" method="POST">
                             <h4>Ingresar</h4>
 
-                            <input class="datosingresados1" id="email" type="text" name="email" placeholder="Email" />
+                            <input class="datosingresados1 " id="email" type="email" name="email" placeholder="Email " />
                             <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
                                 <span style="color:red">
                                 <%=locals.errorsLogin.email.msg %>
@@ -31,8 +31,8 @@
                                             </span>
                                         <% } %>
                                             <br>
+                                            <label> <input class="recuerdame" type="checkbox" name="Recuerdame "> Recuerdame </label><br>
                                             <button class="boton1" type="submit" name="Ingresar" value="Ingresar">INGRESAR</button><br><br>
-                                            <label class="recuerdame" type="checkbox" name="Recuerdame" id=recuerdame>Recuerdame </label><br>
                                             <label class="olvide "><a href="# ">Olvide mi contraseña</a></label>
                                             <br>
                                             <br>
