@@ -57,7 +57,18 @@ const controller = {
     },
 
     create: (req, res) => {
-        db.product.create({
+        const errors = validationResult(req)
+        if (errors.errors.length > 0) {
+            let product = db.product.findByPk(req.params.id);
+            let categoriaProducto = db.productCategory.findAll();
+            let productoProveedor = db.supplier.findAll();
+            Promise.all([product, categoriaProducto, productoProveedor])
+            .then(function([product, categoriaProducto, productoProveedor]) {
+                return res.render('form_productos_create', {product: product, categoriaProducto: categoriaProducto, productoProveedor: productoProveedor,errors: errors.mapped()})
+            })         
+            .catch(error => res.send(error))
+            }else
+        {db.product.create({
             SKU: req.body.SKU,
             nombre: req.body.nombre,
             precio: req.body.precio,
@@ -69,7 +80,7 @@ const controller = {
             stock: req.body.stock,
             proveedor_id: req.body.proveedor_id,
         }).then(function(){
-            return res.redirect('/product/listadoDeProductos')})
+            return res.redirect('/product/listadoDeProductos')})}
     },
 
     edit: (req, res) => {
