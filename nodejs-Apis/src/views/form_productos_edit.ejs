@@ -49,6 +49,9 @@
         <div>
             <label for="descripcion">Descripcion Producto (Optional)</label>
             <textarea rows="5" value="<%= product.descripcion %>" id="descripcion" name="descripcion"><%= product.descripcion %></textarea>
+            <% if(locals.errors && locals.errors.descripcion){ %>
+                <span> <%=errors.descripcion.msg %> </span>
+                <% } %>
         </div>
 
         <div>
@@ -77,7 +80,7 @@
     </form>
 
 </div>
-<script src="/static/js/prodUpdateValidation.js"></script>
+
 </main>
 <%-include('partials/footer')%>
     </body>

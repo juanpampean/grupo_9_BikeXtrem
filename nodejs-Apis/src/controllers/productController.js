@@ -100,13 +100,14 @@ const controller = {
             let product = db.product.findByPk(req.params.id);
             let categoriaProducto = db.productCategory.findAll();
             let productoProveedor = db.supplier.findAll();
+    
             Promise.all([product, categoriaProducto, productoProveedor])
-            .then(function([product, categoriaProducto, productoProveedor]) {
-                return res.render('form_productos_create', {product: product, categoriaProducto: categoriaProducto, productoProveedor: productoProveedor,errors: errors.mapped()})
-            })         
-            .catch(error => res.send(error))
-            }else
-        {db.product.update({
+                .then(function([product, categoriaProducto, productoProveedor]) {
+                    return res.render('form_productos_edit', { product: product, categoriaProducto: categoriaProducto, productoProveedor: productoProveedor,errors: errors.mapped() });
+                })
+                .catch(error => res.send(error));
+        } else
+    {db.product.update({
             SKU: req.body.SKU,
             nombre: req.body.nombre,
             precio: req.body.precio,

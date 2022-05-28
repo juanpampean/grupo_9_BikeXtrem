@@ -94,12 +94,8 @@ module.exports = {
     processEdit: [
         check("nombre")
         .notEmpty().withMessage("campo nombre vacío")
-        .isLength({ min: 5 }).withMessage("el campo debe tener al menos 10 caracteres"),
-        check("precio").notEmpty().isNumeric().withMessage("campo precio vacío"),
-        check("talle_producto").notEmpty().withMessage("Coloca Talle del Producto"),
-        check("rodado").notEmpty().withMessage("campo rodado vacío"),
-        check("velocidad").notEmpty().withMessage("campo velocidad vacío").isDate(),
-        check("color").notEmpty().withMessage("campo color vacío"),
+        .isLength({ min: 5 }).withMessage("el campo debe tener al menos 5 caracteres"),
+
         check("descripcion").isLength({ min: 20 }).withMessage("Coloca descripción del producto acá"),
         
         body('file').custom((value, { req }) => {
@@ -122,7 +118,7 @@ module.exports = {
         check("nombre")
         .notEmpty()
         .withMessage("campo nombre vacío")
-        .isLength({min:15})
+        .isLength({min:5})
         .withMessage("campo nombre debe tener al menos 15 caracteres"),
 
         check("descripcion")
