@@ -6,6 +6,7 @@
     <%-include('partials/head')%>
     <link href="/static/css/form_productos.css" rel="stylesheet">
 </head> 
+
     <body>
         <%-include('partials/header')%>
     <main>
@@ -13,6 +14,9 @@
             <div class="tabs__content" data-tab="2">
 
                 <div class="errores">
+                    <ul></ul>
+                </div>
+                <div class="errores_img">
                     <ul></ul>
                 </div>
 
@@ -90,8 +94,9 @@
                </form>
             
             </div>
+            <script src="/static/js/validatorCreateProd-front.js"> </script>
         </div>
-        <script src="/static/js/validatorCreateProd-front.js"> </script>
+        
     </main>
         <%-include('partials/footer')%>
            

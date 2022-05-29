@@ -24,9 +24,9 @@ module.exports = (sequelize, DataTypes) => {
         categoria_id: {
             type: DataTypes.BIGINT(11),
         },
-        /*imagen: {
-            type: DataTypes.IMAGEN
-        },*/
+        imagen: {
+            type: DataTypes.STRING(255),
+        },
         create_date: {
             type: DataTypes.DATE,
         },

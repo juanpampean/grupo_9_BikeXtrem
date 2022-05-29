@@ -35,8 +35,12 @@ window.onload = function(){
         }
     
     })
-}
 
+
+    
+};
+
+//Validar imagen
 function fileValidation(){
     const fileInput = document.getElementById('file');
     const filePath = fileInput.value;
