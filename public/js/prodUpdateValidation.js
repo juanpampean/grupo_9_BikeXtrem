@@ -40,14 +40,20 @@ window.onload = function(){
     
 };
 
-//Validar imagen
+//validar imagen
 function fileValidation(){
+
+    let errores_img = '';
+    let ulErrores = document.querySelector('.errores');
+    ulErrores.innerHTML = '';
+
     const fileInput = document.getElementById('file');
     const filePath = fileInput.value;
     const extensionesPermitidas = /(.jpg|.jpeg|.png|.gif)$/i;
 
     if (!extensionesPermitidas.exec(filePath)){
-        errores.push('Tipo de imagen no valida, las extensiones permitidas son las siguientes: .jpeg/.jpg/.png/.gif');
+        errores_img = 'Tipo de imagen no valida, las extensiones permitidas son las siguientes: .jpeg/.jpg/.png/.gif';
+        ulErrores.innerHTML += '<li>' + errores_img + '</li>';
         fileInput.value = '';
         return false;
     } else {
