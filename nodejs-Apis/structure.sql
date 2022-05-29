@@ -27,6 +27,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `genres`
 --
 
+CREATE DATABASE `bikextrem`;
+USE `bikextrem`;
+
 CREATE TABLE `genres` (
   `id` int(11) NOT NULL,
   `nombre_genero` varchar(45) DEFAULT NULL
