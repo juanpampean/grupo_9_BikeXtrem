@@ -52,7 +52,7 @@
                         
                         <p>
                             <select class="proveedor_id" name="proveedor_id" id="" >
-                              <option value="" disabled selected>- proveedor_id - </option>
+                              <option value="" disabled selected>- MARCA - </option>
                               <% productoProveedor.forEach(provedor => { %>
                               <option value="<%= provedor.id %>"><%= provedor.nombre %></option>
                               <% }); %>
@@ -65,7 +65,7 @@
                     </div>
                     <p>
                         <select class="categoria_id" name="categoria_id" id="" >
-                          <option value="" disabled selected>- categoria_id - </option>
+                          <option value="" disabled selected>- Categoría - </option>
                           <% categoriaProducto.forEach(categoria => { %>
                           <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
                           <% }); %>

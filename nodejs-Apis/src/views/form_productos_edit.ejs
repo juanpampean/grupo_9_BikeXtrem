@@ -57,7 +57,7 @@
         <div>
             <label for="file">Imagen Producto</label>
             <input type="file" class="form-control" name="file" onchange= "return fileValidation()">
-            <img src="static/images/product/<%= product.imagen %>">
+            <img src="static/images/product/<%= product.imagen %>" width="200" height="200">
             <% if (locals.errors && errors.file) { %>
                 <span><%= errors.file.msg %></span>
                 <% } %>
@@ -65,10 +65,18 @@
 
 
         <p>
-            <label for="categoria_id">categoria_id</label>
+            <label for="categoria_id">Categoría</label>
             <select name="categoria_id" id="" required>
                 <% categoriaProducto.forEach(categoria => { %>
                 <option value="<%= categoria.id %>" <% if (product.categoria_id == categoria.id) { %><%= 'selected' %><% }; %>><%= categoria.nombre %></option>
+                 <% }); %>
+            </select>
+        </p>
+        <p>
+            <label for="proveedor_id">Proveedor</label>
+            <select name="proveedor_id" id="" required>
+                <% productoProveedor.forEach(proveedor => { %>
+                <option value="<%= proveedor.id %>" <% if (product.provedor_id == proveedor.id) { %><%= 'selected' %><% }; %>><%= proveedor.nombre %></option>
                  <% }); %>
             </select>
         </p>
