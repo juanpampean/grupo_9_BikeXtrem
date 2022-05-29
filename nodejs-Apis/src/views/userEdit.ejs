@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<base href="/">
+<%-include('partials/head.ejs') %>
+<link href="/static/css/userProfile.css" rel="stylesheet">
+</head>
+<body>
+
+<%-include('partials/header.ejs')%>
+
+<main>
+    <h1 class="titulo">Aqui podrás editar tu usuario  <%= userLog.nombre %></h1>
+    <section class="formulario">
+        <form action="/users/update/<%= userLog.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <label for="nombre">Nombre </label>
+            <p><input type="text" name="nombre" id="" value="<%= userLog.nombre %>" required></p>
+            <label for="apellido">Apellido </label>
+            <p><input type="text" name="apellido" id="" value="<%= userLog.apellido %>" required></p>
+            <label for="telefono">Teléfono Contacto </label>
+            <p><input type="number" name="telefono" id="" value="<%= userLog.telefono %>" required></p>
+            <label for="fecha_nacimiento">Fecha de Nacimiento </label>
+            <p><input type="date" name="fecha_nacimiento" id="" value="<%= userLog.fecha_nacimiento %>" required ></p>
+            <label for="domicilio_entrega">Domicilio de Entrega </label>
+            <p><input type="text" name="domicilio_entrega" id="" value="<%= userLog.domicilio_entrega %>" required></p>
+            <label for="codigo_postal">Código Postal </label>
+            <p><input type="text" name="codigo_postal" id="" value="<%= userLog.codigo_postal %>" required></p>
+            <label for="ciudad">Ciudad </label>
+            <p><input type="text" name="ciudad" id="" value="<%= userLog.ciudad %>" required></p>
+            <label for="gebre_id">Género </label>
+            <p>
+                <select name="genre_id" id="" required>
+                    <% allGenres.forEach(genre => { %>
+                    <option value="<%= genre.id %>" <% if (userLog.genero_id == genre.id) { %><%= 'selected' %><% }; %>><%= genre.nombre_genero %></option>
+                    <% }); %>
+                </select>
+            </p>
+            <label for="email">Email </label>
+            <p><input type="text" name="email" id="" value="<%= userLog.mail %>" required></p>
+
+            
+            <label for="avatar" class="imagen1"> Avatar</label><br>
+            <input type="file" class="form-control" name="avatar" >
+            <img src="static/images/avatars/<%= userLog.avatar %>" onerror="this.src='static/images/avatars/error.jpg';this.onerror='';">
+
+            
+            <br>
+            <p> <button class="botonAgregar" type="submit">Actualizar</button>
+        
+            <a  class="botonVolver" href="/">Home</a></p>
+        </form>
+    </section>
+</main>
+<footer>
+<%-include('partials/footer.ejs')%>
+</footer>
+</body>
+</html>

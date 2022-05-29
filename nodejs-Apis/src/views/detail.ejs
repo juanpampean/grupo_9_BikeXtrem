@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <base href="/">
+    <%-include('partials/head')%>
+    <link href="/static/css/style_listadoProduct.css" rel="stylesheet">
+</head>
+
+<body>
+    <%-include('partials/header')%>
+
+    <main>
+        <div class="listado-caja">
+            <article>
+                <div class="image-container">
+                    <img src="static/images/product/<%= product.imagen %>" onerror="this.src='static/images/product/errorBici.jpg';this.onerror='';" width="50%">
+                </div>
+                <p> Información de la Bicicleta</p>
+                
+                <ul>
+                    <li><strong>Nombre:</strong> <%= product.nombre %> </li>
+                    <li><strong>Precio:</strong> <%= product.precio %> </li>
+                    <li><strong>Peso:</strong> <%= product.peso %> </li>
+                    <li><strong>Descripcion:</strong> <%= product.descripcion %> </li>
+                
+                </ul>
+            </article>
+        </div>
+        <a class="botonModificar" href="/product/edit/<%= product.id %>">Editar Información de la Bicicleta</a>
+    </main>
+
+
+        <%-include('partials/footer')%>    
+</body>
+
+</html>
