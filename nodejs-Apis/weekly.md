@@ -168,3 +168,135 @@ La carpeta database deberá incluir:
 ○ Crear
 ○ Editar
 ○ Ver el detalle
+
+// Reunión Semanal o Weekly 20/04/2022 //
+● Qué se hizo ayer:
+* Se revisaron los modelos en donde se consideraba la subida de imagenes; las cuales no están permitidas de forma tan directa con sequelize.
+
+● Si se encontró con algún impedimento.
+* Donde usabamos el parámetro Datatypes definido arriba entre paréntesis (sequelize,DataTypes) luego debajo no lo escribíamos igual, estaba por ejemplo "datatype", y por otro lado  según lo que dice la bibliografia de Sequelize, si queremos poner una cantidad de dígitos al INTEGER entonces se deja de usar INTEGER para usar BIGINT(10) por ejemplo.
+ 
+ ● Qué vamos a hacer hoy:
+ *Asignaciones:
+  Queda pendiente declarar las imágenes en sql; para poder subirlas.
+
+// Reunión Semanal o Weekly 25/04/2022 //
+● Qué se hizo: Revisión de Crasheos, y mejoras, se dejó funcionando la aplicación.
+
+// Reunión Semanal o Weekly 25/04/2022 //
+
+● Qué se hizo:
+ Se revisaron los puntos correspondientes al sprint actual y sus respectivas asignaciones.
+
+● Qué vamos a hacer hoy: Puntos pendientes:
+CRUD Productos:
+   - Destroy 
+   - Update
+   - Buscar 
+CRUD tablas carrito / ordenes (opcional)
+Paginado listados de productos y buscadores (opcional)
+Vista Registro : Mejorar CSS
+
+// Reunión Semanal o Weekly 09/05/2022 //
+● Qué se hizo ayer:
+* Se revisaron los puntos correspondientes al sprint 7 y sus respectivas asignaciones.
+
+ ● Qué vamos a hacer hoy: Validaciones de back-end y front-end
+ *Asignaciones:
+ 
+ ** Validaciones del back-end
+● Registro de usuarios ///Juan///
+○ Nombre y apellido
+■ Obligatorio.
+■ Deberá tener al menos 2 caracteres.
+○ Email
+■ Obligatorio.
+■ Deberá ser un formato de e-mail válido.
+■ No puede repetirse con los e-mails ya registrados.
+○ Contraseña
+■ Obligatoria.
+■ Deberá tener al menos 8 caracteres.
+■ (Opcional) → Deberá tener letras mayúsculas, minúsculas, un
+número y un carácter especial.
+○ Imagen
+■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF).
+
+● Login de usuarios ///Joni//
+○ Email
+■ Obligatorio.
+■ Deberá ser válido.
+■ Deberá existir en base.
+○ Contraseña
+■ Obligatoria.
+■ Deberá coincidir con la existente en base.
+
+● Creación de productos.///Juan///
+○ Nombre
+■ Obligatorio.
+■ Deberá tener al menos 5 caracteres.
+○ Descripción
+■ Deberá tener al menos 20 caracteres.
+○ Imagen
+■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF).
+○ (Opcional) Tablas secundarias
+■ Verificar que los valores existan en base. Es decir, que los valores
+de talles, colores, etc. que lleguen sean válidos en la base.
+● (Opcional) Resto de los formularios del sitio
+
+
+● Modificación de productos.///Joni///
+○ Nombre
+■ Obligatorio.
+■ Deberá tener al menos 5 caracteres.
+○ Descripción
+■ Deberá tener al menos 20 caracteres.
+○ Imagen
+■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF).
+○ (Opcional) Tablas secundarias
+■ Verificar que los valores existan en base. Es decir, que los valores
+de talles, colores, etc. que lleguen sean válidos en la base.
+● (Opcional) Resto de los formularios del sitio
+
+
+** Validaciones del front-end:
+Registro de usuarios ///KRIS///
+○ Nombre y apellido
+■ Obligatorio.
+■ Deberá tener al menos 2 caracteres.
+○ Email
+■ Obligatorio.
+■ Deberá ser válido.
+■ (Opcional) → No puede repetirse con los e-mails ya registrados.
+○ Contraseña
+■ Obligatoria.
+■ Deberá tener al menos 8 caracteres.
+■ (Opcional) → Deberá tener letras mayúsculas, minúsculas, un
+número y un carácter especial.
+○ Imagen
+■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF).
+
+Login de usuarios ///JONI///
+○ Email
+■ Obligatorio.
+■ Deberá ser válido.
+■ (Opcional) → Debe existir en la base.
+○ Contraseña
+■ Obligatoria.
+
+Creación de productos ///Ker///
+○ Nombre
+■ Obligatorio.
+■ Deberá tener al menos 5 caracteres.
+○ Descripción
+■ Deberá tener al menos 20 caracteres.
+○ Imagen
+■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)
+
+Modificación de productos ///Juan///
+○ Nombre
+■ Obligatorio.
+■ Deberá tener al menos 5 caracteres.
+○ Descripción
+■ Deberá tener al menos 20 caracteres.
+○ Imagen
+■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)
