@@ -166,7 +166,18 @@ form span {
     border-radius: 8px;
 }
 
+<<<<<<< HEAD:public/css/login_style.css
+.recuerdame{
+  color:#ab2e44;
+  font-size: 20px;
+}
+
+.imagen1{
+    color: white;
+    font-weight: bold;
+=======
 .recuerdame {
     color: #ab2e44;
     font-size: 20px;
+>>>>>>> c42db98eff13091e8fe804bbe5c3ad8ee23a3d33:nodejs-Apis/public/css/login_style.css
 }

@@ -5,12 +5,15 @@ const formulario = document.getElementById('create-form');
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 } */
 
-let errores = [];
+
 
 //Evento para el boton al hacer submit
 formulario.addEventListener('submit', function(e){
-    //console.log(e.target);
     
+let errores = [];
+
+let ulErrores = document.querySelector('.errores');
+ulErrores.innerHTML = '';
 
     let campoNombre = document.querySelector('#nombre');
 
@@ -25,31 +28,44 @@ formulario.addEventListener('submit', function(e){
         if (campoDescripcion.value.length < 20) {
             errores.push('Deberá agregar más detalle a la descripción');
         }
-
+        
     //Array de errores
     if (errores.length > 0) {
         e.preventDefault();
 
-        let ulErrores = document.querySelector('.errores');
+        
+        //console.log(errores);
+        //console.log(ulErrores);
 
         for (let i = 0; i < errores.length; i++){
             ulErrores.innerHTML += '<li>' + errores[i] + '</li>';
         }
         console.log(ulErrores);
+        
+        
         } else {
             alert('El producto fue creado satirfactoriamente');
         }
 
+        
+
 });
+
 
 //validar imagen
 function fileValidation(){
+
+    let errores_img = '';
+    let ulErrores = document.querySelector('.errores');
+    ulErrores.innerHTML = '';
+
     const fileInput = document.getElementById('file');
     const filePath = fileInput.value;
     const extensionesPermitidas = /(.jpg|.jpeg|.png|.gif)$/i;
 
     if (!extensionesPermitidas.exec(filePath)){
-        errores.push('Tipo de imagen no valida, las extensiones permitidas son las siguientes: .jpeg/.jpg/.png/.gif');
+        errores_img = 'Tipo de imagen no valida, las extensiones permitidas son las siguientes: .jpeg/.jpg/.png/.gif';
+        ulErrores.innerHTML += '<li>' + errores_img + '</li>';
         fileInput.value = '';
         return false;
     } else {
@@ -63,4 +79,3 @@ function fileValidation(){
 
     }
 };
-

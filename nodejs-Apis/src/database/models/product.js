@@ -25,8 +25,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BIGINT(11),
         },
         imagen: {
+<<<<<<< HEAD:src/database/models/product.js
+            type: DataTypes.STRING(255),
+=======
             type: DataTypes.STRING(100),
             allowNull:true,
+>>>>>>> c42db98eff13091e8fe804bbe5c3ad8ee23a3d33:nodejs-Apis/src/database/models/product.js
         },
         create_date: {
             type: DataTypes.DATE,

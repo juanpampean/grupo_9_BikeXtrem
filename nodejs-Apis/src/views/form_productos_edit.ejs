@@ -6,83 +6,95 @@
     <%-include('partials/head')%>
     <link href="/static/css/form_productos.css" rel="stylesheet">
 </head>
+
 <body>
     <%-include('partials/header')%>
-<main>
-<div class="tabs__content" data-tab="2">
-    <h2>Editar Producto</h2>
-    <ul class="errores"></ul>
-    <form class="form" action="/product/edit/<%= product.id%>?_method=PUT" method="post" enctype="multipart/form-data">
+    <main>
+        <div class="tabs">
+            <div class="tabs__content" data-tab="2">
 
-        <div>
-            <label>Producto a editar</label>
-            <input type="search" value="<%= product.id %>" name="codigo_producto" id="codigo_producto" placeholder="Buscar Producto a editar">
-        </div>
-        
-            <label>Nombre</label>
-            <input type="text" value="<%= product.nombre %>" name="nombre" id="nombre" placeholder="Nombre Producto">
-            <% if(locals.errors && locals.errors.nombre){ %>
-                <span> <%=errors.nombre.msg %> </span>
-                <% } %>
-        
-        <div>
-            <label>Precio</label>
-            <input type="number" value="<%= product.precio %>" name="precio" id="precio" placeholder="Precio">
-        </div>
-        <div>
-            <label>Talle</label>
-            <input type="text" value="<%= product.talle_producto %>" name="talle_producto" id="talle_producto" placeholder="Talle">
-        </div>
-        <div>
-            <label for="rodado">Rodado</label>
-            <input type="text" value="<%= product.rodado %>" name="rodado" id="rodado" placeholder="Rodado">
-        </div>
-        <div>
-            <label for="velocidad">Velocidades</label>
-            <input type="text" value="<%= product.velocidad %>" name="velocidad" id="velocidad" placeholder="Velocidad">
-        </div>
-        <div>
-            <label for="color">Color</label>
-            <input type="text" value="<%= product.color %>" name="color" id="color" placeholder="Color">
-        </div>
+                <div class="errores">
+                    <ul></ul>
+                </div>
+                <div class="errores_img">
+                    <ul></ul>
+                </div>
 
-        <div>
-            <label for="descripcion">Descripcion Producto (Optional)</label>
-            <textarea rows="5" value="<%= product.descripcion %>" id="descripcion" name="descripcion"><%= product.descripcion %></textarea>
-            <% if(locals.errors && locals.errors.descripcion){ %>
-                <span> <%=errors.descripcion.msg %> </span>
-                <% } %>
-        </div>
+                <form class="form" action="/product/edit/<%= product.id%>?_method=PUT" method="post">
+                    <h2>Editar Producto</h2>
 
-        <div>
-            <label for="file">Imagen Producto</label>
-            <input type="file" class="form-control" name="file" onchange= "return fileValidation()">
-            <img src="static/images/product/<%= product.imagen %>">
-            <% if (locals.errors && errors.file) { %>
-                <span><%= errors.file.msg %></span>
-                <% } %>
-        </div>
+                    <div>
+                        <label>Producto a editar</label>
+                        <input type="search" value="<%= product.id %>" name="codigo_producto" id="codigo_producto" placeholder="Buscar Producto a editar">
+                    </div>
+                    <div>
+                        <label>Nombre</label>
+                        <input type="text" value="<%= product.nombre %>" name="nombre" id="nombre" placeholder="Nombre Producto">
+                    </div>
+                    <div>
+                        <label>Precio</label>
+                        <input type="number" value="<%= product.precio %>" name="precio" id="precio" placeholder="Precio">
+                    </div>
+                    <div>
+                        <label>Talle</label>
+                        <input type="text" value="<%= product.talle_producto %>" name="talle_producto" id="talle_producto" placeholder="Talle">
+                    </div>
+                    <div>
+                        <label for="rodado">Rodado</label>
+                        <input type="text" value="<%= product.rodado %>" name="rodado" id="rodado" placeholder="Rodado">
+                    </div>
+                    <div>
+                        <label for="velocidad">Velocidades</label>
+                        <input type="text" value="<%= product.velocidad %>" name="velocidad" id="velocidad" placeholder="Velocidad">
+                    </div>
+                    <div>
+                        <label for="color">Color</label>
+                        <input type="text" value="<%= product.color %>" name="color" id="color" placeholder="Color">
+                    </div>
+
+                    <div>
+                        <label for="descripcion">Descripcion Producto (Optional)</label>
+                        <textarea rows="5" value="<%= product.descripcion %>" id="descripcion" name="descripcion"><%= product.descripcion %></textarea>
+                    </div>
+
+                    <!--<div>
+                        <label for="descripcion">Descripcion Producto (Optional)</label>
+                        <textarea rows="5" value="<%= product.descripcion %>" id="descripcion" name="descripcion" required><%= product.descripcion %></textarea>
+                    </div>-->
 
 
-        <p>
-            <label for="categoria_id">categoria_id</label>
-            <select name="categoria_id" id="" required>
-                <% categoriaProducto.forEach(categoria => { %>
-                <option value="<%= categoria.id %>" <% if (product.categoria_id == categoria.id) { %><%= 'selected' %><% }; %>><%= categoria.nombre %></option>
-                 <% }); %>
-            </select>
-        </p>
+                    <p>
+                        <label for="categoria_id">categoria_id</label>
+                        <select name="categoria_id" id="" required>
+                                    <% categoriaProducto.forEach(categoria => { %>
+                                    <option value="<%= categoria.id %>" <% if (product.categoria_id == categoria.id) { %><%= 'selected' %><% }; %>><%= categoria.nombre %></option>
+                                    <% }); %>
+                                </select>
+                    </p>
 
-        <button type="submit" value="Guardar y volver al Home">EDITAR PRODUCTO</a></button> <br><br>
-    </form>
-    <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post">
-        <button type="submit" value="Guardar y volver al Home">ELIMINAR PRODUCTO</a></button>
-    </form>
-    <script src="/static/js/prodUpdateValidation.js"></script>
-</div>
 
-</main>
-<%-include('partials/footer')%>
+                    <!-- File input field -->
+                    <div>
+                        <label for="file">Foto de Producto</label>
+                        <input type="file" name="file"  id="file" onchange= "return fileValidation()" />
+                    </div>
+                    
+                <!-- Image preview -->
+                    <div id="imagePreview"></div>
+
+
+
+                    <button type="submit" value="Guardar y volver al Home">EDITAR PRODUCTO</a></button> <br><br>
+                </form>
+                <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post">
+                    <button type="submit" value="Guardar y volver al Home">ELIMINAR PRODUCTO</a></button>
+                </form>
+
+            </div>
+            <script src="/static/js/prodUpdateValidation.js"></script>
+        </div>
+    </main>
+    <%-include('partials/footer')%>
     </body>
 
 </html>
