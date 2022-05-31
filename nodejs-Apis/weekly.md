@@ -300,3 +300,57 @@ Modificación de productos ///Juan///
 ■ Deberá tener al menos 20 caracteres.
 ○ Imagen
 ■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)
+
+// Reunión Semanal o Weekly 26/05/2022 //
+
+● Qué se hizo ayer:
+* Se revisaron los puntos correspondientes al sprint 8 y sus respectivas asignaciones.
+
+● Qué vamos a hacer hoy: Apis + React
+ *Asignaciones:
+
+ API de usuarios ///Joni///
+● api/users/
+  ○ Deberá devolver un objeto literal con la siguiente estructura:
+  ■ count → cantidad total de usuarios en la base.
+  ■ users → array con la colección de usuarios, cada uno con:
+  ● id
+  ● name
+  ● email
+  ● detail → URL para obtener el detalle.
+● api/users/:id
+  ○ Deberá devolver un objeto literal con la siguiente estructura:
+  ■ Una propiedad por cada campo en base.
+  ■ Una URL para la imagen de perfil (para mostrar la imagen).
+  ■ Sin información sensible (ej: password y categoría).
+
+
+API de productos /// Kris///
+● api/products/
+  ○ Deberá devolver un objeto literal con la siguiente estructura:
+  ■ count → cantidad total de productos en la base.
+  ■ countByCategory → objeto literal con una propiedad por categoría
+  con el total de productos.
+  ■ products → array con la colección de productos, cada uno con:
+  ● id
+  ● name
+  ● description
+  ● un array con principal relación de uno a muchos (ej:
+  categories).
+  ● detail → URL para obtener el detalle.
+● api/products/:id
+  ○ Deberá devolver un objeto literal con la siguiente estructura:
+  ■ una propiedad por cada campo en base.
+  ■ un array por cada relación de uno a muchos (categories, colors,
+  sizes, etc).
+  ■ Una URL para la imagen del producto (para mostrar la imagen).
+
+Dashboard en React ///Juan, Kerby///
+El dashboard deberá contener al menos:
+● 3 a 6 paneles simples con los siguientes totales:
+○ Total de productos
+○ Total de usuarios
+○ Total de categorías
+● Panel de detalle de último producto o usuario creado.
+● Panel de categorías con el total de productos de cada una.
+● Panel con el listado de productos.

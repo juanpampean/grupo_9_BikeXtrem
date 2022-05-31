@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         create_date: {
             type: DataTypes.DATE,
-            allowNull:true,
+            allowNull: true,
         },
 
         stock: {
@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
 
         proveedor_id: {
             type: DataTypes.BIGINT(11),
-            allowNull:true,
+            allowNull: true,
         }
     };
     let config = {
