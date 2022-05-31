@@ -6,6 +6,6 @@ const router = express.Router();
 router.get('/', userApiController.list);
 
 //Detalles de un usuario particular//
-router.get('/user/:id', userApiController.detail);
+router.get('/:id', userApiController.detail);
 
 module.exports = router;
