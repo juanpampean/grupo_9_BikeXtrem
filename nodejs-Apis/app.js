@@ -6,7 +6,7 @@ const session = require("express-session");
 
 
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
-//Necesario para sobreescribir el json
+    //Necesario para sobreescribir el json
 const bp = require('body-parser');
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: true }))
@@ -48,11 +48,18 @@ app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") }
 const rutas = require('./src/routes/mainRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const usersRoutes = require('./src/routes/usersRoutes');
-const user = require("./src/database/models/user");
+const users = require("./src/database/models/user");
+
+//RUTAS DE LAS APIs//
+const userApiRoutes = require('./src/routes/api/userApiRoutes');
 
 
 app.use('/', rutas);
 app.use('/product', productRoutes);
 app.use('/users', usersRoutes);
+
+//Colección de recursos de APIs//
+app.use('/api/users', userApiRoutes);
+
 
 module.exports = app;
