@@ -1,0 +1,21 @@
+.borderTabla{
+  border: 2px solid #ccc ;
+  padding: 2em;
+}
+.tabla{
+  padding: 0.5em;
+}
+.tabla .col{
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  color: #666;
+}
+.tabla .col-md-4{
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  color: #666;
+}
+
+.strongTitle{
+  font-weight: 700;
+}
