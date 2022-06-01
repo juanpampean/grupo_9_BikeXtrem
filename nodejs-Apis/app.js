@@ -49,6 +49,7 @@ const rutas = require('./src/routes/mainRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const usersRoutes = require('./src/routes/usersRoutes');
 const users = require("./src/database/models/user");
+//const imagesRoutes = require("static/images/avatars")
 
 //RUTAS DE LAS APIs//
 const userApiRoutes = require('./src/routes/api/userApiRoutes');
@@ -57,7 +58,7 @@ const userApiRoutes = require('./src/routes/api/userApiRoutes');
 app.use('/', rutas);
 app.use('/product', productRoutes);
 app.use('/users', usersRoutes);
-
+//app.use("/images",imagesRoutes)
 //Colección de recursos de APIs//
 app.use('/api/users', userApiRoutes);
 

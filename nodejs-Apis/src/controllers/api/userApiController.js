@@ -34,7 +34,7 @@ const userApiController = {
                         Ciudad:user.ciudad,
                         Código_postal:user.codigo_postal,
                         genero_id:user.genero_id,
-                        Avatar:"static/images/avatars/" + user.avatar,
+                        Avatar:"http://localhost:3000/static/images/avatars/" + user.avatar,
 
                     },
                     
