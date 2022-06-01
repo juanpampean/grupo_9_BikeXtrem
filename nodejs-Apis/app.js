@@ -53,6 +53,7 @@ const users = require("./src/database/models/user");
 
 //RUTAS DE LAS APIs//
 const userApiRoutes = require('./src/routes/api/userApiRoutes');
+const productApiRoutes = require('./src/routes/api/productApiRoutes');
 
 
 app.use('/', rutas);
@@ -61,6 +62,7 @@ app.use('/users', usersRoutes);
 //app.use("/images",imagesRoutes)
 //Colección de recursos de APIs//
 app.use('/api/users', userApiRoutes);
+app.use('/api/product', productApiRoutes);
 
 
 module.exports = app;
