@@ -4,26 +4,40 @@ const sequelize = db.sequelize;
 const { Op } = require('sequelize');
 const fetch = require('node-fetch');
 const { response } = require('express');
+const user = require('../../database/models/user');
+
 
 const userApiController = {
     'list': (req, res) => {
-        db.user.findAll()
+        db.user.findAll({attributes: ['id','nombre','mail']})
             .then(users => {
+                let DataShort = users.map(user => {
+                    return {
+                        id: user.id,
+                        nombre: user.nombre,
+                        apellido: user.apellido,
+                        email: user.mail,
+                        url: "/api/users/" + user.id,
+
+                    }
+                })
                 let respuesta = {
                     meta: {
                         status: 200,
                         total: users.length,
                         url: '/api/users'
                     },
-                    data: users
+                    data: DataShort
                 }
                 res.json(respuesta);
             })
     },
     'detail': (req, res) => {
-        db.user.findByPk(req.params.id)
+        db.user.findByPk(req.params.id,{include:["genres"]})
             .then(user => {
+              
                 let productJson = {
+                    
                     data: {
                         id:user.id,
                         nombre: user.nombre,
@@ -33,10 +47,11 @@ const userApiController = {
                         Domicilio:user.domicilio_entrega,
                         Ciudad:user.ciudad,
                         Código_postal:user.codigo_postal,
-                        genero_id:user.genero_id,
+                        genero_id:user.genres,
                         Avatar:"http://localhost:3000/static/images/avatars/" + user.avatar,
 
                     },
+                    
                     
                 }
                 res.json(productJson);
