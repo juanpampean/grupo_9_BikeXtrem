@@ -3,6 +3,7 @@ const app = express();
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const cookies = require('cookie-parser');
 const session = require("express-session");
+const cors = require("cors");
 
 
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
@@ -37,10 +38,11 @@ app.set('views', './src/views/');
 
 app.use(cookies());
 app.use(userLoggedMiddleware);
-
+app.use(cors());
 
 //Levantando servidor
-app.listen(process.env.PORT || 3000, () => { console.log("servidor corriendo") });
+const port = 3000
+app.listen(process.env.PORT || `${port}`, () => { console.log("servidor corriendo") });
 
 
 
@@ -49,7 +51,7 @@ const rutas = require('./src/routes/mainRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const usersRoutes = require('./src/routes/usersRoutes');
 const users = require("./src/database/models/user");
-//const imagesRoutes = require("static/images/avatars")
+
 
 //RUTAS DE LAS APIs//
 const userApiRoutes = require('./src/routes/api/userApiRoutes');
@@ -58,7 +60,7 @@ const userApiRoutes = require('./src/routes/api/userApiRoutes');
 app.use('/', rutas);
 app.use('/product', productRoutes);
 app.use('/users', usersRoutes);
-//app.use("/images",imagesRoutes)
+
 //Colección de recursos de APIs//
 app.use('/api/users', userApiRoutes);
 
