@@ -46,7 +46,8 @@ const productApiController={
                                     Categoria:product.categoriaProducto,
                                     Marca:product.productoProveedor,
                                     Stock:product.stock,
-                                    Precio:product.precio,     
+                                    Precio:product.precio, 
+                                    Imagen:"http://localhost:3000/static/images/product/" + product.imagen   
 
                             },
                     }
