@@ -23,15 +23,23 @@ const userApiController = {
     'detail': (req, res) => {
         db.user.findByPk(req.params.id)
             .then(user => {
-                let respuesta = {
-                    meta: {
-                        status: 200,
-                        total: user.length,
-                        url: '/api/user/:id'
+                let productJson = {
+                    data: {
+                        id:user.id,
+                        nombre: user.nombre,
+                        apellido:user.apellido,
+                        teléfono:user.telefono,
+                        Fecha_Nacimiento:user.fecha_nacimiento,
+                        Domicilio:user.domicilio_entrega,
+                        Ciudad:user.ciudad,
+                        Código_postal:user.codigo_postal,
+                        genero_id:user.genero_id,
+                        Avatar:"static/images/avatars/" + user.avatar,
+
                     },
-                    data: user
+                    
                 }
-                res.json(respuesta);
+                res.json(productJson);
             });
     }
 }
