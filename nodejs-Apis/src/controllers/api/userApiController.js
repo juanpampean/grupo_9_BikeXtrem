@@ -9,7 +9,7 @@ const user = require('../../database/models/user');
 
 const userApiController = {
     'list': (req, res) => {
-        db.user.findAll({attributes: ['id','nombre','mail']})
+        db.user.findAll()
             .then(users => {
                 let DataShort = users.map(user => {
                     return {
@@ -47,12 +47,10 @@ const userApiController = {
                         Domicilio:user.domicilio_entrega,
                         Ciudad:user.ciudad,
                         Código_postal:user.codigo_postal,
-                        genero_id:user.genres,
+                        genero:user.genres.nombre_genero,
                         Avatar:"http://localhost:3000/static/images/avatars/" + user.avatar,
 
                     },
-                    
-                    
                 }
                 res.json(productJson);
             });

@@ -64,7 +64,7 @@ app.use('/users', usersRoutes);
 
 //Colección de recursos de APIs//
 app.use('/api/users', userApiRoutes);
-app.use('/api/product', productApiRoutes);
+app.use('/api/products', productApiRoutes);
 
 
 module.exports = app;
