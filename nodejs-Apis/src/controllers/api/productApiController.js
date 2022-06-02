@@ -12,14 +12,18 @@ const product = require("../../database/models/product")
 const productApiController={
     productList: function(req,res){
         db.product
-        .findAll({include:["productoProveedor"]})
+        .findAll({include:["productoProveedor"],
+                order: [["create_date","DESC"]]
+        })
         .then(product =>{
                 let DataShort = product.map(products => {
+                        
                         return {
                             id: products.id,
                             nombre: products.nombre,
                             descripcion: products.descripcion,
                             Proveedor:products.productoProveedor,
+                            Fecha_Creacion:products.create_date,
                             EndPoint: "api/products/" + products.id 
                             
                              }
