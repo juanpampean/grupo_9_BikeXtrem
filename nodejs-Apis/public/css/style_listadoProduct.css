@@ -1,4 +1,4 @@
-ul{
+ul {
     list-style: none;
 }
 
@@ -12,10 +12,10 @@ main {
     padding: 0rem;
     font-family: 'Monserrat', sans-serif;
     box-sizing: border-box;
-    background-color: #E6DAC6;
+    background-color: white;
 }
 
-article{
+article {
     border: 1px solid black;
     width: 40rem;
     margin: 2rem;
@@ -23,7 +23,7 @@ article{
 
 .listado-caja {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
@@ -51,6 +51,6 @@ strong {
     font-weight: bold;
 }
 
-img { background: transparent;
- }
-
+img {
+    background: transparent;
+}
