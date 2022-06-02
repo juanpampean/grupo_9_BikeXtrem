@@ -54,6 +54,32 @@ const productApiController={
                     res.json(productJson)
             });
 
-    }
+    },
+    suppliers : function(req,res){
+            db.supplier.findAll()
+            .then(supplier =>{
+                    let respuesta = {
+                            meta:{
+                                    status:200,
+                                    total_suppliers:supplier.length
+                            }
+
+                    }
+                    res.json(respuesta)
+            })
+    },
+    categories : function(req,res){
+        db.productCategory.findAll()
+        .then(cat =>{
+                let respuesta = {
+                        meta:{
+                                status:200,
+                                total_categories:cat.length
+                        }
+
+                }
+                res.json(respuesta)
+        })
+}
 }   
 module.exports = productApiController;

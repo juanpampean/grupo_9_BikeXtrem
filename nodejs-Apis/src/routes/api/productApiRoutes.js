@@ -6,8 +6,10 @@ const productApiController = require('../../controllers/api/productApiController
 
 
 //APIS PRODUCTS
-router.get("/", productApiController.productList);
-router.get("/:id", productApiController.productId);
+router.get("/products", productApiController.productList);
+router.get("/products/:id", productApiController.productId);
+router.get("/suppliers", productApiController.suppliers);
+router.get("/categories", productApiController.categories);
 
 //TODO: exportar el modulo
 module.exports = router;
