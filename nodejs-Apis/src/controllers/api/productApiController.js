@@ -12,7 +12,7 @@ const product = require("../../database/models/product")
 const productApiController={
     productList: function(req,res){
         db.product
-        .findAll({include:["productoProveedor"],
+        .findAll({include:["productoProveedor","categoriaProducto"],
                 order: [["create_date","DESC"]]
         })
         .then(product =>{
@@ -30,6 +30,7 @@ const productApiController={
                              }
                         })
                 
+
                 let respuesta = {
                         meta:{
                                 status:200,
@@ -42,6 +43,56 @@ const productApiController={
                         res.json(respuesta)
 
                 })
+     },
+
+     listProducts: async function(req,res){
+        let modelosxcategoria1 = await db.product.findAll({
+                include:["categoriaProducto"],
+                attributes: [
+                        'categoriaProducto.nombre',
+                        [sequelize.fn("COUNT", sequelize.col("categoria_id")),'Modelos'],],
+                        group:['categoriaProducto.nombre'],
+                        raw: true
+                             
+    })
+        let modelosxcategoria = modelosxcategoria1.map(products=>{
+                return {
+                        Categoria:products.nombre,
+                        Modelos:products.Modelos
+                }
+        })
+        let totalproductos= await db.product.findAll({include:["categoriaProducto","productoProveedor"]})
+
+        let detallesproductos = totalproductos.map(products => {
+                        
+                return {
+                    id: products.id,
+                    nombre: products.nombre,
+                    descripcion: products.descripcion,
+                    proveedor:products.productoProveedor.nombre,
+                    categoria:products.categoriaProducto.nombre,
+                    fecha_Creacion:products.create_date,
+                    imagen:"http://localhost:3000/static/images/product/" + products.imagen,
+                    EndPoint: "api/products/" + products.id 
+                    
+                     }
+                })
+                   
+ 
+    
+    
+        let jsonproducts = {
+                                meta:{
+                                    status:200,
+                                    TotalModelos:totalproductos.length,
+                                    countByCategory:modelosxcategoria,
+                                    products:detallesproductos
+                                    
+                                }
+                        }
+                res.json(jsonproducts)
+
+                
      },
 
     stocksProducts: async function (req,res){
