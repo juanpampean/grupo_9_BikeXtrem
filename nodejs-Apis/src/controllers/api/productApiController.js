@@ -22,23 +22,55 @@ const productApiController={
                             id: products.id,
                             nombre: products.nombre,
                             descripcion: products.descripcion,
-                            Proveedor:products.productoProveedor,
-                            Fecha_Creacion:products.create_date,
+                            proveedor:products.productoProveedor,
+                            fecha_Creacion:products.create_date,
+                            imagen:"http://localhost:3000/static/images/product/" + products.imagen,
                             EndPoint: "api/products/" + products.id 
                             
                              }
                         })
+                
                 let respuesta = {
                         meta:{
                                 status:200,
-                                total: product.length
+                                total: product.length,
+                                products:DataShort
                         },
-                        data: DataShort
+                
+                        
                 }
                         res.json(respuesta)
 
                 })
-    },
+     },
+
+    stocksProducts: async function (req,res){
+            let stockxproveedor = await db.product.findAll({
+                include:["productoProveedor"],
+                attributes: [
+                        'productoProveedor.nombre',
+                        [sequelize.fn("SUM", sequelize.col("stock")),'totalbicis'],],
+                        group:['productoProveedor.nombre'],
+                        raw: true
+                             
+    })
+            let stocktotal = await db.product.findOne({
+                attributes: [sequelize.fn("SUM", sequelize.col("stock"))],
+                raw: true,
+                
+              })
+            
+
+            let jsonproducts = {
+                    meta:{
+                        status:200,
+                        stocktotal:stocktotal,
+                        stockxproveedor:stockxproveedor
+                    }
+            }
+            res.json(jsonproducts)
+},
+   
     productId: (req,res) => {
             db.product.findByPk(req.params.id,{include:["productoProveedor","categoriaProducto"]})
             .then(product =>{

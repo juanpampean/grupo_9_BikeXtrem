@@ -10,6 +10,7 @@ router.get("/products", productApiController.productList);
 router.get("/products/:id", productApiController.productId);
 router.get("/suppliers", productApiController.suppliers);
 router.get("/categories", productApiController.categories);
+router.get("/totalproducts", productApiController.stocksProducts);
 
 //TODO: exportar el modulo
 module.exports = router;
