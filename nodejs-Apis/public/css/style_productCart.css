@@ -15,7 +15,11 @@
         justify-content: space-between;
         height: 50px;
     }
-    img { background: transparent; }
+    
+    img {
+        background: transparent;
+    }
+    
     header .cuenta a {
         margin: 5px;
         color: #72CDAE;
@@ -175,7 +179,6 @@
         font-size: 20px;
         font-family: 'Monserrat', sans-serif;
         color: #72CDAE;
-        border-radius: 8px;
         justify-content: center;
         align-items: center;
         background-color: #0D353F;
@@ -241,7 +244,6 @@
     .Envio {
         display: column;
         flex-flow: wrap;
-        align-items: flex-start;
         height: 200px;
         width: 98%;
         float: left;
@@ -249,7 +251,6 @@
         display: flex;
         justify-content: space-between;
         padding: 10px 15px 0px 10px;
-        border: black solid 1px;
         margin: 10px;
         align-items: center;
     }
@@ -261,6 +262,10 @@
         color: #0D353F;
     }
     
+    .flex-container:hover {
+        border-color: #72CDAE;
+    }
+    
     .flex-container {
         display: flex;
         flex: wrap;
@@ -269,6 +274,7 @@
         height: 350px;
         width: 100%;
         float: left;
+        border-radius: 8px;
     }
     
     .flex-container div {
@@ -277,6 +283,9 @@
         margin-left: 15px;
         background: white;
         position: relative;
+        transition: color 5ms;
+        animation: reverse;
+        border-top: 1px solid #ebebeb;
     }
     
     .flex-container div img {
@@ -284,7 +293,6 @@
         height: auto;
         float: left;
         margin-right: 2px;
-        margin-bottom: 10px;
         margin-left: 5px;
     }
     
@@ -293,4 +301,9 @@
         font-weight: 100px;
         margin-bottom: 10px;
         margin-left: 10px;
+        color: #72CDAE;
+    }
+    
+    .flex-container p:hover {
+        color: black;
     }
