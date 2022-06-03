@@ -1,15 +1,15 @@
 import CategoriesInDb from './CategoriesInDb'
-import ContentRowMovies from './ContentRowMovies'
-import LastMovieInDb from "./LastMovieInDb";
+import Totales from './Totales'
+import UltimoProducto from "./UltimoProducto";
 
 function ContentRowTop() {
     return (
         <div className="container-fluid">
                                        
-        <ContentRowMovies />
+        <Totales />
             
             <div className="row">
-        <LastMovieInDb/>
+        <UltimoProducto />
         <CategoriesInDb />
             </div>
         </div>     
