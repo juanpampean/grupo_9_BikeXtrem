@@ -10,7 +10,7 @@ const product = require("../../database/models/product")
 
 
 const productApiController={
-    productList: function(req,res){
+    /*productList: function(req,res){
         db.product
         .findAll({include:["productoProveedor","categoriaProducto"],
                 order: [["create_date","DESC"]]
@@ -44,7 +44,7 @@ const productApiController={
 
                 })
      },
-
+     */
      listProducts: async function(req,res){
         let modelosxcategoria1 = await db.product.findAll({
                 include:["categoriaProducto"],
@@ -55,7 +55,7 @@ const productApiController={
                         raw: true
                              
     })
-        let modelosxcategoria = modelosxcategoria1.map(products=>{
+        let modelosxcategoria = await modelosxcategoria1.map(products=>{
                 return {
                         Categoria:products.nombre,
                         Modelos:products.Modelos
