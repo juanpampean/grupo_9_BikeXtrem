@@ -6,23 +6,14 @@ function LastProductInDb () {
     let [product,setProduct] = useState("no state")
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/products")
+        fetch("http://localhost:3000/api/products/:id")
         .then(res=>res.json())
         .then(dat=>{
             setProduct({
-            nombre_producto:dat.meta.products[0].nombre,
-            imagen_producto:dat.meta.products[0].imagen,
-            descripcion:dat.meta.products[0].descripcion,
-            id:dat.meta.products[0].id
-
+                
         })
         })
     })
-
-
-
-
-
 
     return (
         <div className="col-lg-6 mb-4">
