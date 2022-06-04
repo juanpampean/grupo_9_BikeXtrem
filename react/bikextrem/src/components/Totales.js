@@ -7,6 +7,7 @@ function ContentRowMovies() {
     let [users, setUsers] = useState("Sin usuarios");
     let [suppliers, setMarcas] = useState("No dispone")
     let [categories, setCategory] = useState("No dispone")
+    let [totalstock,setStock] =useState("no dispone")
 
     let datos = [
         {
@@ -31,6 +32,12 @@ function ContentRowMovies() {
         {
             titulo: "Total Categories",
             cifra: categories,
+            colorBorder: "warning",
+            icono: "fa-user-check"
+        },
+        {
+            titulo: "Stock Total",
+            cifra: totalstock,
             colorBorder: "warning",
             icono: "fa-user-check"
         }
@@ -59,6 +66,12 @@ function ContentRowMovies() {
         .then(resultado => resultado.json())
         .then(dataCat => {
             setCategory(dataCat.meta.total_categories)
+        })
+
+        fetch("http://localhost:3001/api/totalproducts")
+        .then(resultado => resultado.json())
+        .then(dataCat => {
+            setStock(dataCat.meta.stocktotal)
         })
 
    }, [])
