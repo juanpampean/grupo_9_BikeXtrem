@@ -7,6 +7,7 @@ function ContentRowMovies() {
     let [users, setUsers] = useState("Sin usuarios");
     let [suppliers, setMarcas] = useState("No dispone")
     let [categories, setCategory] = useState("No dispone")
+    let [totalstock,setStock] =useState("no dispone")
 
     let datos = [
         {
@@ -33,32 +34,44 @@ function ContentRowMovies() {
             cifra: categories,
             colorBorder: "warning",
             icono: "fa-user-check"
+        },
+        {
+            titulo: "Stock Total",
+            cifra: totalstock,
+            colorBorder: "warning",
+            icono: "fa-user-check"
         }
     ]
     
     useEffect(() => {
-        fetch("http://localhost:3000/api/products")
+        fetch("http://localhost:3001/api/products")
         .then(resultado => resultado.json())
         .then(dataProduct => {
             setProducts(dataProduct.meta.TotalModelos)
         })
 
-        fetch("http://localhost:3000/api/users")
+        fetch("http://localhost:3001/api/users")
         .then(resultado => resultado.json())
         .then(dataUser => {
             setUsers(dataUser.meta.total)
         })
 
-        fetch("http://localhost:3000/api/suppliers")
+        fetch("http://localhost:3001/api/suppliers")
         .then(resultado => resultado.json())
         .then(dataSupp => {
             setMarcas(dataSupp.meta.total_suppliers)
         })
 
-        fetch("http://localhost:3000/api/categories")
+        fetch("http://localhost:3001/api/categories")
         .then(resultado => resultado.json())
         .then(dataCat => {
             setCategory(dataCat.meta.total_categories)
+        })
+
+        fetch("http://localhost:3001/api/totalproducts")
+        .then(resultado => resultado.json())
+        .then(dataCat => {
+            setStock(dataCat.meta.stocktotal)
         })
 
    }, [])
