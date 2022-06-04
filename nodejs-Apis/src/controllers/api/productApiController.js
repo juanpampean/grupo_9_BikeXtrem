@@ -123,6 +123,7 @@ const productApiController={
 },
    
     productId: (req,res) => {
+            let fullUrl = req.protocol + '://' + req.get('host');
             db.product.findByPk(req.params.id,{include:["productoProveedor","categoriaProducto"]})
             .then(product =>{
                     let productJson = {
@@ -134,7 +135,7 @@ const productApiController={
                                     Marca:product.productoProveedor,
                                     Stock:product.stock,
                                     Precio:product.precio, 
-                                    Imagen:"http://localhost:3000/static/images/product/" + product.imagen   
+                                    Imagen: fullUrl + "/static/images/product/" + product.imagen   
 
                             },
                     }

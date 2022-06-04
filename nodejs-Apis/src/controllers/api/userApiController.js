@@ -7,8 +7,10 @@ const { response } = require('express');
 const user = require('../../database/models/user');
 
 
+
 const userApiController = {
     'list': (req, res) => {
+        let fullUrl = req.protocol + '://' + req.get('host');
         db.user.findAll()
             .then(users => {
                 let DataShort = users.map(user => {
@@ -17,7 +19,7 @@ const userApiController = {
                         nombre: user.nombre,
                         apellido: user.apellido,
                         email: user.mail,
-                        url: "/api/users/" + user.id,
+                        url: fullUrl + "/api/users/" + user.id,
 
                     }
                 })
@@ -25,7 +27,7 @@ const userApiController = {
                     meta: {
                         status: 200,
                         total: users.length,
-                        url: '/api/users'
+                        url: fullUrl + '/api/users'
                     },
                     data: DataShort
                 }
@@ -33,6 +35,7 @@ const userApiController = {
             })
     },
     'detail': (req, res) => {
+        let fullUrl = req.protocol + '://' + req.get('host');
         db.user.findByPk(req.params.id,{include:["genres"]})
             .then(user => {
               
@@ -48,7 +51,7 @@ const userApiController = {
                         Ciudad:user.ciudad,
                         Código_postal:user.codigo_postal,
                         genero:user.genres.nombre_genero,
-                        Avatar:"http://localhost:3000/static/images/avatars/" + user.avatar,
+                        Avatar: fullUrl + "/static/images/avatars/" + user.avatar,
 
                     },
                 }
