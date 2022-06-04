@@ -40,7 +40,7 @@ function ContentRowMovies() {
         fetch("http://localhost:3000/api/products")
         .then(resultado => resultado.json())
         .then(dataProduct => {
-            setProducts(dataProduct.meta.total)
+            setProducts(dataProduct.meta.TotalModelos)
         })
 
         fetch("http://localhost:3000/api/users")
