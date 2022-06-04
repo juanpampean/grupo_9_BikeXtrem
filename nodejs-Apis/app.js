@@ -41,7 +41,7 @@ app.use(userLoggedMiddleware);
 app.use(cors());
 
 //Levantando servidor
-const port = 3000
+const port = 3001
 app.listen(process.env.PORT || `${port}`, () => { console.log("servidor corriendo") });
 
 
