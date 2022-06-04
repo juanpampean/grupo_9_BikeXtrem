@@ -1,4 +1,4 @@
-import CategoriesInDb from './CategoriesInDb'
+import MarcasEnStock from './MarcasEnStock'
 import Totales from './Totales'
 import UltimoProducto from "./UltimoProducto";
 
@@ -10,7 +10,7 @@ function ContentRowTop() {
             
             <div className="row">
         <UltimoProducto />
-        <CategoriesInDb />
+        <MarcasEnStock />
             </div>
         </div>     
 

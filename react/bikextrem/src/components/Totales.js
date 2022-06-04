@@ -11,26 +11,26 @@ function ContentRowMovies() {
 
     let datos = [
         {
-            titulo: "Products in Data Base",
+            titulo: "Modelos en Stock",
             cifra: products,
             colorBorder: "primary",
             icono: "fa-clipboard-list"
         },
 
         {
-            titulo: "Users quantity",
+            titulo: "Usuarios Registrados",
             cifra: users,
             colorBorder: "warning",
             icono: "fa-user-check"
         },
         {
-            titulo: "Total Suppliers",
+            titulo: "Marcas en Stock",
             cifra: suppliers,
             colorBorder: "success",
             icono: "fa-dollar-sign"
         },
         {
-            titulo: "Total Categories",
+            titulo: "Total Categorías",
             cifra: categories,
             colorBorder: "warning",
             icono: "fa-user-check"
