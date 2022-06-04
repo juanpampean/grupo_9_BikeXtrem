@@ -104,19 +104,19 @@ const productApiController={
                         [sequelize.fn("SUM", sequelize.col("stock")),'totalbicis'],],
                         group:['productoProveedor.nombre'],
                         raw: true
-                             
+                        
     })
             let stocktotal = await db.product.findOne({
-                attributes: [sequelize.fn("SUM", sequelize.col("stock"))],
+                attributes: [[sequelize.fn("SUM", sequelize.cast(sequelize.col("stock"), 'integer')), "totalAsset"]],
                 raw: true,
                 
               })
-            
+            let total_bicis = stocktotal.totalAsset
 
             let jsonproducts = {
                     meta:{
                         status:200,
-                        stocktotal:stocktotal,
+                        stocktotal:total_bicis, 
                         stockxproveedor:stockxproveedor
                     }
             }
