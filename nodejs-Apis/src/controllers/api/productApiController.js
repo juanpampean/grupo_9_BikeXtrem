@@ -117,7 +117,7 @@ const productApiController={
                     meta:{
                         status:200,
                         stocktotal:total_bicis, 
-                        stockxproveedor:stockxproveedor
+                        proveedores:stockxproveedor
                     }
             }
             res.json(jsonproducts)
