@@ -61,7 +61,8 @@ const productApiController={
                         Modelos:products.Modelos
                 }
         })
-        let totalproductos= await db.product.findAll({include:["categoriaProducto","productoProveedor"]})
+        let totalproductos= await db.product.findAll({include:["categoriaProducto","productoProveedor"],
+        order: [["create_date","DESC"]]})
 
         let detallesproductos = totalproductos.map(products => {
                         
