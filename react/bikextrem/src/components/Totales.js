@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import SmallCard from "./SmallCard";
+import CardTotales from "./CardTotales";
 
 function ContentRowMovies() {
     let [products, setProducts] = useState("No dispone");
@@ -80,7 +80,7 @@ function ContentRowMovies() {
     return (					
         <div className="row">
         {datos.map((dato, i) => 
-            <SmallCard key={i} 
+            <CardTotales key={i} 
                 titulo={dato.titulo} 
                 cifra={dato.cifra}
                 colorBorder={dato.colorBorder}

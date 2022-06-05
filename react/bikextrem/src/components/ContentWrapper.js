@@ -1,7 +1,7 @@
 import Topbar from './TopBar'
 import ContentRowTop from './ContentRowTop'
 import Footer from './Footer'
-import Tabla from './Tabla'
+import TablaProductos from './TablaProductos'
 
 
 function ContentWrapper() {
@@ -11,7 +11,7 @@ function ContentWrapper() {
                 <Topbar />
                 <ContentRowTop />
             </div>
-            <Tabla />
+            <TablaProductos />
             <Footer />
         </div>
 
