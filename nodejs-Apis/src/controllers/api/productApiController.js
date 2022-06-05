@@ -73,7 +73,7 @@ const productApiController={
                     proveedor:products.productoProveedor.nombre,
                     categoria:products.categoriaProducto.nombre,
                     fecha_Creacion:products.create_date,
-                    imagen:"http://localhost:3000/static/images/product/" + products.imagen,
+                    imagen:"http://localhost:3001/static/images/product/" + products.imagen,
                     EndPoint: "api/products/" + products.id 
                     
                      }
