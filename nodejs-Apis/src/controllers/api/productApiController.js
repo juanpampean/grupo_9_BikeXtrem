@@ -97,21 +97,26 @@ const productApiController={
      },
 
     stocksProducts: async function (req,res){
-            let stockxproveedor = await db.product.findAll({
+            let stockxproveedor1 = await db.product.findAll({
                 include:["productoProveedor"],
                 attributes: [
                         'productoProveedor.nombre',
-                        [sequelize.fn("SUM", sequelize.col("stock")),'totalbicis'],],
+                        [sequelize.fn("SUM", sequelize.cast(sequelize.col("stock"), 'integer')),'totalbicis'],],
                         group:['productoProveedor.nombre'],
                         raw: true
                         
     })
+           let stockxproveedor = await stockxproveedor1.map(products=>{
+                  return {
+                Proveedor:products.nombre,
+                Stock:Number(products.totalbicis)
+        }})
             let stocktotal = await db.product.findOne({
                 attributes: [[sequelize.fn("SUM", sequelize.cast(sequelize.col("stock"), 'integer')), "totalAsset"]],
                 raw: true,
                 
               })
-            let total_bicis = stocktotal.totalAsset
+            let total_bicis = Number(stocktotal.totalAsset)
 
             let jsonproducts = {
                     meta:{
