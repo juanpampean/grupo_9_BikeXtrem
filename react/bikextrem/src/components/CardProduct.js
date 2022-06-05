@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import logoLast from "../images/bmc-ruta.png";
+
+
 
 function CardProduct({nombre_producto,imagen_producto,descripcion_producto}){
     return(

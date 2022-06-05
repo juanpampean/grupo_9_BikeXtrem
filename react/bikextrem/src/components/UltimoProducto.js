@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-
 import CardProduct from "./CardProduct";
 
 function LastProductInDb () {
@@ -29,7 +28,7 @@ function LastProductInDb () {
         <div className="card shadow mb-4">
             <div className="card-header py-3">
                 <h6 className="m-0 font-weight-bold text-primary">
-                    Last product in Data Dase
+                    Ultimo producto incorporado
                 </h6>
             </div>
         <CardProduct 
