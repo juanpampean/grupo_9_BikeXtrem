@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 31, 2022 at 08:45 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 06-06-2022 a las 00:19:14
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,17 +18,18 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bikextrem`
+-- Base de datos: `bikextrem`
 --
 
 -- --------------------------------------------------------
 
-
--- Table structure for table `genres`
+--
+-- Estructura de tabla para la tabla `genres`
 --
 
 CREATE DATABASE `bikextrem`;
 USE `bikextrem`;
+
 
 CREATE TABLE `genres` (
   `id` int(11) NOT NULL,
@@ -36,7 +37,7 @@ CREATE TABLE `genres` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='GÃ©neros';
 
 --
--- Dumping data for table `genres`
+-- Volcado de datos para la tabla `genres`
 --
 
 INSERT INTO `genres` (`id`, `nombre_genero`) VALUES
@@ -47,7 +48,7 @@ INSERT INTO `genres` (`id`, `nombre_genero`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Estructura de tabla para la tabla `orders`
 --
 
 CREATE TABLE `orders` (
@@ -60,7 +61,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Ordenes';
 
 --
--- Dumping data for table `orders`
+-- Volcado de datos para la tabla `orders`
 --
 
 INSERT INTO `orders` (`id`, `fecha_orden`, `usuario_id`, `total_compra`, `direccion_orden`, `status_orden`) VALUES
@@ -69,7 +70,7 @@ INSERT INTO `orders` (`id`, `fecha_orden`, `usuario_id`, `total_compra`, `direcc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Estructura de tabla para la tabla `products`
 --
 
 CREATE TABLE `products` (
@@ -87,41 +88,40 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Productos';
 
 --
--- Dumping data for table `products`
+-- Volcado de datos para la tabla `products`
 --
 
 INSERT INTO `products` (`id`, `SKU`, `nombre`, `precio`, `peso`, `descripcion`, `categoria_id`, `imagen`, `create_date`, `stock`, `proveedor_id`) VALUES
 (6, 123455, 'Orran Mountain', 80583, 15, 'Una bicicleta que responde a las necesidades y requerimientos de los consumidores locales. TREK en el mundo es sinÃ³nimo de garantÃ­a y confianza por la excelencia en sus procesos productivos y calidad de sus materiales.', 1, 'file-1653742601766-.png', '2022-03-22 12:36:36', 10, 5),
-(7, 324895, 'Trek Merlin 6 ', 150000, 12, 'Trek Marlin 6 es una bicicleta de cross country diseÃ±ada para resultar eficiente sobre superficies de montaÃ±a gracias a su horquilla de suspensiÃ³n con bloqueo y a su sencilla transmisiÃ³n 1x. Se ha diseÃ±ado para el mountain bike, pero tambiÃ©n estÃ¡ equipada', 1, 'file-1653741779270-.png', '2022-05-10 15:37:07', 7, 5),
-(8, 234232, 'Big Nine', 150000, 12, 'El Big Nine 15 es una construcciÃ³n versÃ¡til que se adapta tanto al ciclista recreativo como al ciclista de trail, con ruedas de 29 \"con una suspensiÃ³n delantera de recorrido de 100 mm, la transmisiÃ³n Shimano y los frenos de disco hidrÃ¡ulicos brindan una c', 2, 'file-1653742713520-.png', '2022-05-13 15:37:19', 10, 2),
-(9, 3112412, 'Cannondale XMax 29', 250000, 10, 'Las Bicicletas Mtb De Trinx EstÃ¡n DiseÃ±adas Para Aquellos Aventureros Que Buscan No Solo Un Viaje Diferente, Sino Una Bicicleta Diferente.', 1, 'file-1653741998509-.png', '2022-05-21 15:37:33', 10, 2),
-(10, 3534, 'Kayane 14', 100000, 10, 'Para todos los dÃ­ias en las montaÃ±as. Bicicleta de Descenso de maxima fidelidad.', 6, 'file-1653742750862-.png', '2022-05-14 15:37:57', 6, 5),
-(11, 31413, 'Nevada R29', 100000, 10, 'Para todos los dÃ­as del aÃ±o', 2, 'file-1653851491955-.png', '2022-05-14 15:38:04', 4, 4),
-(12, 1341, 'Scultura 100', 143000, 10, 'La Bicicleta Merida Scultura 100 es una excelente bicicleta de carretera de rango medio para paseos en grupo o carreras, con su manejo Ã¡gil y comodidad ideal para la mayorÃ­a de los ciclistas que desean la simplicidad de los frenos de llanta.', 5, 'file-1653852241362-.png', '2022-05-13 15:38:12', 10, 1),
-(13, 3131, 'Scultura 200', 117000, 1000, 'La bicicleta de carretera Merida Scultura 200 es una bicicleta de carretera dinÃ¡mica, diseÃ±ada con tecnologÃ­a vanguardista e innovadora para brindarte un paseo resbaladizo que es rÃ¡pido y divertido.', 4, 'file-1653852333215-.png', '2022-05-31 15:38:20', 12, 1),
-(14, 0, 'Trekk Merlin', 100000, 1000, 'Increible tecnologia sobre 2 ruedas', 4, 'file-1653855661689-.png', '2022-05-14 15:38:29', 10, 2),
-(15, 0, 'Cannondale XMax 29', 100000, 130, 'Rutera de maximas prestaciones', 4, 'file-1653859146156-.png', '2022-05-14 15:38:39', 100, 1),
-(16, 0, 'Fuji Merlin', 100, 10, 'Agregando detalle a la descripcion', 4, 'file-1653853919020-.png', '2022-05-12 15:38:47', 10, 2),
-(17, 0, 'On Road Bike', 100, 10, 'Ruteras en su mÃ¡xima expresiÃ³n', 4, 'file-1653854452897-.png', '2022-05-14 15:38:57', 10, 2),
-(18, 0, 'Trekk Merlin', 100, 10, 'Agregando detalle a la descripcion', 2, 'file-1653854040758-.png', '2022-05-06 15:39:05', 10, 2),
-(22, 0, 'Tandem Bike', 100, 10, 'Bicicleta para salir en Equipo', 3, 'file-1653854091659-.png', '2022-05-14 15:40:27', 2, 1),
-(23, 0, 'Specialized E1', 124000, 13, 'La nueva Bicicleta Specialized E1 es ideal para los ciclistas que le gustan los circuitos agresivos y descensos mÃ¡s cercanos al DH y teniendo, tambiÃ©n, un buen comportamiento en subida. Su presentaciÃ³n con un cuadro mÃ¡s ligero y manteniendo un gran recorr', 6, 'file-1653854916108-.png', '2022-04-20 15:40:37', 14, 2),
-(24, 0, 'Max Speed', 100000, 10, 'Bicicleta ideal para las rutas.', 4, 'file-1653854559243-.png', '2022-05-21 15:40:46', 10, 2),
-(28, 1313, 'E-Bike', 100, 10, 'E-bike para alcanzar las mejores rutas el mismo dia', 2, 'file-1653853252060-.jpg', '2022-05-20 15:41:17', 6, 1),
-(29, 0, 'E-Bike Tornado', 10, 12, 'Para usar todos los dias!', 2, 'file-1653853397356-.png', '2022-05-19 15:41:25', 5, 2),
-(30, 0, 'Karakoram', 0, 0, 'Bicicleta de Descenso', 1, 'file-1653855388023-.png', '2022-05-21 15:41:35', 0, 1),
-(33, 0, 'Rafagas', 0, 0, 'Bicicleta de Descenso', 6, 'file-1653855107040-.png', '2022-05-10 15:41:43', 0, 1),
-(34, 0, 'Rutera Equifax', 0, 0, 'Bicicleta de ruta para los mejores recorridos.', 2, 'file-1653856535525-.jpg', '2022-04-22 15:41:53', 0, 1),
-(35, 0, 'E-Bike Pampas', 0, 0, 'E-Bike pensada para las majores salidas.', 2, 'file-1653853740556-.jpg', '2022-05-21 15:42:03', 0, 1),
-(36, 0, 'Descenso', 100000, 0, 'Ideal para las sierras de CÃ³rdoba', 2, 'file-1653852431258-.png', '2022-05-14 15:42:13', 0, 1),
-(37, 0, 'Trekk Merlin', 0, 0, 'La bicicleta de montaÃ±a recreativa perfecta para que los nuevos ciclistas se sumerjan en los senderos, una soluciÃ³n para los desplazamientos o simplemente una bicicleta divertida para la ciudad o el campo. Un cuadro completamente nuevo con geometrÃ­a actua', 2, 'file-1653853608118-.png', '2022-05-21 15:42:32', 0, 2),
-(38, 0, 'Trekk Merlin', 85000, 0, 'Bicicleta Mountain Bike con lo Ãºltimo en transmisiÃ³n.', 3, 'file-1653855483319-.png', '2022-05-01 15:37:47', 0, 2),
-(39, 0, 'CUBE Reaction', 132400, 10, 'Le mejor bici del mercado.', 1, 'file-1654021205413-.png', '2022-05-31 00:00:00', 10, 4);
+(7, 324895, 'Trek Merlin 6 ', 150000, 12, 'Trek Marlin 6 es una bicicleta de cross country diseÃ±ada para resultar eficiente sobre superficies de montaÃ±a gracias a su horquilla de suspensiÃ³n con bloqueo y a su sencilla transmisiÃ³n 1x. Se ha diseÃ±ado para el mountain bike, pero tambiÃ©n estÃ¡ e', 1, 'file-1653741779270-.png', '0000-00-00 00:00:00', 7, 5),
+(8, 234232, 'Big Nine', 150000, 12, 'El Big Nine 15 es una construcciÃ³n versÃ¡til que se adapta tanto al ciclista recreativo como al ciclista de trail, con ruedas de 29 \"con una suspensiÃ³n delantera de recorrido de 100 mm, la transmisiÃ³n Shimano y los frenos de disco hidrÃ¡ulicos brindan ', 2, 'file-1653742713520-.png', '0000-00-00 00:00:00', 10, 2),
+(9, 3112412, 'Cannondale XMax 29', 250000, 10, 'Las Bicicletas Mtb De Trinx EstÃ¡n DiseÃ±adas Para Aquellos Aventureros Que Buscan No Solo Un Viaje Diferente, Sino Una Bicicleta Diferente.', 1, 'file-1653741998509-.png', '0000-00-00 00:00:00', 10, 2),
+(10, 3534, 'Kayane 14', 100000, 10, 'Para todos los dÃ­ias en las montaÃ±as. Bicicleta de Descenso de maxima fidelidad.', 6, 'file-1653742750862-.png', '0000-00-00 00:00:00', 6, 5),
+(11, 31413, 'Nevada R29', 100000, 10, 'Para todos los dÃ­as del aÃ±o', 2, 'file-1653851491955-.png', '0000-00-00 00:00:00', 4, 4),
+(12, 1341, 'Scultura 100', 143000, 10, 'La Bicicleta Merida Scultura 100 es una excelente bicicleta de carretera de rango medio para paseos en grupo o carreras, con su manejo Ã¡gil y comodidad ideal para la mayorÃ­a de los ciclistas que desean la simplicidad de los frenos de llanta.', 5, 'file-1653852241362-.png', '0000-00-00 00:00:00', 10, 1),
+(13, 3131, 'Scultura 200', 117000, 1000, 'La bicicleta de carretera Merida Scultura 200 es una bicicleta de carretera dinÃ¡mica, diseÃ±ada con tecnologÃ­a vanguardista e innovadora para brindarte un paseo resbaladizo que es rÃ¡pido y divertido. Esta bicicleta es de toda clase en cada paseo, escal', 4, 'file-1653852333215-.png', '0000-00-00 00:00:00', 12, 1),
+(14, 0, 'Trekk Merlin', 100000, 1000, 'Increible tecnologia sobre 2 ruedas', 4, 'file-1653855661689-.png', '0000-00-00 00:00:00', 10, 2),
+(15, 0, 'Cannondale XMax 29', 100000, 130, 'Rutera de maximas prestaciones', 4, 'file-1653859146156-.png', '0000-00-00 00:00:00', 100, 1),
+(16, 0, 'Fuji Merlin', 100, 10, 'Agregando detalle a la descripcion', 4, 'file-1653853919020-.png', '0000-00-00 00:00:00', 10, 2),
+(17, 0, 'On Road Bike', 100, 10, 'Ruteras en su mÃ¡xima expresiÃ³n', 4, 'file-1653854452897-.png', '0000-00-00 00:00:00', 10, 2),
+(18, 0, 'Trekk Merlin', 100, 10, 'Agregando detalle a la descripcion', 2, 'file-1653854040758-.png', '0000-00-00 00:00:00', 10, 2),
+(22, 0, 'Tandem Bike', 100, 10, 'Bicicleta para salir en Equipo', 3, 'file-1653854091659-.png', '0000-00-00 00:00:00', 2, 1),
+(23, 0, 'Specialized E1', 124000, 13, 'La nueva Bicicleta Specialized E1 es ideal para los ciclistas que le gustan los circuitos agresivos y descensos mÃ¡s cercanos al DH y teniendo, tambiÃ©n, un buen comportamiento en subida. Su presentaciÃ³n con un cuadro mÃ¡s ligero y manteniendo un gran re', 6, 'file-1653854916108-.png', '0000-00-00 00:00:00', 14, 2),
+(24, 0, 'Max Speed', 100000, 10, 'Bicicleta ideal para las rutas.', 4, 'file-1653854559243-.png', '0000-00-00 00:00:00', 10, 2),
+(28, 1313, 'E-Bike', 100, 10, 'E-bike para alcanzar las mejores rutas el mismo dia', 2, 'file-1653853252060-.jpg', '0000-00-00 00:00:00', 6, 1),
+(29, 0, 'E-Bike Tornado', 10, 12, 'Para usar todos los dias!', 2, 'file-1653853397356-.png', '0000-00-00 00:00:00', 5, 2),
+(30, 0, 'Karakoram', 0, 0, 'Bicicleta de Descenso', 1, 'file-1653855388023-.png', '0000-00-00 00:00:00', 0, 1),
+(33, 0, 'Rafagas', 0, 0, 'Bicicleta de Descenso', 6, 'file-1653855107040-.png', '0000-00-00 00:00:00', 0, 1),
+(34, 0, 'Rutera Equifax', 0, 0, 'Bicicleta de ruta para los mejores recorridos.', 2, 'file-1653856535525-.jpg', '0000-00-00 00:00:00', 0, 1),
+(35, 0, 'E-Bike Pampas', 0, 0, 'E-Bike pensada para las majores salidas.', 2, 'file-1653853740556-.jpg', '0000-00-00 00:00:00', 0, 1),
+(36, 0, 'Descenso', 100000, 0, 'eqwnqcqwcqifqpeqwiomqwcqwicqwcqp', 2, 'file-1653852431258-.png', '0000-00-00 00:00:00', 0, 1),
+(37, 0, 'Trekk Merlin', 0, 0, 'La bicicleta de montaÃ±a recreativa perfecta para que los nuevos ciclistas se sumerjan en los senderos, una soluciÃ³n para los desplazamientos o simplemente una bicicleta divertida para la ciudad o el campo. Un cuadro completamente nuevo con geometrÃ­a ac', 2, 'file-1653853608118-.png', '0000-00-00 00:00:00', 0, 2),
+(38, 0, 'Trekk Merlin', 85000, 0, 'Bicicleta Mountain Bike con lo Ãºltimo en transmisiÃ³n.', 3, 'file-1653855483319-.png', '0000-00-00 00:00:00', 0, 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products_orders`
+-- Estructura de tabla para la tabla `products_orders`
 --
 
 CREATE TABLE `products_orders` (
@@ -134,7 +134,7 @@ CREATE TABLE `products_orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Ordenes de Producto';
 
 --
--- Dumping data for table `products_orders`
+-- Volcado de datos para la tabla `products_orders`
 --
 
 INSERT INTO `products_orders` (`id`, `orden_id`, `producto_id`, `precio`, `cantidad`, `subtotal_compra`) VALUES
@@ -143,7 +143,7 @@ INSERT INTO `products_orders` (`id`, `orden_id`, `producto_id`, `precio`, `canti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product_category`
+-- Estructura de tabla para la tabla `product_category`
 --
 
 CREATE TABLE `product_category` (
@@ -152,7 +152,7 @@ CREATE TABLE `product_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Categoria del Producto';
 
 --
--- Dumping data for table `product_category`
+-- Volcado de datos para la tabla `product_category`
 --
 
 INSERT INTO `product_category` (`id`, `nombre`) VALUES
@@ -166,7 +166,7 @@ INSERT INTO `product_category` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `suppliers`
+-- Estructura de tabla para la tabla `suppliers`
 --
 
 CREATE TABLE `suppliers` (
@@ -177,7 +177,7 @@ CREATE TABLE `suppliers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Proveedores';
 
 --
--- Dumping data for table `suppliers`
+-- Volcado de datos para la tabla `suppliers`
 --
 
 INSERT INTO `suppliers` (`id`, `nombre`, `telefono`, `mail`) VALUES
@@ -190,7 +190,7 @@ INSERT INTO `suppliers` (`id`, `nombre`, `telefono`, `mail`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estructura de tabla para la tabla `users`
 --
 
 CREATE TABLE `users` (
@@ -198,7 +198,7 @@ CREATE TABLE `users` (
   `nombre` varchar(45) DEFAULT NULL,
   `apellido` varchar(45) DEFAULT NULL,
   `mail` varchar(100) DEFAULT NULL,
-  `contraseÃ±a` varchar(100) DEFAULT NULL,
+  `contraseña` varchar(100) DEFAULT NULL,
   `telefono` varchar(100) DEFAULT NULL,
   `domicilio_entrega` varchar(255) DEFAULT NULL,
   `avatar` varchar(255) DEFAULT NULL,
@@ -209,10 +209,10 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Usuarios';
 
 --
--- Dumping data for table `users`
+-- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `nombre`, `apellido`, `mail`, `contraseÃ±a`, `telefono`, `domicilio_entrega`, `avatar`, `genero_id`, `codigo_postal`, `fecha_nacimiento`, `ciudad`) VALUES
+INSERT INTO `users` (`id`, `nombre`, `apellido`, `mail`, `contraseña`, `telefono`, `domicilio_entrega`, `avatar`, `genero_id`, `codigo_postal`, `fecha_nacimiento`, `ciudad`) VALUES
 (2, 'Kerby', 'Tovar', 'kerbytovar@gmail.com', '$2a$10$3cWTqBRxT/3hd7gguFhRm.aVO.H9FXiBXysNhSVTXYpimUWfUYuVu', '+5491123456789', 'Villa Urquiza, CABA', NULL, 1, '1431', '2022-05-01 16:10:01', NULL),
 (3, 'Pedro', 'Gomez', 'pedro14@gmail.com', '$2a$10$.jRYk4pvCTTVJlltXOKcX.KGJDLayE5B31Zn1ENfpIJfrlh1V8iOG', '3516311211', 'Belgrano 45', 'avatar-1653740317103-.jpg', 2, '23222', '1975-02-09 00:00:00', 'SUNCHALES'),
 (7, 'Peter', 'Jordan', 'peter@gmail.com', '$2a$10$U.wrC/2Bg9Tob2RGrSVxZuVwK8fme75Oek9U6CiOBDP4Y/GUQPFuW', '234131', 'Jalil 2403', 'avatar-1653501659967-.jpg', 2, '24230', '1992-01-03 00:00:00', 'Rafael'),
@@ -223,24 +223,24 @@ INSERT INTO `users` (`id`, `nombre`, `apellido`, `mail`, `contraseÃ±a`, `telef
 (12, 'Marta', 'Schulz', 'marta@gmail.com', '$2a$10$OBawhKc5gR4sT4qCWvtYKeEM5Sk5bLuwo0CAyG70zX1ED8cfukGly', '91312049', 'Hungria 1039', 'avatar-1653740552378-.jpg', 1, '3948', '1995-11-02 00:00:00', 'San Luis');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `genres`
+-- Indices de la tabla `genres`
 --
 ALTER TABLE `genres`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `orders`
+-- Indices de la tabla `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `usuario_id` (`usuario_id`);
 
 --
--- Indexes for table `products`
+-- Indices de la tabla `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
@@ -248,7 +248,7 @@ ALTER TABLE `products`
   ADD KEY `categoria_id` (`categoria_id`);
 
 --
--- Indexes for table `products_orders`
+-- Indices de la tabla `products_orders`
 --
 ALTER TABLE `products_orders`
   ADD PRIMARY KEY (`id`),
@@ -256,99 +256,101 @@ ALTER TABLE `products_orders`
   ADD KEY `producto_id` (`producto_id`);
 
 --
--- Indexes for table `product_category`
+-- Indices de la tabla `product_category`
 --
 ALTER TABLE `product_category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `suppliers`
+-- Indices de la tabla `suppliers`
 --
 ALTER TABLE `suppliers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD KEY `genero_id` (`genero_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `genres`
+-- AUTO_INCREMENT de la tabla `genres`
 --
 ALTER TABLE `genres`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT de la tabla `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `products_orders`
+-- AUTO_INCREMENT de la tabla `products_orders`
 --
 ALTER TABLE `products_orders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `product_category`
+-- AUTO_INCREMENT de la tabla `product_category`
 --
 ALTER TABLE `product_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `suppliers`
+-- AUTO_INCREMENT de la tabla `suppliers`
 --
 ALTER TABLE `suppliers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `orders`
+-- Filtros para la tabla `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `products`
+-- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `categoria__id` FOREIGN KEY (`categoria_id`) REFERENCES `product_category` (`id`),
   ADD CONSTRAINT `proveedor_id` FOREIGN KEY (`proveedor_id`) REFERENCES `suppliers` (`id`);
 
 --
--- Constraints for table `products_orders`
+-- Filtros para la tabla `products_orders`
 --
 ALTER TABLE `products_orders`
   ADD CONSTRAINT `orden_id` FOREIGN KEY (`orden_id`) REFERENCES `orders` (`id`),
   ADD CONSTRAINT `producto_id` FOREIGN KEY (`producto_id`) REFERENCES `products` (`id`);
 
 --
--- Constraints for table `users`
+-- Filtros para la tabla `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `genero_id` FOREIGN KEY (`genero_id`) REFERENCES `genres` (`id`);
+  
+ALTER DATABASE bikextrem CHARACTER SET utf8 COLLATE utf8_general_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
