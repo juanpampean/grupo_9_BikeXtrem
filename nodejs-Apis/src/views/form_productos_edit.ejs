@@ -20,7 +20,6 @@
                     <ul></ul>
                 </div>
 
-<<<<<<< HEAD
                 <form class="form" action="/product/edit/<%= product.id%>?_method=PUT" method="post">
                     <h2>Editar Producto</h2>
 
@@ -52,23 +51,12 @@
                         <label for="color">Color</label>
                         <input type="text" value="<%= product.color %>" name="color" id="color" placeholder="Color">
                     </div>
-=======
-        <div>
-            <label for="file">Imagen Producto</label>
-            <input type="file" class="form-control" name="file" onchange= "return fileValidation()">
-            <img src="static/images/product/<%= product.imagen %>" width="200" height="200">
-            <% if (locals.errors && errors.file) { %>
-                <span><%= errors.file.msg %></span>
-                <% } %>
-        </div>
->>>>>>> 3ba59c227ba0072cd24cee0e6e0d9d64e8a4c00a
 
                     <div>
                         <label for="descripcion">Descripcion Producto (Optional)</label>
                         <textarea rows="5" value="<%= product.descripcion %>" id="descripcion" name="descripcion"><%= product.descripcion %></textarea>
                     </div>
 
-<<<<<<< HEAD
                     <!--<div>
                         <label for="descripcion">Descripcion Producto (Optional)</label>
                         <textarea rows="5" value="<%= product.descripcion %>" id="descripcion" name="descripcion" required><%= product.descripcion %></textarea>
@@ -115,35 +103,6 @@
         </div>
     </main>
     <%-include('partials/footer')%>
-=======
-        <p>
-            <label for="categoria_id">Categoría</label>
-            <select name="categoria_id" id="" required>
-                <% categoriaProducto.forEach(categoria => { %>
-                <option value="<%= categoria.id %>" <% if (product.categoria_id == categoria.id) { %><%= 'selected' %><% }; %>><%= categoria.nombre %></option>
-                 <% }); %>
-            </select>
-        </p>
-        <p>
-            <label for="proveedor_id">Proveedor</label>
-            <select name="proveedor_id" id="" required>
-                <% productoProveedor.forEach(proveedor => { %>
-                <option value="<%= proveedor.id %>" <% if (product.provedor_id == proveedor.id) { %><%= 'selected' %><% }; %>><%= proveedor.nombre %></option>
-                 <% }); %>
-            </select>
-        </p>
-
-        <button type="submit" value="Guardar y volver al Home">EDITAR PRODUCTO</a></button> <br><br>
-    </form>
-    <form action="/product/delete/<%= product.id %>?_method=DELETE" method="post">
-        <button type="submit" value="Guardar y volver al Home">ELIMINAR PRODUCTO</a></button>
-    </form>
-    <script src="/static/js/prodUpdateValidation.js"></script>
-</div>
-
-</main>
-<%-include('partials/footer')%>
->>>>>>> 3ba59c227ba0072cd24cee0e6e0d9d64e8a4c00a
     </body>
 
 </html>
