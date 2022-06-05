@@ -1,20 +1,19 @@
 import React, {useState, useEffect} from "react";
-
 import CardProduct from "./CardProduct";
 
 function LastProductInDb () {
     let [product,setProduct] = useState("no state")
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/products")
+        fetch("http://localhost:3001/api/products")
         .then(res=>res.json())
         .then(dat=>{
             setProduct({
             nombre_producto:dat.meta.products[0].nombre,
             imagen_producto:dat.meta.products[0].imagen,
             descripcion:dat.meta.products[0].descripcion,
-            id:dat.meta.products[0].id
-
+            url:`http://localhost:3001/product/detail/${dat.meta.products[0].id}`
+                
         })
         })
     })
@@ -29,7 +28,7 @@ function LastProductInDb () {
         <div className="card shadow mb-4">
             <div className="card-header py-3">
                 <h6 className="m-0 font-weight-bold text-primary">
-                    Last product in Data Dase
+                    Ultimo producto incorporado
                 </h6>
             </div>
         <CardProduct 

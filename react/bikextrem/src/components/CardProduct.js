@@ -1,8 +1,8 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import logoLast from "../images/bmc-ruta.png";
 
-function CardProduct({nombre_producto,imagen_producto,descripcion_producto}){
+
+
+function CardProduct({nombre_producto,imagen_producto,descripcion_producto,url}){
     return(
         <div className="card-body">
         <h2>{nombre_producto}</h2>    
@@ -11,7 +11,7 @@ function CardProduct({nombre_producto,imagen_producto,descripcion_producto}){
             <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width:"40rem"}} src={imagen_producto} alt=" Star Wars - Mandalorian " />
         </div>
         <p>{descripcion_producto}</p>
-        <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+        <a className="btn btn-danger" target="_blank" rel="noreferrer" href="/">View product detail</a>
     </div>
     )
 }
