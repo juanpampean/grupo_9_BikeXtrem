@@ -12,8 +12,8 @@ function LastProductInDb () {
             nombre_producto:dat.meta.products[0].nombre,
             imagen_producto:dat.meta.products[0].imagen,
             descripcion:dat.meta.products[0].descripcion,
-            id:dat.meta.products[0].id
-
+            url:`http://localhost:3001/product/detail/${dat.meta.products[0].id}`
+                
         })
         })
     })
