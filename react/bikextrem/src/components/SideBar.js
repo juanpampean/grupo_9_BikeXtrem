@@ -1,7 +1,11 @@
 import logo from '../images/LOGO-BIKEXTREM.png'
+import {Link,Route,Switch} from 'react-router-dom';
+import React from 'react';
+
 
 function SideBar() {
     return (
+		
         <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 			
@@ -52,6 +56,7 @@ function SideBar() {
 			
 			<hr className="sidebar-divider d-none d-md-block"/>
 		</ul>
+
     )    
 }
 
