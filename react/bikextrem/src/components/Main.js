@@ -4,7 +4,7 @@ import Footer from './Footer'
 import TablaProductos from './TablaProductos'
 
 
-function ContentWrapper() {
+function Main() {
     return (
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
@@ -18,4 +18,4 @@ function ContentWrapper() {
     )
 }
 
-export default ContentWrapper;
+export default Main;

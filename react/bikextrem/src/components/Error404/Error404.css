@@ -1,0 +1,23 @@
+
+
+.Error {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width:100%; 
+    
+}
+
+span {
+    
+    font-size: 200px;
+    color:white
+}
+
+span.h2 {
+    color:blue;
+    font-size: 80px;
+    display:flexbox;
+}

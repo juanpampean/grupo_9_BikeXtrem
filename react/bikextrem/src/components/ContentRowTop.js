@@ -1,6 +1,7 @@
 import MarcasEnStock from './MarcasEnStock'
 import Totales from './Totales'
 import UltimoProducto from "./UltimoProducto";
+import StockPorCategorias from './stockPorCategorias/StockPorCategorias';
 
 function ContentRowTop() {
     return (
