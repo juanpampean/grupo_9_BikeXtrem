@@ -10,42 +10,10 @@ const product = require("../../database/models/product")
 
 
 const productApiController={
-    /*productList: function(req,res){
-        db.product
-        .findAll({include:["productoProveedor","categoriaProducto"],
-                order: [["create_date","DESC"]]
-        })
-        .then(product =>{
-                let DataShort = product.map(products => {
-                        
-                        return {
-                            id: products.id,
-                            nombre: products.nombre,
-                            descripcion: products.descripcion,
-                            proveedor:products.productoProveedor,
-                            fecha_Creacion:products.create_date,
-                            imagen:"http://localhost:3000/static/images/product/" + products.imagen,
-                            EndPoint: "api/products/" + products.id 
-                            
-                             }
-                        })
-                
-
-                let respuesta = {
-                        meta:{
-                                status:200,
-                                total: product.length,
-                                products:DataShort
-                        },
-                
-                        
-                }
-                        res.json(respuesta)
-
-                })
-     },
-     */
      listProducts: async function(req,res){
+  
+        
+    
         let modelosxcategoria1 = await db.product.findAll({
                 include:["categoriaProducto"],
                 attributes: [
@@ -61,6 +29,7 @@ const productApiController={
                         Modelos:products.Modelos
                 }
         })
+
         let totalproductos= await db.product.findAll({include:["categoriaProducto","productoProveedor"],
         order: [["create_date","DESC"]]})
 
@@ -78,8 +47,8 @@ const productApiController={
                     
                      }
                 })
-                   
- 
+         
+            
     
     
         let jsonproducts = {
