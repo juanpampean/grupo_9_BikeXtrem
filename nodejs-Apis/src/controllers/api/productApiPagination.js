@@ -17,7 +17,7 @@ const { limit, offset } = getPagination(page, size);
 db.product.findAndCountAll({
     limit,
     offset,
-    attributes: ["nombre"],
+    attributes: ["id","nombre"],
   })
     .then((data) => {
       const response = getPagingData(data, page, limit);
@@ -31,7 +31,7 @@ db.product.findAndCountAll({
     });
 };
 const getPagination = (page, size) => {
-  const limit = size ? +size : 5;
+  const limit = size ? +size : 10;
   const offset = page ? page * limit : 0;
 return { limit, offset };
 };
@@ -39,5 +39,7 @@ const getPagingData = (data, page, limit) => {
   const { count: totalItems, rows: modelos } = data;
   const currentPage = page ? +page : 0;
   const totalPages = Math.ceil(totalItems / limit);
-return { totalItems, modelos, totalPages, currentPage };
-};
+  const nextpage = (currentPage < totalPages-1) ? "http://localhost:3001/api/productsPag?page="+(currentPage+1) : "Ultima Pagina";
+  const previouspage = (currentPage > totalPages-totalPages) ? "http://localhost:3001/api/productsPag?page="+(currentPage-1) : "Primer Pagina";
+
+return { totalItems, modelos, totalPages, currentPage,nextpage,previouspage}};
