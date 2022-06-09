@@ -6,21 +6,12 @@ const sequelize = db.sequelize;
 const Op = Sequelize.Op;
 const { validationResult } = require('express-validator');
 
-const productsFilePath = path.join(__dirname, '../data/listadoProductos.json');
-const products1 = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 
-function findAll() {
-    let data = fs.readFileSync(path.join(__dirname, "../data/listadoProductos.json"), "utf-8");
-    let productos = JSON.parse(data);
-    return productos;
-}
 
-function writeFile(array) {
-    let string = JSON.stringify(array, null, 4)
-    fs.writeFileSync(path.join(__dirname, "../data/listadoProductos.json"), string)
-}
+
+
 
 //*---------------------------------------------------------------------------------------------*//
 
@@ -117,7 +108,7 @@ const controller = {
             categoria_id: req.body.categoria_id,
             stock: req.body.stock,
             proveedor_id: req.body.proveedor_id,
-            imagen: req.file ? req.file.filename : req.body.imagen
+            imagen: req.file.filename,
         }, {
             where: {
                 id: req.params.id

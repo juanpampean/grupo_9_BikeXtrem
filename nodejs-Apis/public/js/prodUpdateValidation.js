@@ -20,6 +20,8 @@ window.onload = function(){
             errores.push("El campo Descripción debe tener al menos 20 carácteres")
         } else{} 
 
+        
+
 
 
         if (errores.length > 0){

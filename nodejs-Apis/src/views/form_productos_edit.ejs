@@ -20,7 +20,7 @@
                     <ul></ul>
                 </div>
 
-                <form class="form" action="/product/edit/<%= product.id%>?_method=PUT" method="post">
+                <form class="form" action="/product/edit/<%= product.id%>?_method=PUT" method="post" enctype="multipart/form-data">
                     <h2>Editar Producto</h2>
 
                     <div>
@@ -30,6 +30,9 @@
                     <div>
                         <label>Nombre</label>
                         <input type="text" value="<%= product.nombre %>" name="nombre" id="nombre" placeholder="Nombre Producto">
+                        <% if(locals.errors && locals.errors.nombre){ %>
+                            <span> <%=errors.nombre.msg %> </span>
+                            <% } %>
                     </div>
                     <div>
                         <label>Precio</label>
@@ -85,6 +88,11 @@
                     <div>
                         <label for="file">Foto de Producto</label>
                         <input type="file" name="file"  id="file" onchange= "return fileValidation()" />
+                        <% if (locals.errors && errors.file) { %>
+                            <span><%= errors.file.msg %></span> 
+                            <% } %>
+
+                        
                     </div>
                     
                 <!-- Image preview -->

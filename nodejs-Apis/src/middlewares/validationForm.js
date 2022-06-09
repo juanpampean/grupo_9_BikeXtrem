@@ -96,7 +96,7 @@ module.exports = {
         .notEmpty().withMessage("campo nombre vacío")
         .isLength({ min: 5 }).withMessage("el campo debe tener al menos 5 caracteres"),
 
-        check("descripcion").isLength({ min: 20 }).withMessage("Coloca descripción del producto acá"),
+        check("descripcion").isLength({ min: 10 }).withMessage("Coloca descripción del producto acá"),
         
         body('file').custom((value, { req }) => {
             let file = req.file;
@@ -111,8 +111,8 @@ module.exports = {
                 }
             }
             return true;
-        })
-
+        })  
+        
     ],
     productCreate:  [
         check("nombre")
